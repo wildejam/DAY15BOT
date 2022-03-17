@@ -146,7 +146,7 @@ async def how_are_you_15(ctx):
 @bot.command(name='repo15')
 async def repo_15(ctx):
     await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/day15\n"
-                   "It's pretty neat stuff! Ask @Caker for more info.")
+                   "It's pretty neat stuff! Ask @Caker#3479 for more info.")
 
 
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
