@@ -11,7 +11,6 @@ from discord.ext import commands, tasks
 # ENVIRONMENT VARIABLES: not sure what these do tbh; will have to research more later
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
 
 # Determines the command prefix that users will use to use the bot
 bot = commands.Bot(command_prefix='/')
@@ -50,18 +49,12 @@ def calculate_date_difference():
 
 
 # -----------------------------------------ON_READY INITIALIZATIONS-----------------------------------------------------
-# On ready, print a message to terminal confirming successful connection to discord
+# On ready, print a message to terminal confirming successful connection to discord, and print all connected servers
 @bot.event
 async def on_ready():
-    guild = bot.guilds[0]
-    for guild in bot.guilds:
-        if guild.name == GUILD:
-            break
-
-    print(
-        f'{bot.user} is connected to the following guild:\n'
-        f'{guild.name}(id: {guild.id})'
-    )
+    print(f"{bot.user} is connected to the following guilds:")
+    for current_guild in bot.guilds:
+        print(f'{current_guild.name}(id: {current_guild.id})')
 
 
 # ---------------------------------------CHECK FOR IF IT IS DAY15-------------------------------------------------------
@@ -112,6 +105,8 @@ async def help15(ctx):
                 "**/timetill15** - Displays the amount of time until the next DAY 15, down to the second!\n" \
                 "**/howareyou15** - If you'd like to ask me how I'm doing, use this! I'm only programmed to respond " \
                 "with the same message though.\n" \
+                "**/repo15** - This will make me share the public GitHub repository with all of my code! If you'd " \
+                "like to see what goes on under the hood, have a look! My changelog can also be found here!\n" \
                 "\n" \
                 "I was told that I would be getting more features in the future :OO, so I'll keep you updated!\n" \
                 "All of these times are in MDT/MST, at least until I get upgraded to accommodate for other times.\n" \
@@ -145,6 +140,13 @@ async def time_to_15(ctx):
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
     await ctx.send("I'm having a blast! How are you doing?")
+
+
+# On command '/repo15', send message sharing the GitHub repository link.
+@bot.command(name='repo15')
+async def repo_15(ctx):
+    await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/day15\n"
+                   "It's pretty neat stuff! Ask @Caker for more info.")
 
 
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
