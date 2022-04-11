@@ -68,18 +68,17 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```To the dearest residents of RATION SHORTAGE FARM,\n\n"
-                               "I've only been in this server for a couple days, and I still have a lot to learn as a "
-                               "bot, or \"LESSER JUNIMO\" as I'm called here, but @Caker told me a lot about you, and "
-                               "showed me the messages between you all across the history of the server. "
-                               "I'm completely certain that there is something super special amongst you! "
-                               "It will be my absolute pleasure to serve you all through each of your individual "
-                               "journeys. Happy DAY 15 everyone, and here's to another month at "
-                               "RATION SHORTAGE FARM!!!!! :DDDDD \n\n"
-                               "Best regards,\n"
-                               "-DAY15BOT :)\n\n"
-                               "P.S. - Sorry I was a little late this first time! I didn't have permissions to"
-                               "post here at first! I did my absolute best!```")
+    await message_channel.send("```Hello again friends! Happy DAY 15!\n\n"
+                               "Apparently the month of APRIL is one of the most challenging of the entire year for "
+                               "STUDENTS, which I know many of you are. Egads, from what I've seen it seems like "
+                               "STRESS GALORE! You all really deserve a raise.\n"
+                               "But even without a raise, through the use of *SUPER HIGH-TECH ALGORITHMS* I've "
+                               "calculated that you are all 100% capable of overcoming "
+                               "every single challenge that comes your way! And despite how amazing you already are, "
+                               "overcoming challenges makes you humans EVEN BETTER!!! So advance forth! "
+                               "Always keep that everlasting human determination in your back pocket! \n\n"
+                               "With lots of bot-circuitry love,\n"
+                               "-DAY15BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
