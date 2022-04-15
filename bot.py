@@ -76,7 +76,7 @@ async def check_to15():
                                "calculated that you are all 100% capable of overcoming "
                                "every single challenge that comes your way! And despite how amazing you already are, "
                                "overcoming challenges makes you humans EVEN BETTER!!! So advance forth! "
-                               "Always keep that everlasting human determination in your back pocket! \n\n"
+                               "Always keep that everlasting human determination in your back pocket. \n\n"
                                "With lots of bot-circuitry love,\n"
                                "-DAY15BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
