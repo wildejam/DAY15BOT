@@ -109,7 +109,7 @@ async def before():
 @bot.command(name='help15')
 async def help15(ctx):
     response = "__Hello! :OO__ I am the DAY 15 Bot. I send a ping to everyone on the 15th day of every month in " \
-               "the hopes of boosting your morale, even if it's just a little bit! Here are some available " \
+               "the hopes of boosting your morale, even just a little bit! Here are some available " \
                "commands:\n\n" \
                 "**/help15** - You should already know this one; it prints this message!\n" \
                 "**/timetill15** - Displays the amount of time until the next DAY 15, down to the second!\n" \
