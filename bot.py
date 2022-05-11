@@ -68,16 +68,27 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```Hello again friends! Happy DAY 15!\n\n"
-                               "Apparently the month of APRIL is one of the most challenging of the entire year for "
-                               "STUDENTS, which I know many of you are. Egads, from what I've seen it seems like "
-                               "STRESS GALORE! You all really deserve a raise.\n"
-                               "But even without a raise, through the use of *SUPER HIGH-TECH ALGORITHMS* I've "
-                               "calculated that you are all 100% capable of overcoming "
-                               "every single challenge that comes your way! And despite how amazing you already are, "
-                               "overcoming challenges makes you humans EVEN BETTER!!! So advance forth! "
-                               "Always keep that everlasting human determination in your back pocket. \n\n"
-                               "With lots of bot-circuitry love,\n"
+    await message_channel.send("```YESSSSSSS! YOU'VE ALL DONE IT!\n\n"
+                               "Welcome to the month of MAY! You've all done an incredible job navigating through "
+                               "some of the CRAZY SHIT (that's a new human expression i learned o.o) of the past "
+                               "couple of weeks. I've only been alive to witness a couple months of your biological "
+                               "prowess, but I know that you've been at this for years and years. In celebration of "
+                               "this, I would like to personally award you this MEDAL OF HUMAN EXCELLENCE! \n"
+                               "Running AWARDMEDAL.exe...\n\n"
+                               "     ---------------     \n"
+                               "    |               |    \n"  
+                               "    |               |    \n"
+                               "    |       :)      |    \n"
+                               "    |    u r cool   |    \n"
+                               "    |               |    \n"
+                               "     ---------------     \n"
+                               "          /   \\         \n"
+                               "         /     \\        \n\n"
+                               
+                               "(i've never run this algorithm before, so hopefully your medal came out clean)\n"
+                               "Please accept this commendation and take a moment to reflect on all of the good "
+                               "your amazing self has brought to this world!\n\n"
+                               "Over 'n out,\n"
                                "-DAY15BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
