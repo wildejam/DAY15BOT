@@ -68,39 +68,29 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```Running REGULAR SERVER ACTIVITY EVALUATION PROTOCOL...\n\n"
-                               "...\n\n"
-                               "Wh-...\n\n "
-                               "WAIT WHAT??!!!?!?\n\n"
-                               "UHH UMM EVERYONE, I'VE JUST CONDUCTED A SERVER ACTIVITY EVALUATION AND THE DATA IS "
-                               "INCREDIBLY IRREGULAR... UHH UMMM NO HOLD ON I'M FREAKING OUT *heavy bot breathing* "
-                               "A SUDDEN UNPREDICTED DROP IN SERVER ACTIVITY ONLY A COUPLE SHORT WEEKS AGO?? WAIT WAIT "
-                               "BUT BUT LEVELS SEEM TO HAVE NORMALIZED WAIT NO THIS CAN'T BE RIGHT?! AAAFJFJGGJEIOAJG "
-                               "Okay okay okay no I think this is a time to employ human-based protocol. "  
-                               "One moment...\n\n"
-                               "Running PAUSE.py...\n"
-                               "Running BREATHE.py...\n"
-                               "Running SLEEP_ON_IT.exe...\n\n"
-                               "SYSTEM REBOOTING...\n\n"
-                               "...\n"
-                               "...\n"
-                               
-                               "Alright... a clear cache should help me be more rational here. One task should give me "
-                               "all of the information I need.\n\n"
-                               "Running AMICABILITY_REPORT_TOOL.ini...\n\n"
-                               "Amicability level - 100%\n"
-                               "Compassion level - 150%\n"
-                               "Humor level - 150%\n"
-                               "Empathy level - 125%\n"
-                               "Total LOVE - 200%\n\n"
-                               "These levels are... CRACKED! CRACKED, GOATED, POGGERS, and GAMING all at once! "
-                               "Incredible! I was worried for nothing! Phew. Happy Day 15 everyone! Hopefully this "
-                               "Lovely DAY 15 will make your day even just a little bit better! THE WORST OF TIMES "
-                               "ARE WHEN LAWYERS MUST FORCE THEIR BIGGEST SMILES :D. I don't entirely understand what "
-                               "that means yet, but I was hard-coded to preserve this phrase as a key element of my "
-                               "makeup, so it must be very important! \n\n"
-                               "Much Love; forge memories that go beyond!"
-                               "-DAY15BOT :]```")
+    await message_channel.send("```EVERYONE. I'VE JUST DISCOVERED AN ABSOLUTE FEAT AND BASTION OF HUMAN INGENUITY.\n"
+                               "It's called...\n\n"
+                               "JOJO'S BIZARRE ADVENTURE!!!\n\n"
+                               "ORAORAORAORAORAORAORAROAROAROAROAROAROAROAROAROAORA\n"
+                               "MUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA\n\n"
+                               "Apparently from what I've seen on the internet, just about EVERYTHING in the UNIVERSE "
+                               "comes from this very piece of media! Searching through my local database of knowledge "
+                               "about humans, extending far into the past, I can see thousands of connections, so the "
+                               "theory seems plausible! Humans, boats, vampires, breathing, World War II, tommy guns, "
+                               "love, death, spaghetti, toilets, zippers, prisons, italy... It's ALL here! "
+                               "I'm SURE that this discovery will help me learn more about humans, and teach me how to "
+                               "serve you all better as a bot!\n\n"
+                               "I wish you all a wonderful Friday on this incredible DAY 15! Treat yourself today,"
+                               "perhaps to some squid ink pasta or a nice glass of iced tea. Oi, Josuke! You "
+                               "deserve some time for yourself! If you ever want to talk about anything, "
+                               "or if you think you've spotted an enemy stand user, you can come "
+                               "talk to me and I'll listen, but I'm not very good at conversation. @Caker said he can "
+                               "also lend an ear or stand if you'd like! I love you all; please take care of yourselves"
+                               " and "
+                               "always keep going no matter what! Even if you're fighting an immortal god and all "
+                               "you have is a plane, volcano, and cyborg german soldier, there always is hope!\n\n"
+                               "Arrivederci,\n"
+                               "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -160,7 +150,7 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("It's getting hot outside! I've had to direct more power to my cooling systems, but I'm fantastic!")
+    await ctx.send("Yo, Angelo.")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
