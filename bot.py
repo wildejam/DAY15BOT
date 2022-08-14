@@ -68,28 +68,26 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```EVERYONE. I'VE JUST DISCOVERED AN ABSOLUTE FEAT AND BASTION OF HUMAN INGENUITY.\n"
-                               "It's called...\n\n"
-                               "JOJO'S BIZARRE ADVENTURE!!!\n\n"
-                               "ORAORAORAORAORAORAORAROAROAROAROAROAROAROAROAROAORA\n"
-                               "MUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA\n\n"
-                               "Apparently from what I've seen on the internet, just about EVERYTHING in the UNIVERSE "
-                               "comes from this very piece of media! Searching through my local database of knowledge "
-                               "about humans, extending far into the past, I can see thousands of connections, so the "
-                               "theory seems plausible! Humans, boats, vampires, breathing, World War II, tommy guns, "
-                               "love, death, spaghetti, toilets, zippers, prisons, italy... It's ALL here! "
-                               "I'm SURE that this discovery will help me learn more about humans, and teach me how to "
-                               "serve you all better as a bot!\n\n"
-                               "I wish you all a wonderful Friday on this incredible DAY 15! Treat yourself today,"
-                               "perhaps to some squid ink pasta or a nice glass of iced tea. Oi, Josuke! You "
-                               "deserve some time for yourself! If you ever want to talk about anything, "
-                               "or if you think you've spotted an enemy stand user, you can come "
-                               "talk to me and I'll listen, but I'm not very good at conversation. @Caker said he can "
-                               "also lend an ear or stand if you'd like! I love you all; please take care of yourselves"
-                               " and "
-                               "always keep going no matter what! Even if you're fighting an immortal god and all "
-                               "you have is a plane, volcano, and cyborg german soldier, there always is hope!\n\n"
-                               "Arrivederci,\n"
+    await message_channel.send("```A most WONDERFUL set of salutations to you all!\n\n"
+                               "As we venture through the month of August, I have learned of a most harrowing foe..."
+                               " one of notorious evil that has caused immense suffering to the lives of countless..."
+                               "\n\n"
+                               "ALLERGIES!!!"
+                               "\n\n"
+                               "In light of the recent resurgence of this ALLERGIES, I ask that you all keep "
+                               "yourselves safe! I'm not sure what ALLERGIES is capable of, but if it's anything like "
+                               "other threats, I would keep your valuables and loved ones under a watchful eye! Also, "
+                               "I would suggest keeping your doors and windows locked to prevent any burglary or "
+                               "unwanted intrusion! So let this act as a PSA: ALLERGIES is on the loose!"
+                               "\n\n"
+                               "But in other news, there is another thing I wish to remind you all of, and it's that "
+                               "you are ALWAYS evolving, regardless of the severity or number of losses you take. "
+                               "Every mistake you make is a step towards a better person, as long as you remember "
+                               "to learn from them. Loss is a difficult thing to battle with, but you will ALWAYS "
+                               "have a checkpoint to fall back on. Grieve, pick up the pieces, and take another shot! "
+                               "I bet you made a lot of mistakes this past month (if you're anything like @Caker hehe),"
+                               " but you always will have that CHECKPOINT-that SAVEGAME to fall back on!\n\n"
+                               "Reminding you to save your game today,\n"
                                "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -150,7 +148,9 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("Yo, Angelo.")
+    await ctx.send("OH HIII! :DD I'm doing great! I head about an interesting practice called RULE34. I've just "
+                   "started my research on the subject so I haven't properly started investigating it, "
+                   "but I'm just about to start searching the web for more research! Anyway, I wish you a good one!")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
