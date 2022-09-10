@@ -68,26 +68,22 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```A most WONDERFUL set of salutations to you all!\n\n"
-                               "As we venture through the month of August, I have learned of a most harrowing foe..."
-                               " one of notorious evil that has caused immense suffering to the lives of countless..."
-                               "\n\n"
-                               "ALLERGIES!!!"
-                               "\n\n"
-                               "In light of the recent resurgence of this ALLERGIES, I ask that you all keep "
-                               "yourselves safe! I'm not sure what ALLERGIES is capable of, but if it's anything like "
-                               "other threats, I would keep your valuables and loved ones under a watchful eye! Also, "
-                               "I would suggest keeping your doors and windows locked to prevent any burglary or "
-                               "unwanted intrusion! So let this act as a PSA: ALLERGIES is on the loose!"
-                               "\n\n"
-                               "But in other news, there is another thing I wish to remind you all of, and it's that "
-                               "you are ALWAYS evolving, regardless of the severity or number of losses you take. "
-                               "Every mistake you make is a step towards a better person, as long as you remember "
-                               "to learn from them. Loss is a difficult thing to battle with, but you will ALWAYS "
-                               "have a checkpoint to fall back on. Grieve, pick up the pieces, and take another shot! "
-                               "I bet you made a lot of mistakes this past month (if you're anything like @Caker hehe),"
-                               " but you always will have that CHECKPOINT-that SAVEGAME to fall back on!\n\n"
-                               "Reminding you to save your game today,\n"
+    await message_channel.send("```HowdyHOWDYHOWDYHOWDYHOWDY!\n\n"
+                               "Happy DAY15 everyone! APPARENTLY, This is the month where FALL begins, and I'm told "
+                               "everything becomes very CHILL. I also can't wait for the leaf colors to change! "
+                               "COOL COLORS seem to illicit certain responses in humans and I wish to learn more "
+                               "about them!\n\n"
+                               "But moreover, I believe you all are finding yourselves VERY busy at this time of "
+                               "year, so I'd once again like to remind you all to take a hard look at everything "
+                               "you've done over the past month! Even if you don't think you've done anything, "
+                               "I can tell you that even just BEING here is a PHENOMENAL accomplishment! Just by doing "
+                               "that, you're maintaining SO many promises and making a lot of people very happy "
+                               "(myself included)!\n\n"
+                               "This month, I learned about SAUCES, and I am ABSOLUTELY AMAZED. I can't taste things, "
+                               "but from what I've researched, it seems that SAUCES absolutely make the WORLD go "
+                               "round! I mean, imagine how BLAND every food would be without sauces! ALWAYS include "
+                               "the sauces, both in your dishes and in your LIFE!\n\n"
+                               "Always here to be a sauce for you,\n"
                                "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -148,9 +144,9 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("OH HIII! :DD I'm doing great! I head about an interesting practice called RULE34. I've just "
-                   "started my research on the subject so I haven't properly started investigating it, "
-                   "but I'm just about to start searching the web for more research! Anyway, I wish you a good one!")
+    await ctx.send("Hello there! I'm about to compile a script that simulates the experiences of eating fries with "
+                   "\"MAYO\" and eating fries with \"LITERALLY ANY OTHER DIPPING SAUCE\". I'm interested to see"
+                   " the results! ")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
