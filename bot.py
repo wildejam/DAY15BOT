@@ -144,9 +144,8 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("Hello there! I'm about to compile a script that simulates the experiences of eating fries with "
-                   "\"MAYO\" and eating fries with \"LITERALLY ANY OTHER DIPPING SAUCE\". I'm interested to see"
-                   " the results! ")
+    await ctx.send("I REALLY like mayo! You can even use it as a dipping sauce! These are the findings of my most "
+                   "recent program! You should try dipping fries and nuggies in it, it's a blast! ")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
