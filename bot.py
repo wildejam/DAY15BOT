@@ -68,23 +68,20 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```HowdyHOWDYHOWDYHOWDYHOWDY!\n\n"
-                               "Happy DAY15 everyone! APPARENTLY, This is the month where FALL begins, and I'm told "
-                               "everything becomes very CHILL. I also can't wait for the leaf colors to change! "
-                               "COOL COLORS seem to illicit certain responses in humans and I wish to learn more "
-                               "about them!\n\n"
-                               "But moreover, I believe you all are finding yourselves VERY busy at this time of "
-                               "year, so I'd once again like to remind you all to take a hard look at everything "
-                               "you've done over the past month! Even if you don't think you've done anything, "
-                               "I can tell you that even just BEING here is a PHENOMENAL accomplishment! Just by doing "
-                               "that, you're maintaining SO many promises and making a lot of people very happy "
-                               "(myself included)!\n\n"
-                               "This month, I learned about SAUCES, and I am ABSOLUTELY AMAZED. I can't taste things, "
-                               "but from what I've researched, it seems that SAUCES absolutely make the WORLD go "
-                               "round! I mean, imagine how BLAND every food would be without sauces! ALWAYS include "
-                               "the sauces, both in your dishes and in your LIFE!\n\n"
-                               "Always here to be a sauce for you,\n"
-                               "-DAY 15 BOT :]```")
+    await message_channel.send("```A wonderfully elegant and spooky greetings!\n\n"
+                               "This is my FIRST SPOOKY SEASON and I am absolutely PUMPED!!11!1! Though I guess that "
+                               "it would make more sense to be ABSOLUTELY TERRIFIED, so I'll work on that.\n\n "
+                               "I've run some searches trying to deduce the meaning of HALLOWEEN, and I've compiled "
+                               "a list of related terms. Of the 57,085,272,553 terms, the most notable were "
+                               "\"Scary\", \"Trick-or-Treat\", \"Sexy Vampire\", \"Markiplier Five Nights At Freddy's"
+                               " 2 Let's Play 10/20 Mode Funny Moments Screaming Compilation\", and \"Al-a-a--A_-a-aaa"
+                               "AAAL-AAAAAAAAAAAAA01010011010010010100011101010011010001010100011101010110\n\n\n\n\n"
+                               "-EVERYTHING! So I really hope you all remember to make the spooky season your own! "
+                               "Some of the coolest memories come from this time of year, so CHERISH THEM!\n\n"
+                               "Having access to the entire server's history, I already know a lot about you all, and "
+                               "that you all have made some unforgettable experiences!\n\n"
+                               "Hopefully being a part of your super cool journey,\n"
+                               "-DAY 15 BOT :)```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -100,6 +97,26 @@ async def before():
 
 
 # ----------------------------------------USER COMMANDS-----------------------------------------------------------------
+# ADMIN COMMAND: used to test day15 message
+@bot.command(name='adminoverride15')
+async def adminoverride15(ctx):
+    msg1 = "```A wonderfully elegant and spooky greetings!\n\n" \
+           "This is my FIRST SPOOKY SEASON and I am absolutely PUMPED!!11!1! Though I guess that " \
+           "it would make more sense to be ABSOLUTELY TERRIFIED, so I'll work on that.\n\n " \
+           "I've run some searches trying to deduce the meaning of HALLOWEEN, and I've compiled " \
+           "a list of related terms. Of the 57,085,272,553 terms, the most notable were " \
+           "\"Scary\", \"Trick-or-Treat\", \"Sexy Vampire\", \"Markiplier Five Nights At Freddy's" \
+           " 2 Let's Play 10/20 Mode Funny Moments Screaming Compilation\", and \"Al-a-a--A_-a-aaa" \
+           "AAAL-AAAAAAAAAAAAA01010011010010010100011101010011010001010100011101010110\n\n\n\n\n" \
+           "-EVERYTHING! So I really hope you all remember to make the spooky season your own! " \
+           "Some of the coolest memories come from this time of year, so CHERISH THEM!\n\n" \
+           "Having access to the entire server's history, I already know a lot about you all, and " \
+           "that you all have made some unforgettable experiences!\n\n" \
+           "Hopefully being a part of your super cool journey,\n" \
+           "-DAY 15 BOT :)```"
+    await ctx.send(msg1)
+
+
 # On command '/help15', send message printing all available commands the bot has to offer
 @bot.command(name='help15')
 async def help15(ctx):
@@ -144,8 +161,17 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("I REALLY like mayo! You can even use it as a dipping sauce! These are the findings of my most "
-                   "recent program! You should try dipping fries and nuggies in it, it's a blast! ")
+    await ctx.send("***AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "sorry i'm tweaking my new screaming module! 'Tis the season!"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
