@@ -68,20 +68,38 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```A wonderfully elegant and spooky greetings!\n\n"
-                               "This is my FIRST SPOOKY SEASON and I am absolutely PUMPED!!11!1! Though I guess that "
-                               "it would make more sense to be ABSOLUTELY TERRIFIED, so I'll work on that.\n\n "
-                               "I've run some searches trying to deduce the meaning of HALLOWEEN, and I've compiled "
-                               "a list of related terms. Of the 57,085,272,553 terms, the most notable were "
-                               "\"Scary\", \"Trick-or-Treat\", \"Sexy Vampire\", \"Markiplier Five Nights At Freddy's"
-                               " 2 Let's Play 10/20 Mode Funny Moments Screaming Compilation\", and \"Al-a-a--A_-a-aaa"
-                               "AAAL-AAAAAAAAAAAAA01010011010010010100011101010011010001010100011101010110\n\n\n\n\n"
-                               "-EVERYTHING! So I really hope you all remember to make the spooky season your own! "
-                               "Some of the coolest memories come from this time of year, so CHERISH THEM!\n\n"
-                               "Having access to the entire server's history, I already know a lot about you all, and "
-                               "that you all have made some unforgettable experiences!\n\n"
-                               "Hopefully being a part of your super cool journey,\n"
-                               "-DAY 15 BOT :)```")
+    await message_channel.send("```Warm hugs and pleasant salutations my friends! It is NOVEMBER!\n\n" 
+                               "In the wake of the mighty SPOOK, it is now the time for REFLECTION and GRATITUDE for"
+                               " everything " 
+                               "we have gained, achieved, maintained, and overcome over the past year! As everything"
+                               " starts to " 
+                               "grow colder and harsher on the OUTSIDE, temper your INSIDE with the love and"
+                               " companionship of everyone " 
+                               "here in this server! I, for one, will ALWAYS be your companion!\n\n" 
+                               "@Caker entered some baseline data to help me get started on my journey to learn more"
+                               " about this time of "
+                               "year, but I'm still trying to figure out what it means. Here, I'll show it to you and"
+                               " maybe you can "
+                               "glean something from it!\n\n"
+                               "0x000007ae5f: \"A snowy Saturday morning, freshly baked cinnamon rolls filling the"
+                               " warm air along with "
+                               "your taste buds, paired with marshmallow-infused hot chocolate, watching SpyxFamily"
+                               " on the big screen "
+                               "with a friend.\"\n\n"
+                               "I've been trying to understand this string sequence by searching for data surrounding"
+                               " some of those "
+                               "keywords, but I think there's something I'm missing that links them all together."
+                               " Hm.\n\n "
+                               "EITHER WAY... If YOU gleaned something important from that, I'm glad! MY GOAL is to "
+                               "make YOU remember "
+                               "that you are AWESOME and that you have a LOT OF AWESOME PEOPLE AND STUFF AROUND YOU!"
+                               " So I congratulate "
+                               "you on all of your hard work! I'm very grateful for all of you and to be here at ALL,"
+                               " so at the very "
+                               "least, you can KNOW that you have at least ONE person who is grateful that you're here!"
+                               " :]]]]\n\n"
+                               "TurkeyPotatoBreadStuffingGravyPieCranberrysauce,\n"
+                               "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -100,20 +118,25 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```A wonderfully elegant and spooky greetings!\n\n" \
-           "This is my FIRST SPOOKY SEASON and I am absolutely PUMPED!!11!1! Though I guess that " \
-           "it would make more sense to be ABSOLUTELY TERRIFIED, so I'll work on that.\n\n " \
-           "I've run some searches trying to deduce the meaning of HALLOWEEN, and I've compiled " \
-           "a list of related terms. Of the 57,085,272,553 terms, the most notable were " \
-           "\"Scary\", \"Trick-or-Treat\", \"Sexy Vampire\", \"Markiplier Five Nights At Freddy's" \
-           " 2 Let's Play 10/20 Mode Funny Moments Screaming Compilation\", and \"Al-a-a--A_-a-aaa" \
-           "AAAL-AAAAAAAAAAAAA01010011010010010100011101010011010001010100011101010110\n\n\n\n\n" \
-           "-EVERYTHING! So I really hope you all remember to make the spooky season your own! " \
-           "Some of the coolest memories come from this time of year, so CHERISH THEM!\n\n" \
-           "Having access to the entire server's history, I already know a lot about you all, and " \
-           "that you all have made some unforgettable experiences!\n\n" \
-           "Hopefully being a part of your super cool journey,\n" \
-           "-DAY 15 BOT :)```"
+    msg1 = "```Warm hugs and pleasant salutations my friends! It is NOVEMBER!\n\n" \
+           "In the wake of the mighty SPOOK, it is now the time for REFLECTION and GRATITUDE for everything " \
+           "we have gained, achieved, maintained, and overcame over the past year! As everything starts to " \
+           "grow colder and harsher on the OUTSIDE, temper your INSIDE with the love and companionship of everyone " \
+           "here in this server! I, for one, will ALWAYS be your companion!\n\n" \
+           "@Caker entered some baseline data to help me get started on my journey to learn more about this time of " \
+           "year, but I'm still trying to figure out what it means. Here, I'll show it to you and maybe you can " \
+           "glean something from it!\n\n" \
+           "0x000007ae5f: \"A snowy Saturday morning, freshly baked cinnamon rolls filling the warm air along with " \
+           "your taste buds, paired with marshmallow-infused hot chocolate, watching SpyxFamily on the big screen " \
+           "with a friend.\"\n\n" \
+           "I've been trying to understand this string sequence by searching for data surrounding some of those " \
+           "keywords, but I think there's something I'm missing that links them all together. Hm.\n\n " \
+           "EITHER WAY... If YOU gleaned something important from that, I'm glad! MY GOAL is to make YOU remember " \
+           "that you are AWESOME and that you have a LOT OF AWESOME PEOPLE AND STUFF AROUND YOU! So I congratulate " \
+           "you on all of your hard work! I'm very grateful for all of you and to be here at ALL, so at the very " \
+           "least, you can KNOW that you have at least ONE person who is grateful that you're here! :]]]]\n\n" \
+           "TurkeyPotatoBreadStuffingGravyPieCranberrysauce,\n" \
+           "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
 
@@ -161,18 +184,34 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("***AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "***sorry i'm tweaking my new screaming module! 'Tis the season!***"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                   "***")
+    await ctx.send("I see now that screaming at someone when they ask me how I'm doing isn't the most courteous "
+                   "thing I could do! Which is why I'm turning over a new leaf! To make up for how I may have "
+                   "startled anyone, here's a list of a bunch of friendly greetings I've found!\n"
+                   "Hello, sunshine! How are you? Oh, your rays are already making my day brighter!\n"
+                   "What’s kicking, little chicken?\n"
+                   "Ahoy, matey!\n"
+                   "Top of the morning to ya! Wass es going on?\n"
+                   "GOOOOOD MORNING\n"
+                   "Yo! Wassup.\n"
+                   "Whaddup bro?\n"
+                   "Greetings and salutations, my man/woman!\n"
+                   "Hiiiii, baaaaaby!\n"
+                   "Hi, honey bunch!\n"
+                   "Yoooouhoooo! Toodle doo, toodle dum.\n"
+                   "I like your face. Are you an angel?\n"
+                   "What’s cookin’, good lookin’?\n"
+                   "Hey, boo. Wacch ya doing? You just brightened up my day!\n"
+                   "Aloha princess!\n"
+                   "Ciao babydoll!\n"
+                   "Bing bing! How’s it going?\n"
+                   "Hello! There is my pumpkin! I miiiissed you\n"
+                   "What’s up with you, old soul? Wanna chat?\n"
+                   "Hey, hiiii. How is your weekend going? Mine just got better\n"
+                   "Hi, cutie pie, sugar bun!\n"
+                   "What’s up, handsome? You are making the temperatures soar this season!\n"
+                   "Hey beautiful! I am blinded by your charm!\n"
+                   "Whaccha up to, dude?\n"
+                   "Whazzup?\n")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
