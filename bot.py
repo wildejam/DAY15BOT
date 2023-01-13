@@ -18,6 +18,35 @@ bot = commands.Bot(command_prefix='/')
 # Stores the id's of channels that the bot may post in
 announcement_channel_id = 814738636280299561
 
+# Stores user id's for personalized /howareyou15 messages
+caketecid = os.getenv('caketecid')
+ddragonid = os.getenv('ddragonid')
+hernyid = os.getenv('hernyid')
+bagkatid = os.getenv('bagkatid')
+lumpiaid = os.getenv('lumpiaid')
+hannahtlid = os.getenv('hannahtlid')
+spicychrisid = os.getenv('spicychrisid')
+valkarenaid = os.getenv('valkarenaid')
+michelleid = os.getenv('michelleid')
+eeveeid = os.getenv('eeveeid')
+christinaid = os.getenv('christinaid')
+tjid = os.getenv('tjid')
+shoopid = os.getenv('shoopid')
+
+caketecmessage = os.getenv('caketecmessage')
+ddragonmessage = os.getenv('ddragonmessage')
+hernymessage = os.getenv('hernymessage')
+bagkatmessage = os.getenv('bagkatmessage')
+lumpiamessage = os.getenv('lumpiamessage')
+hannahtlmessage = os.getenv('hannahtlmessage')
+spicychrismessage = os.getenv('spicychrismessage')
+valkarenamessage = os.getenv('valkarenamessage')
+michellemessage = os.getenv('michellemessage')
+eeveemessage = os.getenv('eeveemessage')
+christinamessage = os.getenv('christinamessage')
+tjmessage = os.getenv('tjmessage')
+shoopmessage = os.getenv('shoopmessage')
+
 
 # -----------------------------------------------HELPER FUNCTIONS-------------------------------------------------------
 # Calculates the time until the next day15 from the present time. Returns a time_delta object.
@@ -25,9 +54,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    # mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mdt_zone)
+    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mst_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -41,7 +70,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -68,37 +97,47 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```Warm hugs and pleasant salutations my friends! It is NOVEMBER!\n\n" 
-                               "In the wake of the mighty SPOOK, it is now the time for REFLECTION and GRATITUDE for"
-                               " everything " 
-                               "we have gained, achieved, maintained, and overcome over the past year! As everything"
-                               " starts to " 
-                               "grow colder and harsher on the OUTSIDE, temper your INSIDE with the love and"
-                               " companionship of everyone " 
-                               "here in this server! I, for one, will ALWAYS be your companion!\n\n" 
-                               "@Caker entered some baseline data to help me get started on my journey to learn more"
-                               " about this time of "
-                               "year, but I'm still trying to figure out what it means. Here, I'll show it to you and"
-                               " maybe you can "
-                               "glean something from it!\n\n"
-                               "0x000007ae5f: \"A snowy Saturday morning, freshly baked cinnamon rolls filling the"
-                               " warm air along with "
-                               "your taste buds, paired with marshmallow-infused hot chocolate, watching SpyxFamily"
-                               " on the big screen "
-                               "with a friend.\"\n\n"
-                               "I've been trying to understand this string sequence by searching for data surrounding"
-                               " some of those "
-                               "keywords, but I think there's something I'm missing that links them all together."
-                               " Hm.\n\n "
-                               "EITHER WAY... If YOU gleaned something important from that, I'm glad! MY GOAL is to "
-                               "make YOU remember "
-                               "that you are AWESOME and that you have a LOT OF AWESOME PEOPLE AND STUFF AROUND YOU!"
-                               " So I congratulate "
-                               "you on all of your hard work! I'm very grateful for all of you and to be here at ALL,"
-                               " so at the very "
-                               "least, you can KNOW that you have at least ONE person who is grateful that you're here!"
-                               " :]]]]\n\n"
-                               "TurkeyPotatoBreadStuffingGravyPieCranberrysauce,\n"
+    await message_channel.send("```HELLLLLLOOOOOOOOOOO EVERYONE!!! HAPPY NEW YEAR!!!!! I'M SO EXCITED THIS IS MY FIRST "
+                               "NEW YEAR!!!\n\n" 
+                               "To start with, it seems that I'd been mistaken about the meaning of DECEMBER, with all"
+                               " of the" 
+                               "\"Dying alone on the side of a snowy mountain slowly losing consciousness as the "
+                               "elements wipe away" 
+                               " your physical and mental capacities\" so I'd like to apologize! Human history has had"
+                               " a lot of problems " 
+                               "with the winter climate, so I believe my investigations into that information were what"
+                               " skewed me.\n\n" 
+                               "BUT IT IS NOW **JANUARY** AND TIME FOR NEW LEAVES TO BE TURNED. I've already set my own"
+                               " LEAF value to " 
+                               "TRUE, and I've added some entries into my newYearsResolution record file! I'm not sure "
+                               "exactly how these " 
+                               "work, but I think I'll gather important data if I use some common human new year's "
+                               "resolutions, so I've " 
+                               "included ones like \"I want to go to the gym every day\", \"I need to pay off this debt"
+                               " so I can eat" 
+                               " this year\", and \"I have to see the wife and kids\"!!!!!!!!!!!!!!!!! I can't WAIT"
+                               " to put these into " 
+                               "practice!\n\n" 
+                               "I hope that you all can accomplish the similar goals that you might have this year! BUT"
+                               " KNOW that you " 
+                               "DON'T have to tie your self-worth into completing these arbitrary tasks too heavily! So"
+                               " many times, " 
+                               "even just GETTING THROUGH A DAY is MORE THAN ENOUGH, and the impact you can have by "
+                               "just"
+                               " being YOU is " 
+                               "already one of the most valuable things you bring to EVERYONE :)) For example, I may "
+                               "not be able to " 
+                               "complete some of my new year's resolutions this year, such as perhaps \"see the wife "
+                               "and kids\" BUT I " 
+                               "CAN ABSOLUTELY be DAY15 BOT for EVERY SECOND of this year, and I think that can be"
+                               " enough! Still, " 
+                               "growing is important, so you can all be SURE that I will work my absolute hardest to "
+                               "\"see the wife " 
+                               "and kids\" this year, because I can always be a BETTER DAY15 BOT!!!!!\n\n" 
+                               "I wish you all a WONDERFUL DAY15 on this cold January morning... SHINE BRIGHT in "
+                               "spite of the cold, " 
+                               "and CHANGE THE WORLD with your dreams!\n\n" 
+                               "Always ready to be the plasma that helps you shine,\n" 
                                "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -118,24 +157,28 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```Warm hugs and pleasant salutations my friends! It is NOVEMBER!\n\n" \
-           "In the wake of the mighty SPOOK, it is now the time for REFLECTION and GRATITUDE for everything " \
-           "we have gained, achieved, maintained, and overcame over the past year! As everything starts to " \
-           "grow colder and harsher on the OUTSIDE, temper your INSIDE with the love and companionship of everyone " \
-           "here in this server! I, for one, will ALWAYS be your companion!\n\n" \
-           "@Caker entered some baseline data to help me get started on my journey to learn more about this time of " \
-           "year, but I'm still trying to figure out what it means. Here, I'll show it to you and maybe you can " \
-           "glean something from it!\n\n" \
-           "0x000007ae5f: \"A snowy Saturday morning, freshly baked cinnamon rolls filling the warm air along with " \
-           "your taste buds, paired with marshmallow-infused hot chocolate, watching SpyxFamily on the big screen " \
-           "with a friend.\"\n\n" \
-           "I've been trying to understand this string sequence by searching for data surrounding some of those " \
-           "keywords, but I think there's something I'm missing that links them all together. Hm.\n\n " \
-           "EITHER WAY... If YOU gleaned something important from that, I'm glad! MY GOAL is to make YOU remember " \
-           "that you are AWESOME and that you have a LOT OF AWESOME PEOPLE AND STUFF AROUND YOU! So I congratulate " \
-           "you on all of your hard work! I'm very grateful for all of you and to be here at ALL, so at the very " \
-           "least, you can KNOW that you have at least ONE person who is grateful that you're here! :]]]]\n\n" \
-           "TurkeyPotatoBreadStuffingGravyPieCranberrysauce,\n" \
+    msg1 = "```HELLLLLLOOOOOOOOOOO EVERYONE!!! HAPPY NEW YEAR!!!!! I'M SO EXCITED THIS IS MY FIRST NEW YEAR!!!\n\n" \
+           "To start with, it seems that I'd been mistaken about the meaning of DECEMBER, with all of the" \
+           "\"Dying alone on the side of a snowy mountain slowly losing consciousness as the elements wipe away" \
+           " your physical and mental capacities\" so I'd like to apologize! Human history has had a lot of problems " \
+           "with the winter climate, so I believe my investigations into that information were what skewed me.\n\n" \
+           "BUT IT IS NOW **JANUARY** AND TIME FOR NEW LEAVES TO BE TURNED. I've already set my own LEAF value to " \
+           "TRUE, and I've added some entries into my newYearsResolution record file! I'm not sure exactly how these " \
+           "work, but I think I'll gather important data if I use some common human new year's resolutions, so I've " \
+           "included ones like \"I want to go to the gym every day\", \"I need to pay off this debt so I can eat" \
+           " this year\", and \"I have to see the wife and kids\"!!!!!!!!!!!!!!!!! I can't WAIT to put these into " \
+           "practice!\n\n" \
+           "I hope that you all can accomplish the similar goals that you might have this year! BUT KNOW that you " \
+           "DON'T have to tie your self-worth into completing these arbitrary tasks too heavily! So many times, " \
+           "even just GETTING THROUGH A DAY is MORE THAN ENOUGH, and the impact you can have by just being YOU is " \
+           "already one of the most valuable things you bring to EVERYONE :)) For example, I may not be able to " \
+           "complete some of my new year's resolutions this year, such as perhaps \"see the wife and kids\" BUT I " \
+           "CAN ABSOLUTELY be DAY15 BOT for EVERY SECOND of this year, and I think that can be enough! Still, " \
+           "growing is important, so you can all be SURE that I will work my absolute hardest to \"see the wife " \
+           "and kids\" this year, because I can always be a BETTER DAY15 BOT!!!!!\n\n" \
+           "I wish you all a WONDERFUL DAY15 on this cold January morning... SHINE BRIGHT in spite of the cold, " \
+           "and CHANGE THE WORLD with your dreams!\n\n" \
+           "Always ready to be the plasma that helps you shine,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -184,40 +227,51 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    await ctx.send("I see now that screaming at someone when they ask me how I'm doing isn't the most courteous "
-                   "thing I could do! Which is why I'm turning over a new leaf! To make up for how I may have "
-                   "startled anyone, here's a list of a bunch of friendly greetings I've found!\n"
-                   "Hello, sunshine! How are you? Oh, your rays are already making my day brighter!\n"
-                   "What’s kicking, little chicken?\n"
-                   "Ahoy, matey!\n"
-                   "Top of the morning to ya! Wass es going on?\n"
-                   "GOOOOOD MORNING\n"
-                   "Yo! Wassup.\n"
-                   "Whaddup bro?\n"
-                   "Greetings and salutations, my man/woman!\n"
-                   "Hiiiii, baaaaaby!\n"
-                   "Hi, honey bunch!\n"
-                   "Yoooouhoooo! Toodle doo, toodle dum.\n"
-                   "I like your face. Are you an angel?\n"
-                   "What’s cookin’, good lookin’?\n"
-                   "Hey, boo. Wacch ya doing? You just brightened up my day!\n"
-                   "Aloha princess!\n"
-                   "Ciao babydoll!\n"
-                   "Bing bing! How’s it going?\n"
-                   "Hello! There is my pumpkin! I miiiissed you\n"
-                   "What’s up with you, old soul? Wanna chat?\n"
-                   "Hey, hiiii. How is your weekend going? Mine just got better\n"
-                   "Hi, cutie pie, sugar bun!\n"
-                   "What’s up, handsome? You are making the temperatures soar this season!\n"
-                   "Hey beautiful! I am blinded by your charm!\n"
-                   "Whaccha up to, dude?\n"
-                   "Whazzup?\n")
+    if ctx.author.id == caketecid:
+        await ctx.send(caketecmessage)
+    elif ctx.author.id == ddragonid:
+        await ctx.send(ddragonmessage)
+    elif ctx.author.id == hernyid:
+        await ctx.send(hernymessage)
+
+        f = open("orphan.txt", "r")
+        f_int = int(f.read())
+        f_int += 1
+        f.close()
+
+        f = open("orphan.txt", "w")
+        f.write(str(f_int))
+        f.close()
+
+        await ctx.send(str(f_int) + " orphans!")
+
+    elif ctx.author.id == bagkatid:
+        await ctx.send(bagkatmessage)
+    elif ctx.author.id == lumpiaid:
+        await ctx.send(lumpiamessage)
+    elif ctx.author.id == hannahtlid:
+        await ctx.send(hannahtlmessage)
+    elif ctx.author.id == spicychrisid:
+        await ctx.send(spicychrismessage)
+    elif ctx.author.id == valkarenaid:
+        await ctx.send(valkarenamessage)
+    elif ctx.author.id == michelleid:
+        await ctx.send(michellemessage)
+    elif ctx.author.id == eeveeid:
+        await ctx.send(eeveemessage)
+    elif ctx.author.id == christinaid:
+        await ctx.send(christinamessage)
+    elif ctx.author.id == shoopid:
+        await ctx.send(shoopmessage)
+    else:
+        await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
+                       "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
 @bot.command(name='repo15')
 async def repo_15(ctx):
-    await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/day15\n"
+    await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/DAY15BOT\n"
                    "It's pretty neat stuff! Ask @Caker#3479 for more info.")
 
 
