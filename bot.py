@@ -227,11 +227,11 @@ async def time_to_15(ctx):
 # On command '/howareyou15', send message showing how the bot is doing!
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
-    if ctx.author.id == caketecid:
+    if str(ctx.author.id) == caketecid:
         await ctx.send(caketecmessage)
-    elif ctx.author.id == ddragonid:
+    elif str(ctx.author.id) == ddragonid:
         await ctx.send(ddragonmessage)
-    elif ctx.author.id == hernyid:
+    elif str(ctx.author.id) == hernyid:
         await ctx.send(hernymessage)
 
         f = open("orphan.txt", "r")
@@ -245,23 +245,23 @@ async def how_are_you_15(ctx):
 
         await ctx.send(str(f_int) + " orphans!")
 
-    elif ctx.author.id == bagkatid:
+    elif str(ctx.author.id) == bagkatid:
         await ctx.send(bagkatmessage)
-    elif ctx.author.id == lumpiaid:
+    elif str(ctx.author.id) == lumpiaid:
         await ctx.send(lumpiamessage)
-    elif ctx.author.id == hannahtlid:
+    elif str(ctx.author.id) == hannahtlid:
         await ctx.send(hannahtlmessage)
-    elif ctx.author.id == spicychrisid:
+    elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
-    elif ctx.author.id == valkarenaid:
+    elif str(ctx.author.id) == valkarenaid:
         await ctx.send(valkarenamessage)
-    elif ctx.author.id == michelleid:
+    elif str(ctx.author.id) == michelleid:
         await ctx.send(michellemessage)
-    elif ctx.author.id == eeveeid:
+    elif str(ctx.author.id) == eeveeid:
         await ctx.send(eeveemessage)
-    elif ctx.author.id == christinaid:
+    elif str(ctx.author.id) == christinaid:
         await ctx.send(christinamessage)
-    elif ctx.author.id == shoopid:
+    elif str(ctx.author.id) == shoopid:
         await ctx.send(shoopmessage)
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
