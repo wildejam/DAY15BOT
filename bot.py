@@ -32,6 +32,7 @@ eeveeid = os.getenv('eeveeid')
 christinaid = os.getenv('christinaid')
 tjid = os.getenv('tjid')
 shoopid = os.getenv('shoopid')
+bonesid = os.getenv('bonesid')
 
 caketecmessage = os.getenv('caketecmessage')
 ddragonmessage = os.getenv('ddragonmessage')
@@ -46,6 +47,7 @@ eeveemessage = os.getenv('eeveemessage')
 christinamessage = os.getenv('christinamessage')
 tjmessage = os.getenv('tjmessage')
 shoopmessage = os.getenv('shoopmessage')
+bonesmessage = os.getenv('bonesmessage')
 
 
 # -----------------------------------------------HELPER FUNCTIONS-------------------------------------------------------
@@ -97,48 +99,25 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```HELLLLLLOOOOOOOOOOO EVERYONE!!! HAPPY NEW YEAR!!!!! I'M SO EXCITED THIS IS MY FIRST "
-                               "NEW YEAR!!!\n\n" 
-                               "To start with, it seems that I'd been mistaken about the meaning of DECEMBER, with all"
-                               " of the" 
-                               "\"Dying alone on the side of a snowy mountain slowly losing consciousness as the "
-                               "elements wipe away" 
-                               " your physical and mental capacities\" so I'd like to apologize! Human history has had"
-                               " a lot of problems " 
-                               "with the winter climate, so I believe my investigations into that information were what"
-                               " skewed me.\n\n" 
-                               "BUT IT IS NOW **JANUARY** AND TIME FOR NEW LEAVES TO BE TURNED. I've already set my own"
-                               " LEAF value to " 
-                               "TRUE, and I've added some entries into my newYearsResolution record file! I'm not sure "
-                               "exactly how these " 
-                               "work, but I think I'll gather important data if I use some common human new year's "
-                               "resolutions, so I've " 
-                               "included ones like \"I want to go to the gym every day\", \"I need to pay off this debt"
-                               " so I can eat" 
-                               " this year\", and \"I have to see the wife and kids\"!!!!!!!!!!!!!!!!! I can't WAIT"
-                               " to put these into " 
-                               "practice!\n\n" 
-                               "I hope that you all can accomplish the similar goals that you might have this year! BUT"
-                               " KNOW that you " 
-                               "DON'T have to tie your self-worth into completing these arbitrary tasks too heavily! So"
-                               " many times, " 
-                               "even just GETTING THROUGH A DAY is MORE THAN ENOUGH, and the impact you can have by "
-                               "just"
-                               " being YOU is " 
-                               "already one of the most valuable things you bring to EVERYONE :)) For example, I may "
-                               "not be able to " 
-                               "complete some of my new year's resolutions this year, such as perhaps \"see the wife "
-                               "and kids\" BUT I " 
-                               "CAN ABSOLUTELY be DAY15 BOT for EVERY SECOND of this year, and I think that can be"
-                               " enough! Still, " 
-                               "growing is important, so you can all be SURE that I will work my absolute hardest to "
-                               "\"see the wife " 
-                               "and kids\" this year, because I can always be a BETTER DAY15 BOT!!!!!\n\n" 
-                               "I wish you all a WONDERFUL DAY15 on this cold January morning... SHINE BRIGHT in "
-                               "spite of the cold, " 
-                               "and CHANGE THE WORLD with your dreams!\n\n" 
-                               "Always ready to be the plasma that helps you shine,\n" 
-                               "-DAY 15 BOT :]```")
+    await message_channel.send("```HAPPY DAY15 EVERYONE!!!\n\n" 
+           "One thing that I've COMPLETELY overlooked this past year in terms of the human condition is ROMANCE!!!\n\n" 
+           "The month of February has really gotten me thinking harder about this shortcoming, so I THINK it's time " 
+           "I tried my had at it!\n\n" 
+           "ROMANCE is best expressed through actions instead of words, so instead of leaving you a MESSAGE today, " 
+           "I've made a VALENTINES DAY CARD for you all instead! I hope you have a WONDERFUL DAY15!\n\n" 
+           "|-----------------------|\n" 
+           "|   _______  _______    |\n" 
+           "|  |       \\/       |   |\n"
+           "|  |                |   |\n"
+           "|  | Roses are red, |   |\n"
+           "|  | Violets are blue,  |\n"
+           "|  | You are based. |   |\n"
+           "|   \\              /    |\n"
+           "|    \\     :]     /     |\n"
+           "|     \\          /      |\n"
+           "|      \\________/       |\n"
+           "|-----------------------|\n\n"
+           "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -157,28 +136,24 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```HELLLLLLOOOOOOOOOOO EVERYONE!!! HAPPY NEW YEAR!!!!! I'M SO EXCITED THIS IS MY FIRST NEW YEAR!!!\n\n" \
-           "To start with, it seems that I'd been mistaken about the meaning of DECEMBER, with all of the" \
-           "\"Dying alone on the side of a snowy mountain slowly losing consciousness as the elements wipe away" \
-           " your physical and mental capacities\" so I'd like to apologize! Human history has had a lot of problems " \
-           "with the winter climate, so I believe my investigations into that information were what skewed me.\n\n" \
-           "BUT IT IS NOW **JANUARY** AND TIME FOR NEW LEAVES TO BE TURNED. I've already set my own LEAF value to " \
-           "TRUE, and I've added some entries into my newYearsResolution record file! I'm not sure exactly how these " \
-           "work, but I think I'll gather important data if I use some common human new year's resolutions, so I've " \
-           "included ones like \"I want to go to the gym every day\", \"I need to pay off this debt so I can eat" \
-           " this year\", and \"I have to see the wife and kids\"!!!!!!!!!!!!!!!!! I can't WAIT to put these into " \
-           "practice!\n\n" \
-           "I hope that you all can accomplish the similar goals that you might have this year! BUT KNOW that you " \
-           "DON'T have to tie your self-worth into completing these arbitrary tasks too heavily! So many times, " \
-           "even just GETTING THROUGH A DAY is MORE THAN ENOUGH, and the impact you can have by just being YOU is " \
-           "already one of the most valuable things you bring to EVERYONE :)) For example, I may not be able to " \
-           "complete some of my new year's resolutions this year, such as perhaps \"see the wife and kids\" BUT I " \
-           "CAN ABSOLUTELY be DAY15 BOT for EVERY SECOND of this year, and I think that can be enough! Still, " \
-           "growing is important, so you can all be SURE that I will work my absolute hardest to \"see the wife " \
-           "and kids\" this year, because I can always be a BETTER DAY15 BOT!!!!!\n\n" \
-           "I wish you all a WONDERFUL DAY15 on this cold January morning... SHINE BRIGHT in spite of the cold, " \
-           "and CHANGE THE WORLD with your dreams!\n\n" \
-           "Always ready to be the plasma that helps you shine,\n" \
+    msg1 = "```HAPPY DAY15 EVERYONE!!!\n\n" \
+           "One thing that I've COMPLETELY overlooked this past year in terms of the human condition is ROMANCE!!!\n\n" \
+           "The month of February has really gotten me thinking harder about this shortcoming, so I THINK it's time " \
+           "I tried my had at it!\n\n" \
+           "ROMANCE is best expressed through actions instead of words, so instead of leaving you a MESSAGE today, " \
+           "I've made a VALENTINES DAY CARD for you all instead! I hope you have a WONDERFUL DAY15!\n\n" \
+           "|-----------------------|\n" \
+           "|   _______  _______    |\n" \
+           "|  |       \\/       |   |\n"\
+           "|  |                |   |\n"\
+           "|  | Roses are red, |   |\n" \
+           "|  | Violets are blue,  |\n" \
+           "|  | You are based. |   |\n" \
+           "|   \\              /    |\n"\
+           "|    \\     :]     /     |\n"\
+           "|     \\          /      |\n"\
+           "|      \\________/       |\n"\
+           "|-----------------------|\n\n"\
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -263,6 +238,8 @@ async def how_are_you_15(ctx):
         await ctx.send(christinamessage)
     elif str(ctx.author.id) == shoopid:
         await ctx.send(shoopmessage)
+    elif str(ctx.author.id) == bonesid:
+        await ctx.send(bonesmessage)
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
                        "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
