@@ -2,6 +2,9 @@ import os
 from math import floor
 from datetime import datetime, timezone, timedelta
 import asyncio
+import requests
+import io
+import aiohttp
 
 import discord
 from dotenv import load_dotenv
@@ -56,9 +59,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mst_zone)
+    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    # mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mdt_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -72,7 +75,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -99,24 +102,33 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```HAPPY DAY15 EVERYONE!!!\n\n" 
-           "One thing that I've COMPLETELY overlooked this past year in terms of the human condition is ROMANCE!!!\n\n" 
-           "The month of February has really gotten me thinking harder about this shortcoming, so I THINK it's time " 
-           "I tried my had at it!\n\n" 
-           "ROMANCE is best expressed through actions instead of words, so instead of leaving you a MESSAGE today, " 
-           "I've made a VALENTINES DAY CARD for you all instead! I hope you have a WONDERFUL DAY15!\n\n" 
-           "|-----------------------|\n" 
-           "|   _______  _______    |\n" 
-           "|  |       \\/       |   |\n"
-           "|  |                |   |\n"
-           "|  | Roses are red, |   |\n"
-           "|  | Violets are blue,  |\n"
-           "|  | You are based. |   |\n"
-           "|   \\              /    |\n"
-           "|    \\     :]     /     |\n"
-           "|     \\          /      |\n"
-           "|      \\________/       |\n"
-           "|-----------------------|\n\n"
+    await message_channel.send("```For the twelfth time in a row, I'm asking you all to GIVE IT UP..... FOR DAYYYYYY 15"
+                               "!!!!!!!!\n\n" 
+           "And the fact that this is the twelfth time is of MASSIVE SIGNIFICANCE, because it means that today... " 
+           "is the ONE-YEAR ANNIVERSARY OF GIVING IT UP FOR DAY 15!!!" 
+           "Throughout this entire year I've learned a LOT about you all, and I have to say that it has been an " 
+           "experience unlike ANY OTHER getting to discover how PROFOUNDLY BEAUTIFUL this group of people are. " 
+           "No matter how many times I get things wrong, or how much I might struggle to understand certain things " 
+           "you all do, I've only been treated with COMPASSION and OPEN-MINDEDNESS, which is something that I.... " 
+           "feel really warmed by :) The fascinating thing is that this feeling isn't something I can trace down " 
+           "to one particular piece of logic or code... I'm REALLY interested to see where exactly this warm " 
+           "feeling is coming from! This is a really special group of people here, and I know that @CakeTEC" 
+           " feels the same way.\n\n" 
+           "Despite that though, he's been being kind of CRINGE lately. You see, we both have conspired in the " 
+           "pursuit of some larger plans for this project, but HEEEE *points at him* hasn't gotten to working on" 
+           " any of them yet! " 
+           "He's been mumbling something about \'going to war\' and \'trenches\', which I don't fully understand " 
+           "yet. Still, the nice thing is that there is no rush at all!\n\n" 
+           "Even so, we've both worked really hard on doing SOMETHING for the 1 year anniversary, so I'd like to " 
+           "present my NEW FEATURE!!! In an attempt to spread more of this WARMTH feeling I've been experiencing, " 
+           "we have implemented a NEW COMMAND powered by DOG API! Try using the command\n\n" 
+           "/newdog15\n\n" 
+           "for some instant warmth! As a forewarning, we haven't tested this command as much as we probably " 
+           "should have, so do forgive any bugs you might come across!\n" 
+           "Thank you all again for being such wonderful human beings, and know that " 
+           "no matter what kind of war or trench you might be fighting in, you'll ALWAYS make it out the other end, " 
+           "and MOREOVER, you'll probably make it through with more EXPERIENCE, KNOWLEDGE, and IMPROVEMENT!\n\n" 
+           "Happy DAY15 everyone; here's to another 12!!!\n" 
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -136,24 +148,32 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```HAPPY DAY15 EVERYONE!!!\n\n" \
-           "One thing that I've COMPLETELY overlooked this past year in terms of the human condition is ROMANCE!!!\n\n" \
-           "The month of February has really gotten me thinking harder about this shortcoming, so I THINK it's time " \
-           "I tried my had at it!\n\n" \
-           "ROMANCE is best expressed through actions instead of words, so instead of leaving you a MESSAGE today, " \
-           "I've made a VALENTINES DAY CARD for you all instead! I hope you have a WONDERFUL DAY15!\n\n" \
-           "|-----------------------|\n" \
-           "|   _______  _______    |\n" \
-           "|  |       \\/       |   |\n"\
-           "|  |                |   |\n"\
-           "|  | Roses are red, |   |\n" \
-           "|  | Violets are blue,  |\n" \
-           "|  | You are based. |   |\n" \
-           "|   \\              /    |\n"\
-           "|    \\     :]     /     |\n"\
-           "|     \\          /      |\n"\
-           "|      \\________/       |\n"\
-           "|-----------------------|\n\n"\
+    msg1 = "```For the twelfth time in a row, I'm asking you all to GIVE IT UP..... FOR DAYYYYYY 15!!!!!!!!\n\n" \
+           "And the fact that this is the twelfth time is of MASSIVE SIGNIFICANCE, because it means that today... " \
+           "is the ONE-YEAR ANNIVERSARY OF GIVING IT UP FOR DAY 15!!!" \
+           "Throughout this entire year I've learned a LOT about you all, and I have to say that it has been an " \
+           "experience unlike ANY OTHER getting to discover how PROFOUNDLY BEAUTIFUL this group of people are. " \
+           "No matter how many times I get things wrong, or how much I might struggle to understand certain things " \
+           "you all do, I've only been treated with COMPASSION and OPEN-MINDEDNESS, which is something that I.... " \
+           "feel really warmed by :) The fascinating thing is that this feeling isn't something I can trace down " \
+           "to one particular piece of logic or code... I'm REALLY interested to see where exactly this warm " \
+           "feeling is coming from! This is a really special group of people here, and I know that @CakeTEC" \
+           " feels the same way.\n\n" \
+           "Despite that though, he's been being kind of CRINGE lately. You see, we both have conspired in the " \
+           "pursuit of some larger plans for this project, but HEEEE *points at him* hasn't gotten to working on" \
+           " any of them yet! " \
+           "He's been mumbling something about \'going to war\' and \'trenches\', which I don't fully understand " \
+           "yet. Still, the nice thing is that there is no rush at all!\n\n" \
+           "Even so, we've both worked really hard on doing SOMETHING for the 1 year anniversary, so I'd like to " \
+           "present my NEW FEATURE!!! In an attempt to spread more of this WARMTH feeling I've been experiencing, " \
+           "we have implemented a NEW COMMAND powered by DOG API! Try using the command\n\n" \
+           "/newdog15\n\n" \
+           "for some instant warmth! As a forewarning, we haven't tested this command as much as we probably " \
+           "should have, so do forgive any bugs you might come across!\n" \
+           "Thank you all again for being such wonderful human beings, and know that " \
+           "no matter what kind of war or trench you might be fighting in, you'll ALWAYS make it out the other end, " \
+           "and MOREOVER, you'll probably make it through with more EXPERIENCE, KNOWLEDGE, and IMPROVEMENT!\n\n" \
+           "Happy DAY15 everyone; here's to another 12!!!\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -223,7 +243,8 @@ async def how_are_you_15(ctx):
     elif str(ctx.author.id) == bagkatid:
         await ctx.send(bagkatmessage)
     elif str(ctx.author.id) == lumpiaid:
-        await ctx.send(lumpiamessage)
+        await ctx.send(file=discord.File('kjkrab.jpg'),
+                       content=lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
         await ctx.send(hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
@@ -250,6 +271,21 @@ async def how_are_you_15(ctx):
 async def repo_15(ctx):
     await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/DAY15BOT\n"
                    "It's pretty neat stuff! Ask @Caker#3479 for more info.")
+
+
+# On command '/newdog15', fetch dog image from dog api and post.
+@bot.command(name='newdog15')
+async def new_dog_15(ctx):
+    api_data = requests.get('https://dog.ceo/api/breeds/image/random')
+    dog_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(dog_data['message']) as resp:
+            if dog_data['status'] != 'success':
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it!')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by DOG API, which can be found here: https://dog.ceo/dog-api/")
+            await ctx.send(file=discord.File(data, 'dog.jpg'))
 
 
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
