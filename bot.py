@@ -233,8 +233,7 @@ async def how_are_you_15(ctx):
     elif str(ctx.author.id) == bagkatid:
         await ctx.send(bagkatmessage)
     elif str(ctx.author.id) == lumpiaid:
-        await ctx.send(file=discord.File('kjkrab.jpg'),
-                       content=lumpiamessage)
+        await ctx.send(lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
         await ctx.send(hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
@@ -274,7 +273,7 @@ async def new_dog_15(ctx):
             if dog_data['status'] != 'success':
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it!')
             data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by DOG API, which can be found here: https://dog.ceo/dog-api/")
+            await ctx.send("Powered by DOG API, which can be found here:" + "<" + "https://dog.ceo/dog-api/" + ">")
             await ctx.send(file=discord.File(data, 'dog.jpg'))
 
 
@@ -289,9 +288,7 @@ async def new_cat_15(ctx):
             if resp.status != 200:
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
             data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + cat_data['urls']['raw'] + "\n Photographer: " + cat_data['user']['name'] + " " + cat_data['user']['links']['self'])
-            await ctx.send(file=discord.File(data, 'cat.jpg'))
-
+            await ctx.send("Powered by Unsplash. \n Link: " + cat_data['urls']['raw'] + "\n Photographer: " + cat_data['user']['name'] + " " + "<" + cat_data['user']['links']['html'] + ">")
 # On command '/newlizard15', fetch lizard image from unsplash api and post.
 @bot.command(name='newlizard15')
 async def new_lizard_15(ctx):
@@ -303,9 +300,7 @@ async def new_lizard_15(ctx):
             if resp.status != 200:
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
             data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + liz_data['user']['links']['self'])
-            await ctx.send(file=discord.File(data, 'lizard.jpg'))
-
+            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + "<" + liz_data['user']['links']['html'] + ">")
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
 # Start the loop to check if it is DAY 15
 check_to15.start()
