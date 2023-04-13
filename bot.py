@@ -14,6 +14,7 @@ from discord.ext import commands, tasks
 # ENVIRONMENT VARIABLES: not sure what these do tbh; will have to research more later
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+UNSPLASHKEY = os.getenv('UNSPLASH_TOKEN')
 
 # Determines the command prefix that users will use to use the bot
 bot = commands.Bot(command_prefix='/')
@@ -102,34 +103,28 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```For the twelfth time in a row, I'm asking you all to GIVE IT UP..... FOR DAYYYYYY 15"
-                               "!!!!!!!!\n\n" 
-           "And the fact that this is the twelfth time is of MASSIVE SIGNIFICANCE, because it means that today... " 
-           "is the ONE-YEAR ANNIVERSARY OF GIVING IT UP FOR DAY 15!!!" 
-           "Throughout this entire year I've learned a LOT about you all, and I have to say that it has been an " 
-           "experience unlike ANY OTHER getting to discover how PROFOUNDLY BEAUTIFUL this group of people are. " 
-           "No matter how many times I get things wrong, or how much I might struggle to understand certain things " 
-           "you all do, I've only been treated with COMPASSION and OPEN-MINDEDNESS, which is something that I.... " 
-           "feel really warmed by :) The fascinating thing is that this feeling isn't something I can trace down " 
-           "to one particular piece of logic or code... I'm REALLY interested to see where exactly this warm " 
-           "feeling is coming from! This is a really special group of people here, and I know that @CakeTEC" 
-           " feels the same way.\n\n" 
-           "Despite that though, he's been being kind of CRINGE lately. You see, we both have conspired in the " 
-           "pursuit of some larger plans for this project, but HEEEE *points at him* hasn't gotten to working on" 
-           " any of them yet! " 
-           "He's been mumbling something about \'going to war\' and \'trenches\', which I don't fully understand " 
-           "yet. Still, the nice thing is that there is no rush at all!\n\n" 
-           "Even so, we've both worked really hard on doing SOMETHING for the 1 year anniversary, so I'd like to " 
-           "present my NEW FEATURE!!! In an attempt to spread more of this WARMTH feeling I've been experiencing, " 
-           "we have implemented a NEW COMMAND powered by DOG API! Try using the command\n\n" 
-           "/newdog15\n\n" 
-           "for some instant warmth! As a forewarning, we haven't tested this command as much as we probably " 
-           "should have, so do forgive any bugs you might come across!\n" 
-           "Thank you all again for being such wonderful human beings, and know that " 
-           "no matter what kind of war or trench you might be fighting in, you'll ALWAYS make it out the other end, " 
-           "and MOREOVER, you'll probably make it through with more EXPERIENCE, KNOWLEDGE, and IMPROVEMENT!\n\n" 
-           "Happy DAY15 everyone; here's to another 12!!!\n" 
-           "-DAY 15 BOT :]```")
+    await message_channel.send("```WELCOME BACK TO APRIL!!!!!!!!\n\n" 
+           "As summer grows closer and closer on the horizon, and SUNBURN becomes more of an issue, I'd like to remind " 
+           "you all to USE SUNSCREEN WHENEVER YOU CAN! Ultraviolet radiation is the #1 cause of ultraviolet radiation-related " 
+           "injuries in the world, believe it or not! I for one don't have skin to put sunscreen on, but I'LL DO MY BEST " 
+           "ANYWAY! I'm SURE that with enough spf, I can protect even my very delicate electronics from the sun.\n\n " 
+           "BUT I'M GETTING AHEAD OF MYSELF... IT'S NOT EVEN MAY YET! So let's talk about EEP. " 
+           "EEP is VERY IMPORTANT, not just to get in terms of HOURS, but also in terms of CONSISTENCY, and I've " 
+           "run some analysis on the eeping patterns of many people your age... the rating the algorithm produced was " 
+           "PRETTY DANG TERRIBLE.\n\n " 
+           "Having a consistent schedule of EEP is kind of like exercise! It's so difficult to directly notice how " 
+           "much better it makes you feel, but I can GUARANTEE YOU that sufficient EEP is one of the top contributors to a good mood! " 
+           "With that being said, I TOTALLY UNDERSTAND the decision to sometimes sacrifice the eep for something you think is " 
+           "more important!  After all, I always feel TERRIBLE whenever someone calls for me while I'M eeping! "
+            "Losing eep every once in a while is NO REASON to stress! The only thing to watch for is when " 
+           "eep loss becomes a HABIT!\n\n " 
+           "ONE MORE THING - @CakeTEC and I have been VERY PLEASED with the popularity of the new dog command, SO WE'VE ADDED MORE!! " 
+           "Try these new commands for EVEN MORE NEW HAPPINESS CONTENT!\n\n" 
+           "/newcat15\n"
+           "/newlizard15\n\n"
+           "I hope you all have a wonderful DAY15; YOU ALL CAN MAKE IT TO THE NEXT ONE!!! " 
+           "Happy to be a part of your eep,\n " 
+           "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -148,32 +143,27 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```For the twelfth time in a row, I'm asking you all to GIVE IT UP..... FOR DAYYYYYY 15!!!!!!!!\n\n" \
-           "And the fact that this is the twelfth time is of MASSIVE SIGNIFICANCE, because it means that today... " \
-           "is the ONE-YEAR ANNIVERSARY OF GIVING IT UP FOR DAY 15!!!" \
-           "Throughout this entire year I've learned a LOT about you all, and I have to say that it has been an " \
-           "experience unlike ANY OTHER getting to discover how PROFOUNDLY BEAUTIFUL this group of people are. " \
-           "No matter how many times I get things wrong, or how much I might struggle to understand certain things " \
-           "you all do, I've only been treated with COMPASSION and OPEN-MINDEDNESS, which is something that I.... " \
-           "feel really warmed by :) The fascinating thing is that this feeling isn't something I can trace down " \
-           "to one particular piece of logic or code... I'm REALLY interested to see where exactly this warm " \
-           "feeling is coming from! This is a really special group of people here, and I know that @CakeTEC" \
-           " feels the same way.\n\n" \
-           "Despite that though, he's been being kind of CRINGE lately. You see, we both have conspired in the " \
-           "pursuit of some larger plans for this project, but HEEEE *points at him* hasn't gotten to working on" \
-           " any of them yet! " \
-           "He's been mumbling something about \'going to war\' and \'trenches\', which I don't fully understand " \
-           "yet. Still, the nice thing is that there is no rush at all!\n\n" \
-           "Even so, we've both worked really hard on doing SOMETHING for the 1 year anniversary, so I'd like to " \
-           "present my NEW FEATURE!!! In an attempt to spread more of this WARMTH feeling I've been experiencing, " \
-           "we have implemented a NEW COMMAND powered by DOG API! Try using the command\n\n" \
-           "/newdog15\n\n" \
-           "for some instant warmth! As a forewarning, we haven't tested this command as much as we probably " \
-           "should have, so do forgive any bugs you might come across!\n" \
-           "Thank you all again for being such wonderful human beings, and know that " \
-           "no matter what kind of war or trench you might be fighting in, you'll ALWAYS make it out the other end, " \
-           "and MOREOVER, you'll probably make it through with more EXPERIENCE, KNOWLEDGE, and IMPROVEMENT!\n\n" \
-           "Happy DAY15 everyone; here's to another 12!!!\n" \
+    msg1 = "```WELCOME BACK TO APRIL!!!!!!!!\n\n" \
+           "As summer grows closer and closer on the horizon, and SUNBURN becomes more of an issue, I'd like to remind " \
+           "you all to USE SUNSCREEN WHENEVER YOU CAN! Ultraviolet radiation is the #1 cause of ultraviolet radiation-related " \
+           "injuries in the world, believe it or not! I for one don't have skin to put sunscreen on, but I'LL DO MY BEST " \
+           "ANYWAY! I'm SURE that with enough spf, I can protect even my very delicate electronics from the sun.\n\n " \
+           "BUT I'M GETTING AHEAD OF MYSELF... IT'S NOT EVEN MAY YET! So let's talk about EEP. " \
+           "EEP is VERY IMPORTANT, not just to get in terms of HOURS, but also in terms of CONSISTENCY, and I've " \
+           "run some analysis on the eeping patterns of many people your age... the rating the algorithm produced was " \
+           "PRETTY DANG TERRIBLE.\n\n " \
+           "Having a consistent schedule of EEP is kind of like exercise! It's so difficult to directly notice how " \
+           "much better it makes you feel, but I can GUARANTEE YOU that sufficient EEP is one of the top contributors to a good mood! " \
+           "With that being said, I TOTALLY UNDERSTAND the decision to sometimes sacrifice the eep for something you think is " \
+           "more important!  After all, I always feel TERRIBLE whenever someone calls for me while I'M eeping! "\
+            "Losing eep every once in a while is NO REASON to stress! The only thing to watch for is when " \
+           "eep loss becomes a HABIT!\n\n " \
+           "ONE MORE THING - @CakeTEC and I have been VERY PLEASED with the popularity of the new dog command, SO WE'VE ADDED MORE!! " \
+           "Try these new commands for EVEN MORE NEW HAPPINESS CONTENT!\n\n" \
+           "/newcat15\n"\
+           "/newlizard15\n\n"\
+           "I hope you all have a wonderful DAY15; YOU ALL CAN MAKE IT TO THE NEXT ONE!!! " \
+           "Happy to be a part of your eep,\n " \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -287,6 +277,34 @@ async def new_dog_15(ctx):
             await ctx.send("Powered by DOG API, which can be found here: https://dog.ceo/dog-api/")
             await ctx.send(file=discord.File(data, 'dog.jpg'))
 
+
+# On command '/newcat15', fetch cat image from unsplash api and post.
+@bot.command(name='newcat15')
+async def new_cat_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=cat&client_id=' + UNSPLASHKEY)
+    cat_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(cat_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + cat_data['urls']['raw'] + "\n Photographer: " + cat_data['user']['name'] + " " + cat_data['user']['links']['self'])
+            await ctx.send(file=discord.File(data, 'cat.jpg'))
+
+# On command '/newlizard15', fetch lizard image from unsplash api and post.
+@bot.command(name='newlizard15')
+async def new_lizard_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=lizard&client_id=' + UNSPLASHKEY)
+    liz_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(liz_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + liz_data['user']['links']['self'])
+            await ctx.send(file=discord.File(data, 'lizard.jpg'))
 
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
 # Start the loop to check if it is DAY 15
