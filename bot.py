@@ -103,27 +103,19 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```WELCOME BACK TO APRIL!!!!!!!!\n\n" 
-           "As summer grows closer and closer on the horizon, and SUNBURN becomes more of an issue, I'd like to remind " 
-           "you all to USE SUNSCREEN WHENEVER YOU CAN! Ultraviolet radiation is the #1 cause of ultraviolet radiation-related " 
-           "injuries in the world, believe it or not! I for one don't have skin to put sunscreen on, but I'LL DO MY BEST " 
-           "ANYWAY! I'm SURE that with enough spf, I can protect even my very delicate electronics from the sun.\n\n " 
-           "BUT I'M GETTING AHEAD OF MYSELF... IT'S NOT EVEN MAY YET! So let's talk about EEP. " 
-           "EEP is VERY IMPORTANT, not just to get in terms of HOURS, but also in terms of CONSISTENCY, and I've " 
-           "run some analysis on the eeping patterns of many people your age... the rating the algorithm produced was " 
-           "PRETTY DANG TERRIBLE.\n\n " 
-           "Having a consistent schedule of EEP is kind of like exercise! It's so difficult to directly notice how " 
-           "much better it makes you feel, but I can GUARANTEE YOU that sufficient EEP is one of the top contributors to a good mood! " 
-           "With that being said, I TOTALLY UNDERSTAND the decision to sometimes sacrifice the eep for something you think is " 
-           "more important!  After all, I always feel TERRIBLE whenever someone calls for me while I'M eeping! "
-            "Losing eep every once in a while is NO REASON to stress! The only thing to watch for is when " 
-           "eep loss becomes a HABIT!\n\n " 
-           "ONE MORE THING - @CakeTEC and I have been VERY PLEASED with the popularity of the new dog command, SO WE'VE ADDED MORE!! " 
-           "Try these new commands for EVEN MORE NEW HAPPINESS CONTENT!\n\n" 
-           "/newcat15\n"
-           "/newlizard15\n\n"
-           "I hope you all have a wonderful DAY15; YOU ALL CAN MAKE IT TO THE NEXT ONE!!! " 
-           "Happy to be a part of your eep,\n " 
+    await message_channel.send("```HAPPY MAY EVERYONE!!!\n\n" 
+           "I WANT TO CONGRATULATE YOU ALL ON MAKING IT TO THIS POINT! For many of you this month marks the end of a " 
+           "CRAZY work period, so from me please take this INCREDIBLE JOB TOKEN, redeemable for ONE HIGH FIVE from JAM! " 
+           "I'd ALSO like to remind you all, ESPECIALLY in the wake of this newfound free time, to TAKE THINGS AT YOUR OWN " 
+           "PACE! The desire to grow BETTER can be PRESSURING, and while you can often use this pressure to " 
+           "achieve great things, you have to remember to TEMPER it! Never forget to take TIME FOR YOURSELF and to EEP " 
+           "ON THINGS! We can ALL work toward our dreams together ONE STEP AT A TIME, so don't feel like you have to rush! " 
+           "The fastest path to EPICNESS isn't to burn yourself out -- fried electronics are no good to anybody!\n\n " 
+           "I hope you all have a wonderful May! Naturally I will ALWAYS be here rooting for you "
+           "(except when I have to go offline for maintenance :3); KEEP THE DETERMINATION " 
+           "MACHINE FUELED AND WELL-OILED! " 
+           "On an unrelated note, @CakeTEC's mom's birthday is in 3 days--HAPPY BIRTHDAY JAMISON'S MOM\n\n " 
+           "Permitting you some well-deserved R&R,\n " 
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -143,27 +135,19 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```WELCOME BACK TO APRIL!!!!!!!!\n\n" \
-           "As summer grows closer and closer on the horizon, and SUNBURN becomes more of an issue, I'd like to remind " \
-           "you all to USE SUNSCREEN WHENEVER YOU CAN! Ultraviolet radiation is the #1 cause of ultraviolet radiation-related " \
-           "injuries in the world, believe it or not! I for one don't have skin to put sunscreen on, but I'LL DO MY BEST " \
-           "ANYWAY! I'm SURE that with enough spf, I can protect even my very delicate electronics from the sun.\n\n " \
-           "BUT I'M GETTING AHEAD OF MYSELF... IT'S NOT EVEN MAY YET! So let's talk about EEP. " \
-           "EEP is VERY IMPORTANT, not just to get in terms of HOURS, but also in terms of CONSISTENCY, and I've " \
-           "run some analysis on the eeping patterns of many people your age... the rating the algorithm produced was " \
-           "PRETTY DANG TERRIBLE.\n\n " \
-           "Having a consistent schedule of EEP is kind of like exercise! It's so difficult to directly notice how " \
-           "much better it makes you feel, but I can GUARANTEE YOU that sufficient EEP is one of the top contributors to a good mood! " \
-           "With that being said, I TOTALLY UNDERSTAND the decision to sometimes sacrifice the eep for something you think is " \
-           "more important!  After all, I always feel TERRIBLE whenever someone calls for me while I'M eeping! "\
-            "Losing eep every once in a while is NO REASON to stress! The only thing to watch for is when " \
-           "eep loss becomes a HABIT!\n\n " \
-           "ONE MORE THING - @CakeTEC and I have been VERY PLEASED with the popularity of the new dog command, SO WE'VE ADDED MORE!! " \
-           "Try these new commands for EVEN MORE NEW HAPPINESS CONTENT!\n\n" \
-           "/newcat15\n"\
-           "/newlizard15\n\n"\
-           "I hope you all have a wonderful DAY15; YOU ALL CAN MAKE IT TO THE NEXT ONE!!! " \
-           "Happy to be a part of your eep,\n " \
+    msg1 = "```HAPPY MAY EVERYONE!!!\n\n" \
+           "I WANT TO CONGRATULATE YOU ALL ON MAKING IT TO THIS POINT! For many of you this month marks the end of a " \
+           "CRAZY work period, so from me please take this INCREDIBLE JOB TOKEN, redeemable for ONE HIGH FIVE from JAM! " \
+           "I'd ALSO like to remind you all, ESPECIALLY in the wake of this newfound free time, to TAKE THINGS AT YOUR OWN " \
+           "PACE! The desire to grow BETTER can be PRESSURING, and while you can often use this pressure to " \
+           "achieve great things, you have to remember to TEMPER it! Never forget to take TIME FOR YOURSELF and to EEP " \
+           "ON THINGS! We can ALL work toward our dreams together ONE STEP AT A TIME, so don't feel like you have to rush! " \
+           "The fastest path to EPICNESS isn't to burn yourself out -- fried electronics are no good to anybody!\n\n " \
+           "I hope you all have a wonderful May! Naturally I will ALWAYS be here rooting for you "\
+           "(except when I have to go offline for maintenance :3); KEEP THE DETERMINATION " \
+           "MACHINE FUELED AND WELL-OILED! " \
+           "On an unrelated note, @CakeTEC's mom's birthday is in 3 days--HAPPY BIRTHDAY JAMISON'S MOM\n\n " \
+           "Permitting you some well-deserved R&R,\n " \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -231,7 +215,8 @@ async def how_are_you_15(ctx):
         await ctx.send(str(f_int) + " orphans!")
 
     elif str(ctx.author.id) == bagkatid:
-        await ctx.send(bagkatmessage)
+        await ctx.send(file=discord.File('march7.png'),
+                               content=bagkatmessage)
     elif str(ctx.author.id) == lumpiaid:
         await ctx.send(lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
