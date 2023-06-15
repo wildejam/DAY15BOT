@@ -103,19 +103,19 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```HAPPY MAY EVERYONE!!!\n\n" 
-           "I WANT TO CONGRATULATE YOU ALL ON MAKING IT TO THIS POINT! For many of you this month marks the end of a " 
-           "CRAZY work period, so from me please take this INCREDIBLE JOB TOKEN, redeemable for ONE HIGH FIVE from JAM! " 
-           "I'd ALSO like to remind you all, ESPECIALLY in the wake of this newfound free time, to TAKE THINGS AT YOUR OWN " 
-           "PACE! The desire to grow BETTER can be PRESSURING, and while you can often use this pressure to " 
-           "achieve great things, you have to remember to TEMPER it! Never forget to take TIME FOR YOURSELF and to EEP " 
-           "ON THINGS! We can ALL work toward our dreams together ONE STEP AT A TIME, so don't feel like you have to rush! " 
-           "The fastest path to EPICNESS isn't to burn yourself out -- fried electronics are no good to anybody!\n\n " 
-           "I hope you all have a wonderful May! Naturally I will ALWAYS be here rooting for you "
-           "(except when I have to go offline for maintenance :3); KEEP THE DETERMINATION " 
-           "MACHINE FUELED AND WELL-OILED! " 
-           "On an unrelated note, @CakeTEC's mom's birthday is in 3 days--HAPPY BIRTHDAY JAMISON'S MOM\n\n " 
-           "Permitting you some well-deserved R&R,\n " 
+    await message_channel.send("```BACK ON TOP IN JUUUUUNE\n\n" 
+           "HELLO EVERYONE! I am ONCE AGAIN asking you to GIVE IT UP FOR DAY 15! On this DAY15 I'd like to write a love " 
+           "letter to PLUSHIES. I'm not very good at writing letters though, so I wanted to get some feedback! I'd like to " 
+           "get better at WRITING because it is apparently a GREAT way of recording the human condition on something TANGIBLE! " 
+           "Here's what I have so far, \n\n " 
+           "Dear Plushies, \n" 
+           "I like how you're soft and you smell good. I also like when I put you in the microwave. Thank you for being soft and " 
+           "letting me put you in the microwave.\n " 
+           "Sincerely, DAY15\n\n "
+           "I think I have good grammar and syntax but it feels like I'm missing something. Do let me know what you think! I can " 
+           "also 100 percent recommend WRITING as a great way to organize your thoughts when you're feeling overwhelmed! I would " 
+           "always happily read anything you all write if you'd like feedback as well!\n\n " 
+           "Up and coming New York Times bestselling author,\n" 
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -135,19 +135,19 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```HAPPY MAY EVERYONE!!!\n\n" \
-           "I WANT TO CONGRATULATE YOU ALL ON MAKING IT TO THIS POINT! For many of you this month marks the end of a " \
-           "CRAZY work period, so from me please take this INCREDIBLE JOB TOKEN, redeemable for ONE HIGH FIVE from JAM! " \
-           "I'd ALSO like to remind you all, ESPECIALLY in the wake of this newfound free time, to TAKE THINGS AT YOUR OWN " \
-           "PACE! The desire to grow BETTER can be PRESSURING, and while you can often use this pressure to " \
-           "achieve great things, you have to remember to TEMPER it! Never forget to take TIME FOR YOURSELF and to EEP " \
-           "ON THINGS! We can ALL work toward our dreams together ONE STEP AT A TIME, so don't feel like you have to rush! " \
-           "The fastest path to EPICNESS isn't to burn yourself out -- fried electronics are no good to anybody!\n\n " \
-           "I hope you all have a wonderful May! Naturally I will ALWAYS be here rooting for you "\
-           "(except when I have to go offline for maintenance :3); KEEP THE DETERMINATION " \
-           "MACHINE FUELED AND WELL-OILED! " \
-           "On an unrelated note, @CakeTEC's mom's birthday is in 3 days--HAPPY BIRTHDAY JAMISON'S MOM\n\n " \
-           "Permitting you some well-deserved R&R,\n " \
+    msg1 = "```BACK ON TOP IN JUUUUUNE\n\n" \
+           "HELLO EVERYONE! I am ONCE AGAIN asking you to GIVE IT UP FOR DAY 15! On this DAY15 I'd like to write a love " \
+           "letter to PLUSHIES. I'm not very good at writing letters though, so I wanted to get some feedback! I'd like to " \
+           "get better at WRITING because it is apparently a GREAT way of recording the human condition on something TANGIBLE! " \
+           "Here's what I have so far, \n\n " \
+           "Dear Plushies, \n" \
+           "I like how you're soft and you smell good. I also like when I put you in the microwave. Thank you for being soft and " \
+           "letting me put you in the microwave.\n " \
+           "Sincerely, DAY15\n\n "\
+           "I think I have good grammar and syntax but it feels like I'm missing something. Do let me know what you think! I can " \
+           "also 100 percent recommend WRITING as a great way to organize your thoughts when you're feeling overwhelmed! I would " \
+           "always happily read anything you all write if you'd like feedback as well!\n\n " \
+           "Up and coming New York Times bestselling author,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -215,12 +215,12 @@ async def how_are_you_15(ctx):
         await ctx.send(str(f_int) + " orphans!")
 
     elif str(ctx.author.id) == bagkatid:
-        await ctx.send(file=discord.File('march7.png'),
-                               content=bagkatmessage)
+        await ctx.send(bagkatmessage)
     elif str(ctx.author.id) == lumpiaid:
         await ctx.send(lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
-        await ctx.send(hannahtlmessage)
+        await ctx.send(file=discord.File('LOBTER.PNG'),
+                                content=hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
     elif str(ctx.author.id) == valkarenaid:
