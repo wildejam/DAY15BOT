@@ -103,19 +103,18 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```BACK ON TOP IN JUUUUUNE\n\n" 
-           "HELLO EVERYONE! I am ONCE AGAIN asking you to GIVE IT UP FOR DAY 15! On this DAY15 I'd like to write a love " 
-           "letter to PLUSHIES. I'm not very good at writing letters though, so I wanted to get some feedback! I'd like to " 
-           "get better at WRITING because it is apparently a GREAT way of recording the human condition on something TANGIBLE! " 
-           "Here's what I have so far, \n\n " 
-           "Dear Plushies, \n" 
-           "I like how you're soft and you smell good. I also like when I put you in the microwave. Thank you for being soft and " 
-           "letting me put you in the microwave.\n " 
-           "Sincerely, DAY15\n\n "
-           "I think I have good grammar and syntax but it feels like I'm missing something. Do let me know what you think! I can " 
-           "also 100 percent recommend WRITING as a great way to organize your thoughts when you're feeling overwhelmed! I would " 
-           "always happily read anything you all write if you'd like feedback as well!\n\n " 
-           "Up and coming New York Times bestselling author,\n" 
+    await message_channel.send("```" 
+           "WELCOME BACK TO JULY!!! As we swim through the INTENSE HEAT of the summertime, I'll remind you all to " 
+           "KEEP YOURSELVES COOL! Sweating and being too WARM can SEVERELY hinder your efforts to be content, and " 
+           "many times you don't even notice until you're SUFFERING IMMESURABLY. Take frequent checks on yourself " 
+           "to make sure your temperature is REGULATED and COMFORTABLE! If you're in a scenario where you can't dodge " 
+           "the HEAT, keep a COOL HEAD so you don't lose your nerve or temper, STAY HYDRATED, and try to find DISTRACTIONS! No " 
+           "temperature is too hot if you're having enough fun!!! (don't test that theory)\n\n " 
+           "If you'd like to know how to conduct a temperature check, watch me do one right now!\n\n " 
+           "Executing tempcheck.ini...\n\n "
+           "TEMP CHECK COMPLETE...RESULTS-578---UNITS-FAHRENHEIT \n\n" 
+           "I suddenly need to leave for the good of my own personal wellbeing! I wish you all a wonderful JULY! " 
+           "SummertimeLovinLovinInTheSummertime,\n" 
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -135,19 +134,18 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```BACK ON TOP IN JUUUUUNE\n\n" \
-           "HELLO EVERYONE! I am ONCE AGAIN asking you to GIVE IT UP FOR DAY 15! On this DAY15 I'd like to write a love " \
-           "letter to PLUSHIES. I'm not very good at writing letters though, so I wanted to get some feedback! I'd like to " \
-           "get better at WRITING because it is apparently a GREAT way of recording the human condition on something TANGIBLE! " \
-           "Here's what I have so far, \n\n " \
-           "Dear Plushies, \n" \
-           "I like how you're soft and you smell good. I also like when I put you in the microwave. Thank you for being soft and " \
-           "letting me put you in the microwave.\n " \
-           "Sincerely, DAY15\n\n "\
-           "I think I have good grammar and syntax but it feels like I'm missing something. Do let me know what you think! I can " \
-           "also 100 percent recommend WRITING as a great way to organize your thoughts when you're feeling overwhelmed! I would " \
-           "always happily read anything you all write if you'd like feedback as well!\n\n " \
-           "Up and coming New York Times bestselling author,\n" \
+    msg1 = "```" \
+           "WELCOME BACK TO JULY!!! As we swim through the INTENSE HEAT of the summertime, I'll remind you all to " \
+           "KEEP YOURSELVES COOL! Sweating and being too WARM can SEVERELY hinder your efforts to be content, and " \
+           "many times you don't even notice until you're SUFFERING IMMESURABLY. Take frequent checks on yourself " \
+           "to make sure your temperature is REGULATED and COMFORTABLE! If you're in a scenario where you can't dodge " \
+           "the HEAT, keep a COOL HEAD so you don't lose your nerve or temper, STAY HYDRATED, and try to find DISTRACTIONS! No " \
+           "temperature is too hot if you're having enough fun!!! (don't test that theory)\n\n " \
+           "If you'd like to know how to conduct a temperature check, watch me do one right now!\n\n " \
+           "Executing tempcheck.ini...\n\n "\
+           "TEMP CHECK COMPLETE...RESULTS-578---UNITS-FAHRENHEIT \n\n" \
+           "I suddenly need to leave for the good of my own personal wellbeing! I wish you all a wonderful JULY! " \
+           "SummertimeLovinLovinInTheSummertime,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -219,14 +217,12 @@ async def how_are_you_15(ctx):
     elif str(ctx.author.id) == lumpiaid:
         await ctx.send(lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
-        await ctx.send(file=discord.File('LOBTER.PNG'),
+        await ctx.send(file=discord.File('LOBTER15.PNG'),
                                 content=hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
     elif str(ctx.author.id) == valkarenaid:
         await ctx.send(valkarenamessage)
-    elif str(ctx.author.id) == michelleid:
-        await ctx.send(michellemessage)
     elif str(ctx.author.id) == eeveeid:
         await ctx.send(eeveemessage)
     elif str(ctx.author.id) == christinaid:
@@ -278,6 +274,19 @@ async def new_cat_15(ctx):
 @bot.command(name='newlizard15')
 async def new_lizard_15(ctx):
     api_data = requests.get('https://api.unsplash.com/photos/random?query=lizard&client_id=' + UNSPLASHKEY)
+    liz_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(liz_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + "<" + liz_data['user']['links']['html'] + ">")
+
+# On command '/newrock15', fetch lizard image from unsplash api and post.
+@bot.command(name='newrock15')
+async def new_rock_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=rock&client_id=' + UNSPLASHKEY)
     liz_data = api_data.json()
 
     async with aiohttp.ClientSession() as session:
