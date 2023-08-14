@@ -231,6 +231,8 @@ async def how_are_you_15(ctx):
         await ctx.send(shoopmessage)
     elif str(ctx.author.id) == bonesid:
         await ctx.send(bonesmessage)
+    elif str(ctx.author.id) == tjid:
+        await ctx.send(tjmessage)
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
                        "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
