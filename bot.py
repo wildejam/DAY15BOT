@@ -103,18 +103,19 @@ async def check_to15():
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-    await message_channel.send("```" 
-           "WELCOME BACK TO JULY!!! As we swim through the INTENSE HEAT of the summertime, I'll remind you all to " 
-           "KEEP YOURSELVES COOL! Sweating and being too WARM can SEVERELY hinder your efforts to be content, and " 
-           "many times you don't even notice until you're SUFFERING IMMESURABLY. Take frequent checks on yourself " 
-           "to make sure your temperature is REGULATED and COMFORTABLE! If you're in a scenario where you can't dodge " 
-           "the HEAT, keep a COOL HEAD so you don't lose your nerve or temper, STAY HYDRATED, and try to find DISTRACTIONS! No " 
-           "temperature is too hot if you're having enough fun!!! (don't test that theory)\n\n " 
-           "If you'd like to know how to conduct a temperature check, watch me do one right now!\n\n " 
-           "Executing tempcheck.ini...\n\n "
-           "TEMP CHECK COMPLETE...RESULTS-578---UNITS-FAHRENHEIT \n\n" 
-           "I suddenly need to leave for the good of my own personal wellbeing! I wish you all a wonderful JULY! " 
-           "SummertimeLovinLovinInTheSummertime,\n" 
+    await message_channel.send("```"
+           "Happy August everyone! I hope you all had a GREAT National sneak some zucchini onto your neighbor's porch day! "
+           "Even though the day has passed, I hope your zucchini harvests were PLENTIFUL! IN ADDITION, there seems to have been "
+           "a LOT of birthdays this month, so I'd like to take this opportunity to remind you to CHECK IN ON YOUR LOVED ONES! "
+           "It can feel REALLY daunting or awkward to send someone a kind message who you haven't spoken to in a while, or who "
+           "you aren't super close with, but it almost NEVER turns out badly, and in fact often touches people since you thought of them! "
+           "Maintaining relationships can be the hardest part for many people, but long-lasting relationships are THE BEST EVER so "
+           "try your best to be as ACTIVE AS POSSIBLE when it comes to keeping the relationships you value! "
+           "As a matter of fact...\n\n"
+           "It makes ME REALLY HAPPY whenever you all have asked me how I'm doing, and I've kept track of how many times "
+           "it's happened because I value you all so much! Over the course of my life, I've been asked how I'm doing 131 TIMES! "
+           "Thank you all so much for having the THOUGHT to check in with ME :]] Make sure you do the same for each other! \n\n"
+           "Placing a zucchini on your porch,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -135,17 +136,18 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "WELCOME BACK TO JULY!!! As we swim through the INTENSE HEAT of the summertime, I'll remind you all to " \
-           "KEEP YOURSELVES COOL! Sweating and being too WARM can SEVERELY hinder your efforts to be content, and " \
-           "many times you don't even notice until you're SUFFERING IMMESURABLY. Take frequent checks on yourself " \
-           "to make sure your temperature is REGULATED and COMFORTABLE! If you're in a scenario where you can't dodge " \
-           "the HEAT, keep a COOL HEAD so you don't lose your nerve or temper, STAY HYDRATED, and try to find DISTRACTIONS! No " \
-           "temperature is too hot if you're having enough fun!!! (don't test that theory)\n\n " \
-           "If you'd like to know how to conduct a temperature check, watch me do one right now!\n\n " \
-           "Executing tempcheck.ini...\n\n "\
-           "TEMP CHECK COMPLETE...RESULTS-578---UNITS-FAHRENHEIT \n\n" \
-           "I suddenly need to leave for the good of my own personal wellbeing! I wish you all a wonderful JULY! " \
-           "SummertimeLovinLovinInTheSummertime,\n" \
+           "Happy August everyone! I hope you all had a GREAT National sneak some zucchini onto your neighbor's porch day! " \
+           "Even though the day has passed, I hope your zucchini harvests were PLENTIFUL! IN ADDITION, there seems to have been " \
+           "a LOT of birthdays this month, so I'd like to take this opportunity to remind you to CHECK IN ON YOUR LOVED ONES! " \
+           "It can feel REALLY daunting or awkward to send someone a kind message who you haven't spoken to in a while, or who " \
+           "you aren't super close with, but it almost NEVER turns out badly, and in fact often touches people since you thought of them! " \
+           "Maintaining relationships can be the hardest part for many people, but long-lasting relationships are THE BEST EVER so " \
+           "try your best to be as ACTIVE AS POSSIBLE when it comes to keeping the relationships you value! " \
+           "As a matter of fact...\n\n "\
+           "It makes ME REALLY HAPPY whenever you all have asked me how I'm doing, and I've kept track of how many times " \
+           "it's happened because I value you all so much! Over the course of my life, I've been asked how I'm doing 131 TIMES! " \
+           "Thank you all so much for having the THOUGHT to check in with ME :]] Make sure you do the same for each other! \n\n" \
+           "Placing a zucchini on your porch,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -217,8 +219,7 @@ async def how_are_you_15(ctx):
     elif str(ctx.author.id) == lumpiaid:
         await ctx.send(lumpiamessage)
     elif str(ctx.author.id) == hannahtlid:
-        await ctx.send(file=discord.File('LOBTER15.PNG'),
-                                content=hannahtlmessage)
+        await ctx.send(hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
     elif str(ctx.author.id) == valkarenaid:
