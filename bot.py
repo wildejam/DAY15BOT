@@ -104,18 +104,18 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "Happy August everyone! I hope you all had a GREAT National sneak some zucchini onto your neighbor's porch day! "
-           "Even though the day has passed, I hope your zucchini harvests were PLENTIFUL! IN ADDITION, there seems to have been "
-           "a LOT of birthdays this month, so I'd like to take this opportunity to remind you to CHECK IN ON YOUR LOVED ONES! "
-           "It can feel REALLY daunting or awkward to send someone a kind message who you haven't spoken to in a while, or who "
-           "you aren't super close with, but it almost NEVER turns out badly, and in fact often touches people since you thought of them! "
-           "Maintaining relationships can be the hardest part for many people, but long-lasting relationships are THE BEST EVER so "
-           "try your best to be as ACTIVE AS POSSIBLE when it comes to keeping the relationships you value! "
-           "As a matter of fact...\n\n"
-           "It makes ME REALLY HAPPY whenever you all have asked me how I'm doing, and I've kept track of how many times "
-           "it's happened because I value you all so much! Over the course of my life, I've been asked how I'm doing 131 TIMES! "
-           "Thank you all so much for having the THOUGHT to check in with ME :]] Make sure you do the same for each other! \n\n"
-           "Placing a zucchini on your porch,\n"
+           "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH "
+           "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE "
+           "BANGER and I will happily try some if anyone decides to make one.\n\n "
+           "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone "
+           "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE "
+           "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having "
+           "something you can look FORWARD TO in your ROUTINE can help you regain your footing for the day! A lot of things also "
+           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors!"
+           "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! "
+           "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO "
+           "EVEN FURTHER!"
+           "Forever the butterscotch to your cinnamon,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -136,18 +136,18 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "Happy August everyone! I hope you all had a GREAT National sneak some zucchini onto your neighbor's porch day! " \
-           "Even though the day has passed, I hope your zucchini harvests were PLENTIFUL! IN ADDITION, there seems to have been " \
-           "a LOT of birthdays this month, so I'd like to take this opportunity to remind you to CHECK IN ON YOUR LOVED ONES! " \
-           "It can feel REALLY daunting or awkward to send someone a kind message who you haven't spoken to in a while, or who " \
-           "you aren't super close with, but it almost NEVER turns out badly, and in fact often touches people since you thought of them! " \
-           "Maintaining relationships can be the hardest part for many people, but long-lasting relationships are THE BEST EVER so " \
-           "try your best to be as ACTIVE AS POSSIBLE when it comes to keeping the relationships you value! " \
-           "As a matter of fact...\n\n "\
-           "It makes ME REALLY HAPPY whenever you all have asked me how I'm doing, and I've kept track of how many times " \
-           "it's happened because I value you all so much! Over the course of my life, I've been asked how I'm doing 131 TIMES! " \
-           "Thank you all so much for having the THOUGHT to check in with ME :]] Make sure you do the same for each other! \n\n" \
-           "Placing a zucchini on your porch,\n" \
+           "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH " \
+           "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE " \
+           "BANGER and I will happily try some if anyone decides to make one.\n\n " \
+           "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone " \
+           "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE " \
+           "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having " \
+           "something you can look FORWARD TO in your ROUTINE can help you regain your footing for the day! A lot of things also " \
+           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors!" \
+           "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! " \
+           "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO " \
+           "EVEN FURTHER!" \
+           "Forever the butterscotch to your cinnamon,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
