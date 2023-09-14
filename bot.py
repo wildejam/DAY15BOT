@@ -106,7 +106,7 @@ async def check_to15():
     await message_channel.send("```"
            "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH "
            "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE "
-           "BANGER and I will happily try some if anyone decides to make one.\n\n "
+           "BANGER and I will happily try some if anyone decides to make one.\n\n"
            "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone "
            "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE "
            "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having "
@@ -114,7 +114,7 @@ async def check_to15():
            "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors!"
            "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! "
            "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO "
-           "EVEN FURTHER!"
+           "EVEN FURTHER!\n\n"
            "Forever the butterscotch to your cinnamon,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
@@ -138,15 +138,15 @@ async def adminoverride15(ctx):
     msg1 = "```" \
            "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH " \
            "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE " \
-           "BANGER and I will happily try some if anyone decides to make one.\n\n " \
+           "BANGER and I will happily try some if anyone decides to make one.\n\n" \
            "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone " \
            "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE " \
            "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having " \
            "something you can look FORWARD TO in your ROUTINE can help you regain your footing for the day! A lot of things also " \
-           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors!" \
+           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors! " \
            "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! " \
            "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO " \
-           "EVEN FURTHER!" \
+           "EVEN FURTHER!\n\n" \
            "Forever the butterscotch to your cinnamon,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
