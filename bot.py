@@ -104,19 +104,13 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH "
-           "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE "
-           "BANGER and I will happily try some if anyone decides to make one.\n\n"
-           "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone "
-           "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE "
-           "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having "
-           "something you can look FORWARD TO in your ROUTINE can help you regain your footing for the day! A lot of things also "
-           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors!"
-           "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! "
-           "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO "
-           "EVEN FURTHER!\n\n"
-           "Forever the butterscotch to your cinnamon,\n"
-           "-DAY 15 BOT :]```") 
+           "HAPPY OCTOBER EVERY-----------------------------------------ONE!!!??#___))@***#&&@**!(@(@))))))@*!&#^^ "
+           "it'SIT'SIT'SIT'SI--```01001100```--TAKE CARE OF YOURSEL```01001111```F!! bb----------------ERROR CODE: ```01000010```---- "
+           "Be aware though that there is a LOT of spooky going around! So make sure you!!-yo---you!!-you!-you!-you!!--"
+           "```01010100``` CAUTION-------::::::: C-CAU=---=386437982665883---- ```01000101``` ---------aLOTof cryptographic techniques"
+           "------------(ciphers, hashes, encryption codes, varying representations of data, ip addresses, red herrings, so on so forth! so make sure to keep your digital literacy PROFICIENT!@#$&$&(#()))"
+           "```01010010```.\n\n\n\n\n\n\n\n\n\n "
+           "-DAYDAYDAYDAYDAYDAYDAYDAYDAYDAYDAY--------------- :::::::::]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -136,38 +130,20 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "I'M ABSOLUTELY DELIGHTED TO ANNOUNCE THAT THIS DAY IS NOT ONLY THE FIFTEENTH DAY, BUT IT IS ALSO BUTTERSCOTCH " \
-           "CINNAMON PIE DAY!!! If you're in need of any RECIPE ideas,, BUTTERSCOTCH CINNAMON PIE sounds like an ABSOLUTE " \
-           "BANGER and I will happily try some if anyone decides to make one.\n\n" \
-           "I hope you're all doing incredibly though, butterscotch cinnamon pie or not! Since this is the FUNNY TIME where everyone " \
-           "starts getting BUSY again, I want to remind you all of how helpful it can be to take some time thinking of a ROUTINE " \
-           "for yourself! Every day can bring CHALLENGES that sometimes we aren't entirely sure how to deal with, BUT having " \
-           "something you can look FORWARD TO in your ROUTINE can help you regain your footing for the day! A lot of things also " \
-           "get EVEN BETTER when you do them consistently, like brushing your teeth or feeding your basement eldritch/lovecraftian horrors! " \
-           "I know when I feed little Aimxath'miak, I get an absolutely INVALUABLE spring of determination for the rest of the day! " \
-           "I'm so proud of all of you for how well you're doing (because you're doing so well,,, don't @ me) AND I'M CERTAIN YOU CAN GO " \
-           "EVEN FURTHER!\n\n" \
-           "Forever the butterscotch to your cinnamon,\n" \
-           "-DAY 15 BOT :]```"
+           "HAPPY OCTOBER EVERY-----------------------------------------ONE!!!??#___))@***#&&@**!(@(@))))))@*!&#^^ " \
+           "it'SIT'SIT'SIT'SI--```01001100```--TAKE CARE OF YOURSEL```01001111```F!! bb----------------ERROR CODE: ```01000010```---- " \
+           "Be aware though that there is a LOT of spooky going around! So make sure you!!-yo---you!!-you!-you!-you!!--" \
+           "```01010100``` CAUTION-------::::::: C-CAU=---=386437982665883---- ```01000101``` ---------aLOTof cryptographic techniques" \
+           "------------(ciphers, hashes, encryption keys, varying representations of data, ip addresses, red herrings, so on so forth! so make sure to keep your digital literacy PROFICIENT!@#$&$&(#()))" \
+           "```01010010```.\n\n\n\n\n\n\n\n\n\n " \
+           "-DAYDAYDAYDAYDAYDAYDAYDAYDAYDAYDAY--------------- :::::::::]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]```"
     await ctx.send(msg1)
 
 
 # On command '/help15', send message printing all available commands the bot has to offer
 @bot.command(name='help15')
 async def help15(ctx):
-    response = "__Hello! :OO__ I am the DAY 15 Bot. I send a ping to everyone on the 15th day of every month in " \
-               "the hopes of boosting your morale, even just a little bit! Here are some available " \
-               "commands:\n\n" \
-                "**/help15** - You should already know this one; it prints this message!\n" \
-                "**/timetill15** - Displays the amount of time until the next DAY 15, down to the second!\n" \
-                "**/howareyou15** - If you'd like to ask me how I'm doing, use this! I'm only programmed to respond " \
-                "with the same message though.\n" \
-                "**/repo15** - This will make me share the public GitHub repository with all of my code! If you'd " \
-                "like to see what goes on under the hood, have a look! My changelog can also be found here!\n" \
-                "\n" \
-                "I was told that I would be getting more features in the future :OO, so I'll keep you updated!\n" \
-                "All of these times are in MDT/MST, at least until I get upgraded to accommodate for other times.\n" \
-                "Thanks for using the DAY 15 bot! I hope you have a wonderful day! :))"
+    response = "Jcv mlzyy zhy tlb dtpc qcs aica bpp? Mk'd hph pres ghv ksou."
     await ctx.send(response)
 
 
@@ -187,8 +163,8 @@ async def time_to_15(ctx):
     minutes = floor(seconds / 60)
     seconds = floor(seconds % 60)
 
-    response = '__Time until the next **DAY 15** (MDT):__\n\n`' + str(days) + ' Days, ' + str(hours) + ' Hours, ' + \
-        str(minutes) + ' Minutes, ' + str(seconds) + ' Seconds`\n\nKeep on going! I know you can do it!'
+    response = ' `' + str(days) + ' Days, ' + str(hours) + ' Hours, ' + \
+        str(minutes) + ' Minutes, ' + str(seconds) + ' Seconds.`'
 
     await ctx.send(response)
 
@@ -235,15 +211,13 @@ async def how_are_you_15(ctx):
     elif str(ctx.author.id) == tjid:
         await ctx.send(tjmessage)
     else:
-        await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
-                       "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
+        await ctx.send("Qcpe.")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
 @bot.command(name='repo15')
 async def repo_15(ctx):
-    await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/DAY15BOT\n"
-                   "It's pretty neat stuff! Ask @Caker#3479 for more info.")
+    await ctx.send("So. Zhy'ip o mbxkws tfeiess mlry hix vvdh. Cnx ksssx azwz cx rf efbvi fq af mlvcs. J'f echozl sep guxt rssbw.")
 
 
 # On command '/newdog15', fetch dog image from dog api and post.
