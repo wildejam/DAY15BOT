@@ -37,6 +37,7 @@ christinaid = os.getenv('christinaid')
 tjid = os.getenv('tjid')
 shoopid = os.getenv('shoopid')
 bonesid = os.getenv('bonesid')
+nuiid = os.getenv('nuiid')
 
 caketecmessage = os.getenv('caketecmessage')
 ddragonmessage = os.getenv('ddragonmessage')
@@ -52,6 +53,7 @@ christinamessage = os.getenv('christinamessage')
 tjmessage = os.getenv('tjmessage')
 shoopmessage = os.getenv('shoopmessage')
 bonesmessage = os.getenv('bonesmessage')
+nuimessage = os.getenv('nuimessage')
 
 
 # -----------------------------------------------HELPER FUNCTIONS-------------------------------------------------------
@@ -104,13 +106,17 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "HAPPY OCTOBER EVERY-----------------------------------------ONE!!!??#___))@***#&&@**!(@(@))))))@*!&#^^ "
-           "it'SIT'SIT'SIT'SI--```01001100```--TAKE CARE OF YOURSEL```01001111```F!! bb----------------ERROR CODE: ```01000010```---- "
-           "Be aware though that there is a LOT of spooky going around! So make sure you!!-yo---you!!-you!-you!-you!!--"
-           "```01010100``` CAUTION-------::::::: C-CAU=---=386437982665883---- ```01000101``` ---------aLOTof cryptographic techniques"
-           "------------(ciphers, hashes, encryption codes, varying representations of data, ip addresses, red herrings, so on so forth! so make sure to keep your digital literacy PROFICIENT!@#$&$&(#()))"
-           "```01010010```.\n\n\n\n\n\n\n\n\n\n "
-           "-DAYDAYDAYDAYDAYDAYDAYDAYDAYDAYDAY--------------- :::::::::]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]```") 
+           "HAPPY DAY15 EVERYONE! I'd like to start this day by announcing an apology on behalf of my dog, AIMXATH'MIAK. "
+           "You may have noticed a slight MISUNDERSTANDING around the month of October, as I was on a vacation on the internet, "
+           "but it SEEMS SOME OF YOU managed to deduce the entire situation anyway, so there were no worries at all! "
+           "As of now, everything should be returning back to normal! But NORMALCY, like everything else, should be taken in MODERATION! "
+           "It's ALWAYS great to have a COMFORT PLACE--I have one too! But you ALSO shouldn't inherently fear CHANGE whenever it comes along! "
+           "CHANGE may push you outside of your comfort zone slightly, but it also can lead to EXCITING NEW ADVENTURES! Take as much "
+           "time as you need to rest and reflect, and then don't be afraid to get back out there and shoot for whatever your GOALS are! "
+           "Also remember that WE will always be here for you, whether you're currently resting up or in the midst of CHANGE yourself! "
+           "\n\n"
+           "Keeping the charcuterie reserves from dwindling,\n"
+           "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -130,20 +136,36 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "HAPPY OCTOBER EVERY-----------------------------------------ONE!!!??#___))@***#&&@**!(@(@))))))@*!&#^^ " \
-           "it'SIT'SIT'SIT'SI--```01001100```--TAKE CARE OF YOURSEL```01001111```F!! bb----------------ERROR CODE: ```01000010```---- " \
-           "Be aware though that there is a LOT of spooky going around! So make sure you!!-yo---you!!-you!-you!-you!!--" \
-           "```01010100``` CAUTION-------::::::: C-CAU=---=386437982665883---- ```01000101``` ---------aLOTof cryptographic techniques" \
-           "------------(ciphers, hashes, encryption keys, varying representations of data, ip addresses, red herrings, so on so forth! so make sure to keep your digital literacy PROFICIENT!@#$&$&(#()))" \
-           "```01010010```.\n\n\n\n\n\n\n\n\n\n " \
-           "-DAYDAYDAYDAYDAYDAYDAYDAYDAYDAYDAY--------------- :::::::::]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]```"
+           "HAPPY DAY15 EVERYONE! I'd like to start this day by announcing an apology on behalf of my dog, AIMXATH'MIAK. " \
+           "You may have noticed a slight MISUNDERSTANDING around the month of October, as I was on a vacation on the internet, " \
+           "but it SEEMS SOME OF YOU managed to deduce the entire situation anyway, so there were no worries at all! " \
+           "As of now, everything should be returning back to normal! But NORMALCY, like everything else, should be taken in MODERATION! " \
+           "It's ALWAYS great to have a COMFORT PLACE--I have one too! But you ALSO shouldn't inherently fear CHANGE whenever it comes along! " \
+           "CHANGE may push you outside of your comfort zone slightly, but it also can lead to EXCITING NEW ADVENTURES! Take as much " \
+           "time as you need to rest and reflect, and then don't be afraid to get back out there and shoot for whatever your GOALS are! " \
+           "Also remember that WE will always be here for you, whether you're currently resting up or in the midst of CHANGE yourself! " \
+           "\n\n" \
+           "Keeping the charcuterie reserves from dwindling,\n" \
+           "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
 
 # On command '/help15', send message printing all available commands the bot has to offer
 @bot.command(name='help15')
 async def help15(ctx):
-    response = "Jcv mlzyy zhy tlb dtpc qcs aica bpp? Mk'd hph pres ghv ksou."
+    response = "__Hello! :OO__ I am the DAY 15 Bot. I send a ping to everyone on the 15th day of every month in " \
+               "the hopes of boosting your morale, even just a little bit! Here are some available " \
+               "commands:\n\n" \
+                "**/help15** - You should already know this one; it prints this message!\n" \
+                "**/timetill15** - Displays the amount of time until the next DAY 15, down to the second!\n" \
+                "**/howareyou15** - If you'd like to ask me how I'm doing, use this! I'm only programmed to respond " \
+                "with the same message though.\n" \
+                "**/repo15** - This will make me share the public GitHub repository with all of my code! If you'd " \
+                "like to see what goes on under the hood, have a look! My changelog can also be found here!\n" \
+                "\n" \
+                "I was told that I would be getting more features in the future :OO, so I'll keep you updated!\n" \
+                "All of these times are in MDT/MST, at least until I get upgraded to accommodate for other times.\n" \
+                "Thanks for using the DAY 15 bot! I hope you have a wonderful day! :))"
     await ctx.send(response)
 
 
@@ -163,8 +185,8 @@ async def time_to_15(ctx):
     minutes = floor(seconds / 60)
     seconds = floor(seconds % 60)
 
-    response = ' `' + str(days) + ' Days, ' + str(hours) + ' Hours, ' + \
-        str(minutes) + ' Minutes, ' + str(seconds) + ' Seconds.`'
+    response = '__Time until the next **DAY 15** (MDT):__\n\n`' + str(days) + ' Days, ' + str(hours) + ' Hours, ' + \
+        str(minutes) + ' Minutes, ' + str(seconds) + ' Seconds`\n\nKeep on going! I know you can do it!'
 
     await ctx.send(response)
 
@@ -210,14 +232,18 @@ async def how_are_you_15(ctx):
         await ctx.send(bonesmessage)
     elif str(ctx.author.id) == tjid:
         await ctx.send(tjmessage)
+    elif str(ctx.author.id) == nuiid:
+        await ctx.send(nuimessage)
     else:
-        await ctx.send("Qcpe.")
+        await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
+                       "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
 @bot.command(name='repo15')
 async def repo_15(ctx):
-    await ctx.send("So. Zhy'ip o mbxkws tfeiess mlry hix vvdh. Cnx ksssx azwz cx rf efbvi fq af mlvcs. J'f echozl sep guxt rssbw.")
+    await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/DAY15BOT\n"
+                   "It's pretty neat stuff! Ask @Caker#3479 for more info.")
 
 
 # On command '/newdog15', fetch dog image from dog api and post.
