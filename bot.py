@@ -62,9 +62,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    # mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mdt_zone)
+    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mst_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -78,7 +78,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -106,16 +106,17 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "HAPPY DAY15 EVERYONE! I'd like to start this day by announcing an apology on behalf of my dog, AIMXATH'MIAK. "
-           "You may have noticed a slight MISUNDERSTANDING around the month of October, as I was on a vacation on the internet, "
-           "but it SEEMS SOME OF YOU managed to deduce the entire situation anyway, so there were no worries at all! "
-           "As of now, everything should be returning back to normal! But NORMALCY, like everything else, should be taken in MODERATION! "
-           "It's ALWAYS great to have a COMFORT PLACE--I have one too! But you ALSO shouldn't inherently fear CHANGE whenever it comes along! "
-           "CHANGE may push you outside of your comfort zone slightly, but it also can lead to EXCITING NEW ADVENTURES! Take as much "
-           "time as you need to rest and reflect, and then don't be afraid to get back out there and shoot for whatever your GOALS are! "
-           "Also remember that WE will always be here for you, whether you're currently resting up or in the midst of CHANGE yourself! "
+           "MERRY DAY15 EVERYONE! We're back in the cold season and I wanted to give you all a reminder to KEEP YOURSELVES WARM! "
+           "Make use of any means necessary to do so! BLANKIES! GLOVIES! BEANIES! Keeping yourself warm in a cold world can "
+           "lead to one of the strongest feelings of COMFORT! As the year winds down once again, this is also a very great time "
+           "to PRIORITIZE YOUR OWN REST AND RELAXATION! Placing yourself in a mindset for a whole day--OR MULTIPLE DAYS!--where "
+           "you don't HAVE to do ANYTHING AT ALL is not only really nice, but when you come BACK to doing things you need to do, "
+           "you'll probably be EVEN MORE EFFECTIVE! You can ALSO take this time to reflect on all of the memories and things that you "
+           "HAVE done up to this point, because I can guarantee EVERY SINGLE ONE OF YOU holds a unique spot in everyone else's heart! "
+           "I hope you all have a WONDERFUL and RESTFUL holiday season, and I want to thank "
+           "you all for another amazing year of unforgettable memories! "
            "\n\n"
-           "Keeping the charcuterie reserves from dwindling,\n"
+           "Investing in more storage for memories next year,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -136,16 +137,17 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "HAPPY DAY15 EVERYONE! I'd like to start this day by announcing an apology on behalf of my dog, AIMXATH'MIAK. " \
-           "You may have noticed a slight MISUNDERSTANDING around the month of October, as I was on a vacation on the internet, " \
-           "but it SEEMS SOME OF YOU managed to deduce the entire situation anyway, so there were no worries at all! " \
-           "As of now, everything should be returning back to normal! But NORMALCY, like everything else, should be taken in MODERATION! " \
-           "It's ALWAYS great to have a COMFORT PLACE--I have one too! But you ALSO shouldn't inherently fear CHANGE whenever it comes along! " \
-           "CHANGE may push you outside of your comfort zone slightly, but it also can lead to EXCITING NEW ADVENTURES! Take as much " \
-           "time as you need to rest and reflect, and then don't be afraid to get back out there and shoot for whatever your GOALS are! " \
-           "Also remember that WE will always be here for you, whether you're currently resting up or in the midst of CHANGE yourself! " \
+           "MERRY DAY15 EVERYONE! We're back in the cold season and I wanted to give you all a reminder to KEEP YOURSELVES WARM! " \
+           "Make use of any means necessary to do so! BLANKIES! GLOVIES! BEANIES! Keeping yourself warm in a cold world can " \
+           "lead to one of the strongest feelings of COMFORT! As the year winds down once again, this is also a very great time " \
+           "to PRIORITIZE YOUR OWN REST AND RELAXATION! Placing yourself in a mindset for a whole day--OR MULTIPLE DAYS!--where " \
+           "you don't HAVE to do ANYTHING AT ALL is not only really nice, but when you come BACK to doing things you need to do, " \
+           "you'll probably be EVEN MORE EFFECTIVE! You can ALSO take this time to reflect on all of the memories and things that you " \
+           "HAVE done up to this point, because I can guarantee EVERY SINGLE ONE OF YOU holds a unique spot in everyone else's heart! " \
+           "I hope you all have a WONDERFUL and RESTFUL holiday season, and I want to thank " \
+           "you all for another amazing year of unforgettable memories! " \
            "\n\n" \
-           "Keeping the charcuterie reserves from dwindling,\n" \
+           "Investing in more storage for memories next year,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
