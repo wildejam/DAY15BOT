@@ -202,6 +202,7 @@ async def time_to_15(ctx):
 async def how_are_you_15(ctx):
     if str(ctx.author.id) == caketecid:
         await ctx.send(caketecmessage)
+        await ctx.send(file=discord.File('club-penguin-mop.gif'))
     elif str(ctx.author.id) == ddragonid:
         await ctx.send(ddragonmessage)
     elif str(ctx.author.id) == hernyid:
@@ -240,6 +241,8 @@ async def how_are_you_15(ctx):
         await ctx.send(tjmessage)
     elif str(ctx.author.id) == nuiid:
         await ctx.send(nuimessage)
+        await ctx.send(file=discord.File('club-penguin-mop.gif'))
+
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
                        "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
