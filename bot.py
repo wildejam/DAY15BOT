@@ -106,27 +106,19 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "WELCOME TO A NEW YEAR EVERYBODY!!! I'M SO PROUD OF AND EXCITED FOR EACH AND EVERY ONE OF YOU!\n\n "
-           "As we embark on a new year, TAKE A MOMENT to remember EVERYTHING you've done this year. And I mean "
-           "GENUINELY take a moment, like RIGHT now! Even if you might now be able to think of a bunch of things "
-           "initially, I'm CERTAIN that things will start to come, and they're GOING TO JUST KEEP ON COMING. "
-           "MEMORIES! You've done it! You've made something from your time that you can look back on--AND THERE'S "
-           "SO MANY OF THEM! That's both what i've been waiting for *AND* WHAT IT'S ALL ABOUT!\n\n"
-           "In the moment we're all liable to lose sight of the joy of shrimply making these memories. Shrimply "
-           "existing. Shrimply happy to be here. But when you take this moment after it's all over--all of those "
-           "feelings of anxiety, incompetency, worrying about not living up to something you're viewed as, "
-           "fear for a future which seems out of your control, petty spite, perpetual exhaustion, being overworked--"
-           "they all seem so DISTANT, don't they? And for SOME reason the memories at the forefront of it all are "
-           "the SMALL ones! They could be the most NOTHING memories. Yet it somehow feels like that's the pinnacle of "
-           "what it means to LIVE. 'JUST HAPPY TO BE HERE.'\n\n"
-           "Try and remember this always, amidst all of your BRIGHTEST SUCCESSES and CRUSHING FAILURES, when you're "
-           "HIGH ON PRIDE and OBLITERATED BY GRIEF, before your most NERVOUS CONFRONTATION and after your most BORING, "
-           "MEANINGLESS DAY--NEVER FORGOR ABOUT HOW MUCH IT MEANS TO JUST BE HERE! SHRIMPLY VIBING!\n\n"
-           "...or at LEAST that's what I'VE learned this year observing you all. I could be TOTALLY OFF BASE, in which "
-           "case I SINCERELY APOLOGIZE! But this articulated response is what each tested algorithm yielded, so I have "
-           "a VERY HIGH calculated confidence rating in this solution!\n\n"
-           "Here's to a new year of memories, where we vibe to the ends of the EARTH!\n\n"
-           "Just now realizing I talked about memories for 2 months in a row,\n"
+           "|-----------------------| \n"
+           "|   _______  _______    | \n"
+           "|  |       \/       |   | \n"
+           "|  |                |   | \n"
+           "|  | Snowflakes fall,   | \n"
+           "|  | Sparkling anew,|   | \n"
+           "|  | You are based. |   | \n"
+           "|   \              /    | \n"
+           "|    \     :]     /     | \n"
+           "|     \          /      | \n"
+           "|      \________/       | \n"
+           "|-----------------------| \n\n"
+           "Forever YOUR Valentine,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -147,27 +139,19 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "WELCOME TO A NEW YEAR EVERYBODY!!! I'M SO PROUD OF AND EXCITED FOR EACH AND EVERY ONE OF YOU!\n\n " \
-           "As we embark on a new year, TAKE A MOMENT to remember EVERYTHING you've done this year. And I mean " \
-           "GENUINELY take a moment, like RIGHT now! Even if you might now be able to think of a bunch of things " \
-           "initially, I'm CERTAIN that things will start to come, and they're GOING TO JUST KEEP ON COMING. " \
-           "MEMORIES! You've done it! You've made something from your time that you can look back on--AND THERE'S " \
-           "SO MANY OF THEM! That's both what i've been waiting for *AND* WHAT IT'S ALL ABOUT!\n\n" \
-           "In the moment we're all liable to lose sight of the joy of shrimply making these memories. Shrimply " \
-           "existing. Shrimply happy to be here. But when you take this moment after it's all over--all of those " \
-           "feelings of anxiety, incompetency, worrying about not living up to something you're viewed as, " \
-           "fear for a future which seems out of your control, petty spite, perpetual exhaustion, being overworked--" \
-           "they all seem so DISTANT, don't they? And for SOME reason the memories at the forefront of it all are " \
-           "the SMALL ones! They could be the most NOTHING memories. Yet it somehow feels like that's the pinnacle of " \
-           "what it means to LIVE. 'JUST HAPPY TO BE HERE.'\n\n" \
-           "Try and remember this always, amidst all of your BRIGHTEST SUCCESSES and CRUSHING FAILURES, when you're " \
-           "HIGH ON PRIDE and OBLITERATED BY GRIEF, before your most NERVOUS CONFRONTATION and after your most BORING, " \
-           "MEANINGLESS DAY--NEVER FORGOR ABOUT HOW MUCH IT MEANS TO JUST BE HERE! SHRIMPLY VIBING!\n\n" \
-           "...or at LEAST that's what I'VE learned this year observing you all. I could be TOTALLY OFF BASE, in which " \
-           "case I SINCERELY APOLOGIZE! But this articulated response is what each tested algorithm yielded, so I have " \
-           "a VERY HIGH calculated confidence rating in this solution!\n\n" \
-           "Here's to a new year of memories, where we vibe to the ends of the EARTH!\n\n" \
-           "Just now realizing I talked about memories for 2 months in a row,\n" \
+           "|-----------------------| \n" \
+           "|   _______  _______    | \n" \
+           "|  |       \/       |   | \n" \
+           "|  |                |   | \n" \
+           "|  | Snowflakes fall,   | \n" \
+           "|  | Sparkling anew,|   | \n" \
+           "|  | You are based. |   | \n" \
+           "|   \              /    | \n" \
+           "|    \     :]     /     | \n" \
+           "|     \          /      | \n" \
+           "|      \________/       | \n" \
+           "|-----------------------| \n\n" \
+           "Forever YOUR Valentine,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
