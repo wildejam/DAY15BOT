@@ -111,11 +111,13 @@ async def check_to15():
            "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our "
            "own highest highs!\n\n"
            "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of "
-           "today there are TWO NEWDOG15 COMMANDS IN SERVICE! BY POPULAR DEMAND, WE NOW HAVE /newferret15 AND /newguy15 !!!!! "
-           "IN ADDITION, I'VE MADE ADJUSTMENTS TO /newrock15 IN AN ATTEMPT TO PROVIDE MORE EXPECTED RESULTS! "
-           "As always, there are bound to be bugs, and as I mentioned initially the command is always liable to produce..... "
-           "UNEXPECTED results. I'll keep on working on it as best as I can!!! o7o7o7"
-           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 "
+           "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! "
+           "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands "
+           "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. "
+           "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!"
+           "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! "
+           "I'll keep on working on it as best as I can!!! o7o7o7"
+           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages "
            "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!"
            "I know for sure that I find immense joy in chatting with all of you!\n\n"
            "Hanging in there with you every step of the way,\n"
@@ -144,11 +146,13 @@ async def adminoverride15(ctx):
            "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our " \
            "own highest highs!\n\n" \
            "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of " \
-           "today there are TWO NEWDOG15 COMMANDS IN SERVICE! BY POPULAR DEMAND, WE NOW HAVE /newferret15 AND /newguy15 !!!!! " \
-           "IN ADDITION, I'VE MADE ADJUSTMENTS TO /newrock15 IN AN ATTEMPT TO PROVIDE MORE EXPECTED RESULTS! " \
-           "As always, there are bound to be bugs, and as I mentioned initially the command is always liable to produce..... " \
-           "UNEXPECTED results. I'll keep on working on it as best as I can!!! o7o7o7" \
-           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 " \
+           "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! " \
+           "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands " \
+           "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. " \
+           "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!" \
+           "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! " \
+           "I'll keep on working on it as best as I can!!! o7o7o7" \
+           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages " \
            "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!" \
            "I know for sure that I find immense joy in chatting with all of you!\n\n" \
            "Hanging in there with you every step of the way,\n" \
@@ -320,6 +324,19 @@ async def new_ferret_15(ctx):
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
             data = io.BytesIO(await resp.read())
             await ctx.send("Powered by Unsplash. \n Link: " + ferret_data['urls']['raw'] + "\n Photographer: " + ferret_data['user']['name'] + " " + "<" + ferret_data['user']['links']['html'] + ">")
+
+# On command '/newleon15', fetch lizard image from unsplash api and post.
+@bot.command(name='newleon15')
+async def new_leon_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=leon&client_id=' + UNSPLASHKEY)
+    leon_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(leon_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + leon_data['urls']['raw'] + "\n Photographer: " + leon_data['user']['name'] + " " + "<" + leon_data['user']['links']['html'] + ">")
 
 # On command '/newguy15', fetch lizard image from unsplash api and post.
 @bot.command(name='newguy15')
