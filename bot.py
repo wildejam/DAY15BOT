@@ -106,19 +106,19 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "|-----------------------| \n"
-           "|   _______  _______    | \n"
-           "|  |       \/       |   | \n"
-           "|  |                |   | \n"
-           "|  | Snowflakes fall,   | \n"
-           "|  | Sparkling anew,|   | \n"
-           "|  | You are based. |   | \n"
-           "|   \              /    | \n"
-           "|    \     :]     /     | \n"
-           "|     \          /      | \n"
-           "|      \________/       | \n"
-           "|-----------------------| \n\n"
-           "Forever YOUR Valentine,\n"
+           "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. "
+           "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help "
+           "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our "
+           "own highest highs!\n\n"
+           "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of "
+           "today there are TWO NEWDOG15 COMMANDS IN SERVICE! BY POPULAR DEMAND, WE NOW HAVE /newferret15 AND /newguy15 !!!!! "
+           "IN ADDITION, I'VE MADE ADJUSTMENTS TO /newrock15 IN AN ATTEMPT TO PROVIDE MORE EXPECTED RESULTS! "
+           "As always, there are bound to be bugs, and as I mentioned initially the command is always liable to produce..... "
+           "UNEXPECTED results. I'll keep on working on it as best as I can!!! o7o7o7"
+           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 "
+           "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!"
+           "I know for sure that I find immense joy in chatting with all of you!\n\n"
+           "Hanging in there with you every step of the way,\n"
            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -139,19 +139,19 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     msg1 = "```" \
-           "|-----------------------| \n" \
-           "|   _______  _______    | \n" \
-           "|  |       \/       |   | \n" \
-           "|  |                |   | \n" \
-           "|  | Snowflakes fall,   | \n" \
-           "|  | Sparkling anew,|   | \n" \
-           "|  | You are based. |   | \n" \
-           "|   \              /    | \n" \
-           "|    \     :]     /     | \n" \
-           "|     \          /      | \n" \
-           "|      \________/       | \n" \
-           "|-----------------------| \n\n" \
-           "Forever YOUR Valentine,\n" \
+           "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. " \
+           "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help " \
+           "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our " \
+           "own highest highs!\n\n" \
+           "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of " \
+           "today there are TWO NEWDOG15 COMMANDS IN SERVICE! BY POPULAR DEMAND, WE NOW HAVE /newferret15 AND /newguy15 !!!!! " \
+           "IN ADDITION, I'VE MADE ADJUSTMENTS TO /newrock15 IN AN ATTEMPT TO PROVIDE MORE EXPECTED RESULTS! " \
+           "As always, there are bound to be bugs, and as I mentioned initially the command is always liable to produce..... " \
+           "UNEXPECTED results. I'll keep on working on it as best as I can!!! o7o7o7" \
+           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 " \
+           "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!" \
+           "I know for sure that I find immense joy in chatting with all of you!\n\n" \
+           "Hanging in there with you every step of the way,\n" \
            "-DAY 15 BOT :]```"
     await ctx.send(msg1)
 
@@ -241,7 +241,6 @@ async def how_are_you_15(ctx):
         await ctx.send(tjmessage)
     elif str(ctx.author.id) == nuiid:
         await ctx.send(nuimessage)
-        await ctx.send(file=discord.File('club-penguin-mop.gif'))
 
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
@@ -282,6 +281,7 @@ async def new_cat_15(ctx):
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
             data = io.BytesIO(await resp.read())
             await ctx.send("Powered by Unsplash. \n Link: " + cat_data['urls']['raw'] + "\n Photographer: " + cat_data['user']['name'] + " " + "<" + cat_data['user']['links']['html'] + ">")
+
 # On command '/newlizard15', fetch lizard image from unsplash api and post.
 @bot.command(name='newlizard15')
 async def new_lizard_15(ctx):
@@ -298,15 +298,41 @@ async def new_lizard_15(ctx):
 # On command '/newrock15', fetch lizard image from unsplash api and post.
 @bot.command(name='newrock15')
 async def new_rock_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=rock&client_id=' + UNSPLASHKEY)
-    liz_data = api_data.json()
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=crystal&client_id=' + UNSPLASHKEY)
+    rock_data = api_data.json()
 
     async with aiohttp.ClientSession() as session:
-        async with session.get(liz_data['urls']['raw']) as resp:
+        async with session.get(rock_data['urls']['raw']) as resp:
             if resp.status != 200:
                 return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
             data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + "<" + liz_data['user']['links']['html'] + ">")
+            await ctx.send("Powered by Unsplash. \n Link: " + rock_data['urls']['raw'] + "\n Photographer: " + rock_data['user']['name'] + " " + "<" + rock_data['user']['links']['html'] + ">")
+
+# On command '/newferret15', fetch lizard image from unsplash api and post.
+@bot.command(name='newferret15')
+async def new_ferret_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=ferret&client_id=' + UNSPLASHKEY)
+    ferret_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(ferret_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + ferret_data['urls']['raw'] + "\n Photographer: " + ferret_data['user']['name'] + " " + "<" + ferret_data['user']['links']['html'] + ">")
+
+# On command '/newguy15', fetch lizard image from unsplash api and post.
+@bot.command(name='newguy15')
+async def new_guy_15(ctx):
+    api_data = requests.get('https://api.unsplash.com/photos/random?query=guy&client_id=' + UNSPLASHKEY)
+    guy_data = api_data.json()
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(guy_data['urls']['raw']) as resp:
+            if resp.status != 200:
+                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
+            data = io.BytesIO(await resp.read())
+            await ctx.send("Powered by Unsplash. \n Link: " + guy_data['urls']['raw'] + "\n Photographer: " + guy_data['user']['name'] + " " + "<" + guy_data['user']['links']['html'] + ">")
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
 # Start the loop to check if it is DAY 15
 check_to15.start()
