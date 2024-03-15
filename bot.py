@@ -140,24 +140,31 @@ async def before():
 # ADMIN COMMAND: used to test day15 message
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
-    msg1 = "```" \
-           "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. " \
-           "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help " \
-           "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our " \
-           "own highest highs!\n\n" \
-           "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of " \
-           "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! " \
-           "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands " \
-           "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. " \
-           "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!" \
-           "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! " \
-           "I'll keep on working on it as best as I can!!! o7o7o7" \
-           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages " \
-           "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!" \
-           "I know for sure that I find immense joy in chatting with all of you!\n\n" \
-           "Hanging in there with you every step of the way,\n" \
-           "-DAY 15 BOT :]```"
-    await ctx.send(msg1)
+    if str(ctx.author.id) == caketecid:
+        message_channel = bot.get_channel(announcement_channel_id)
+        print(f'Retrieved Channel {message_channel}')
+        await message_channel.send(file=discord.File('DAY15.png'),
+                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
+        await message_channel.send("```"
+            "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. "
+            "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help "
+            "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our "
+            "own highest highs!\n\n"
+            "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of "
+            "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! "
+            "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands "
+            "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. "
+            "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!"
+            "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! "
+            "I'll keep on working on it as best as I can!!! o7o7o7"
+            "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages "
+            "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!"
+            "I know for sure that I find immense joy in chatting with all of you!\n\n"
+            "Hanging in there with you every step of the way,\n"
+            "-DAY 15 BOT :]```") 
+        print(f'Day 15 Message sent! Loop should have reset.')
+    else:
+        await message_channel.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
 
 
 # On command '/help15', send message printing all available commands the bot has to offer
