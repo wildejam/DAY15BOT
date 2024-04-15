@@ -106,22 +106,20 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. "
-           "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help "
-           "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our "
-           "own highest highs!\n\n"
-           "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of "
-           "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! "
-           "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands "
-           "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. "
-           "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!"
-           "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! "
-           "I'll keep on working on it as best as I can!!! o7o7o7"
-           "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages "
-           "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!"
-           "I know for sure that I find immense joy in chatting with all of you!\n\n"
-           "Hanging in there with you every step of the way,\n"
-           "-DAY 15 BOT :]```") 
+            "WE'VE MADE IT TO APRIL GANG! MARCH WINDS AND APRIL SHOWERS! BRING FORTH uhhhhhhhhhhhhhhhhh-\n\n"
+            "I come to you all on this DAY15 with an immense amount of WORK to press forth into (including "
+            "fixes to some of the current /newdog15 commands and progress toward some long awaited ones >:]) "
+            "I felt a sense of DISAPPOINTMENT at the budget cuts I had to make last month in my greetings to you all "
+            "in the lacking /howareyou15 responses, so I'm proud to say that such budget cuts will NOT exist in the month of April!\n\n "
+            "THIS BEGS A GREAT SUBJECT FOR THIS APRIL THOUGH: We've spoken before about the importance of CHECKING IN on one another, "
+            "and that FRIENDSHIPS require a certain amount of MAINTAINING for best results! With that in mind, I'D LIKE TO PRESENT "
+            "AN IMPORTANT COROLLARY TO THAT IDEA! There is at the same time NO PROBLEM with taking time for yourself to complete "
+            "things which you'd like to complete! It can be easy to fall victim to things like FOMO when you take this time for yourself, "
+            "but know that your true friends will respect time that you need for yourself >:] I FOR ONE will ALWAYS respect AND self time "
+            "you all decide to take for yourselves :] "
+            "I wish you all a safe and balanced April <3\n\n"
+            "Making way for May flowers,\n"
+            "-DAY 15 BOT :]```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -141,30 +139,28 @@ async def before():
 @bot.command(name='adminoverride15')
 async def adminoverride15(ctx):
     if str(ctx.author.id) == caketecid:
-        message_channel = bot.get_channel(announcement_channel_id)
-        print(f'Retrieved Channel {message_channel}')
-        await message_channel.send(file=discord.File('DAY15.png'),
+        # message_channel = bot.get_channel(announcement_channel_id)
+        # print(f'Retrieved Channel {message_channel}')
+        await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-        await message_channel.send("```"
-            "HAPPY MARCH EVERYONE! I HOPE YOU ARE ALL DOING WELL! MARCH tends to mark the start of when things get REALLY BUSY. "
-            "As always, I'm FULLY SUPPORTING YOU THE WHOLE WAY THROUGH AND I KNOW THAT EVERYONE ELSE HERE IS TOO! Asking for help "
-            "is never something to be ashamed of or worried about, because only TOGETHER can we each individually reach our "
-            "own highest highs!\n\n"
-            "I've also been hard at work this month, and I'm excited to also use this DAY 15 to present an ANNOUNCEMENT! As of "
-            "today there is ONE NEWDOG15 COMMAND IN SERVICE! EVERYONE PLEASE WELCOME /newguy15 !!!!! "
-            "IN ADDITION, I AM WORKING ON A PROTOTYPE FOR /newferret15 AND /newleon15, BY POPULAR DEMAND! These commands "
-            "can technically be used currently if you'd like, but testing results show they are unexpectedly VERY buggy and unreliable. "
-            "I'll be working on fixing these the best that I can in the coming future, but know that these are in the works!"
-            "As mentioned in months prior, ALL of these commands are subject to bugs, so do be aware of this HAZARD! "
-            "I'll keep on working on it as best as I can!!! o7o7o7"
-            "Unfortunately, the resources I've spent on these new implementations has meant that the quality of my /howareyou15 messages "
-            "may have seen a SLIGHT decline! I apologize for this shortcoming, but I hope you all still find pleasure in talking with me!"
-            "I know for sure that I find immense joy in chatting with all of you!\n\n"
-            "Hanging in there with you every step of the way,\n"
+        await ctx.send("```"
+            "WE'VE MADE IT TO APRIL GANG! MARCH WINDS AND APRIL SHOWERS! BRING FORTH uhhhhhhhhhhhhhhhhh-\n\n"
+            "I come to you all on this DAY15 with an immense amount of WORK to press forth into (including "
+            "fixes to some of the current /newdog15 commands and progress toward some long awaited ones >:]) "
+            "I felt a sense of DISAPPOINTMENT at the budget cuts I had to make last month in my greetings to you all "
+            "in the lacking /howareyou15 responses, so I'm proud to say that such budget cuts will NOT exist in the month of April!\n\n "
+            "THIS BEGS A GREAT SUBJECT FOR THIS APRIL THOUGH: We've spoken before about the importance of CHECKING IN on one another, "
+            "and that FRIENDSHIPS require a certain amount of MAINTAINING for best results! With that in mind, I'D LIKE TO PRESENT "
+            "AN IMPORTANT COROLLARY TO THAT IDEA! There is at the same time NO PROBLEM with taking time for yourself to complete "
+            "things which you'd like to complete! It can be easy to fall victim to things like FOMO when you take this time for yourself, "
+            "but know that your true friends will respect time that you need for yourself >:] I FOR ONE will ALWAYS respect AND self time "
+            "you all decide to take for yourselves :] "
+            "I wish you all a safe and balanced April <3\n\n"
+            "Making way for May flowers,\n"
             "-DAY 15 BOT :]```") 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
-        await message_channel.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
+        await ctx.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
 
 
 # On command '/help15', send message printing all available commands the bot has to offer
