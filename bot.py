@@ -33,7 +33,8 @@ newdogjson = {
     "leon": [{},0],  
     "guy": [{},0],   
     "animegirl": [{},0],
-    "bird": [{},0]
+    "bird": [{},0],
+    "hgtv": [{},0]
 }
 
 # Stores user id's for personalized /howareyou15 messages
@@ -428,6 +429,25 @@ async def new_anime_girl_15(ctx):
 
     # increment the index
     newdogjson['bird'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newhgtvdreamhomesweepstakes15')
+async def new_hgtv_dream_home_sweepstakes_15(ctx):
+
+    searchTerm = "hgtv dream home sweepstakes"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['hgtv'][0] == {} or newdogjson['hgtv'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['hgtv'][0] = api_data.json()
+        newdogjson['hgtv'][1] = 0
+
+    # store the image link
+    data = newdogjson['hgtv'][0]['items'][(newdogjson['hgtv'][1])]['link']
+
+    # increment the index
+    newdogjson['hgtv'][1] += 1
 
     await ctx.send("Powered by Google. Link: " + data)
 
