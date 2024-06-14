@@ -5,6 +5,7 @@ import asyncio
 import requests
 import io
 import aiohttp
+import random
 
 import discord
 from dotenv import load_dotenv
@@ -21,6 +22,19 @@ bot = commands.Bot(command_prefix='/')
 
 # Stores the id's of channels that the bot may post in
 announcement_channel_id = 814738636280299561
+
+# NEWDOG SEARCH RESULTS: stores JSON objects which contain Google images for newdog commands
+# rock ferret leon guy animegirl
+newdogjson = {
+    "cat": [{},0],
+    "lizard": [{},0],
+    "rock": [{},0], 
+    "ferret": [{},0],  
+    "leon": [{},0],  
+    "guy": [{},0],   
+    "animegirl": [{},0],
+    "bird": [{},0]
+}
 
 # Stores user id's for personalized /howareyou15 messages
 caketecid = os.getenv('caketecid')
@@ -48,7 +62,7 @@ hannahtlmessage = os.getenv('hannahtlmessage')
 spicychrismessage = os.getenv('spicychrismessage')
 valkarenamessage = os.getenv('valkarenamessage')
 michellemessage = os.getenv('michellemessage')
-eeveemessage = os.getenv('eeveemessage')
+# eeveemessage = os.getenv('eeveemessage')
 christinamessage = os.getenv('christinamessage')
 tjmessage = os.getenv('tjmessage')
 shoopmessage = os.getenv('shoopmessage')
@@ -62,9 +76,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mst_zone)
+    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    # mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mdt_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -78,7 +92,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -106,20 +120,12 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-            "WE'VE MADE IT TO APRIL GANG! MARCH WINDS AND APRIL SHOWERS! BRING FORTH uhhhhhhhhhhhhhhhhh-\n\n"
-            "I come to you all on this DAY15 with an immense amount of WORK to press forth into (including "
-            "fixes to some of the current /newdog15 commands and progress toward some long awaited ones >:]) "
-            "I felt a sense of DISAPPOINTMENT at the budget cuts I had to make last month in my greetings to you all "
-            "in the lacking /howareyou15 responses, so I'm proud to say that such budget cuts will NOT exist in the month of April!\n\n "
-            "THIS BEGS A GREAT SUBJECT FOR THIS APRIL THOUGH: We've spoken before about the importance of CHECKING IN on one another, "
-            "and that FRIENDSHIPS require a certain amount of MAINTAINING for best results! With that in mind, I'D LIKE TO PRESENT "
-            "AN IMPORTANT COROLLARY TO THAT IDEA! There is at the same time NO PROBLEM with taking time for yourself to complete "
-            "things which you'd like to complete! It can be easy to fall victim to things like FOMO when you take this time for yourself, "
-            "but know that your true friends will respect time that you need for yourself >:] I FOR ONE will ALWAYS respect AND self time "
-            "you all decide to take for yourselves :] "
-            "I wish you all a safe and balanced April <3\n\n"
-            "Making way for May flowers,\n"
-            "-DAY 15 BOT :]```") 
+        "HAPPY MEGALODON DAY EVERYONE!\n\n "
+        "In light of this most WONDERFUL MEGALODON day, I’d like to ask you all to refrain from rotating any sharks on this day out of respect! If you ABSOLUTELY NEED to, I’d URGE you to do so with the utmost respect! MILLIONS of megalodons get ROTATED every single day, and while it is a sustainable activity in theory, OVER-ROTATING can contribute to immense lows in megalodon happiness levels!\n\n"
+        "To other matters, I’d like to apologize for the delays in my /howareyou15 responses during the previous month! The changes made to the /newdog commands required HIGH amounts of BANDWIDTH, POWER, and MOTIVATION, which are always invaluable and limited. IN LIGHT OF THIS HOWEVER, I’ve spend extra resources to bring you all ASSORTED SHORT STORIES this month, so I hope you all enjoy them!\n\n"
+        "Always acknowledging megalodon rights,\n"
+        "-DAY15 BOT :]```"
+    ) 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -144,20 +150,11 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-            "WE'VE MADE IT TO APRIL GANG! MARCH WINDS AND APRIL SHOWERS! BRING FORTH uhhhhhhhhhhhhhhhhh-\n\n"
-            "I come to you all on this DAY15 with an immense amount of WORK to press forth into (including "
-            "fixes to some of the current /newdog15 commands and progress toward some long awaited ones >:]) "
-            "I felt a sense of DISAPPOINTMENT at the budget cuts I had to make last month in my greetings to you all "
-            "in the lacking /howareyou15 responses, so I'm proud to say that such budget cuts will NOT exist in the month of April!\n\n "
-            "THIS BEGS A GREAT SUBJECT FOR THIS APRIL THOUGH: We've spoken before about the importance of CHECKING IN on one another, "
-            "and that FRIENDSHIPS require a certain amount of MAINTAINING for best results! With that in mind, I'D LIKE TO PRESENT "
-            "AN IMPORTANT COROLLARY TO THAT IDEA! There is at the same time NO PROBLEM with taking time for yourself to complete "
-            "things which you'd like to complete! It can be easy to fall victim to things like FOMO when you take this time for yourself, "
-            "but know that your true friends will respect time that you need for yourself >:] I FOR ONE will ALWAYS respect AND self time "
-            "you all decide to take for yourselves :] "
-            "I wish you all a safe and balanced April <3\n\n"
-            "Making way for May flowers,\n"
-            "-DAY 15 BOT :]```") 
+            "HAPPY MEGALODON DAY EVERYONE!\n\n "
+            "In light of this most WONDERFUL MEGALODON day, I’d like to ask you all to refrain from rotating any sharks on this day out of respect! If you ABSOLUTELY NEED to, I’d URGE you to do so with the utmost respect! MILLIONS of megalodons get ROTATED every single day, and while it is a sustainable activity in theory, OVER-ROTATING can contribute to immense lows in megalodon happiness levels!\n\n"
+            "To other matters, I’d like to apologize for the delays in my /howareyou15 responses during the previous month! The changes made to the /newdog commands required HIGH amounts of BANDWIDTH, POWER, and MOTIVATION, which are always invaluable and limited. IN LIGHT OF THIS HOWEVER, I’ve spend extra resources to bring you all ASSORTED SHORT STORIES this month, so I hope you all enjoy them!\n\n"
+            "Always acknowledging megalodon rights,\n"
+            "-DAY15 BOT :]```") 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
         await ctx.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
@@ -236,8 +233,8 @@ async def how_are_you_15(ctx):
         await ctx.send(spicychrismessage)
     elif str(ctx.author.id) == valkarenaid:
         await ctx.send(valkarenamessage)
-    elif str(ctx.author.id) == eeveeid:
-        await ctx.send(eeveemessage)
+    # elif str(ctx.author.id) == eeveeid:
+    #     await ctx.send(eeveemessage)
     elif str(ctx.author.id) == christinaid:
         await ctx.send(christinamessage)
     elif str(ctx.author.id) == shoopid:
@@ -279,80 +276,161 @@ async def new_dog_15(ctx):
 # On command '/newcat15', fetch cat image from unsplash api and post.
 @bot.command(name='newcat15')
 async def new_cat_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=cat&client_id=' + UNSPLASHKEY)
-    cat_data = api_data.json()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(cat_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + cat_data['urls']['raw'] + "\n Photographer: " + cat_data['user']['name'] + " " + "<" + cat_data['user']['links']['html'] + ">")
+    searchTerm = "cat"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['cat'][0] == {} or newdogjson['cat'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['cat'][0] = api_data.json()
+        newdogjson['cat'][1] = 0
+
+    # store the image link
+    data = newdogjson['cat'][0]['items'][(newdogjson['cat'][1])]['link']
+    
+    # increment the index
+    newdogjson['cat'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
 
 # On command '/newlizard15', fetch lizard image from unsplash api and post.
 @bot.command(name='newlizard15')
 async def new_lizard_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=lizard&client_id=' + UNSPLASHKEY)
-    liz_data = api_data.json()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(liz_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + liz_data['urls']['raw'] + "\n Photographer: " + liz_data['user']['name'] + " " + "<" + liz_data['user']['links']['html'] + ">")
+    searchTerm = "lizard"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['lizard'][0] == {} or newdogjson['lizard'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['lizard'][0] = api_data.json()
+        newdogjson['lizard'][1] = 0
+
+    # store the image link
+    data = newdogjson['lizard'][0]['items'][(newdogjson['lizard'][1])]['link']
+    
+    # increment the index
+    newdogjson['lizard'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
 
 # On command '/newrock15', fetch lizard image from unsplash api and post.
 @bot.command(name='newrock15')
 async def new_rock_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=crystal&client_id=' + UNSPLASHKEY)
-    rock_data = api_data.json()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(rock_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + rock_data['urls']['raw'] + "\n Photographer: " + rock_data['user']['name'] + " " + "<" + rock_data['user']['links']['html'] + ">")
+    searchTerm = "rock"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['rock'][0] == {} or newdogjson['rock'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['rock'][0] = api_data.json()
+        newdogjson['rock'][1] = 0
+
+    # store the image link
+    data = newdogjson['rock'][0]['items'][(newdogjson['rock'][1])]['link']
+    
+    # increment the index
+    newdogjson['rock'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
 
 # On command '/newferret15', fetch lizard image from unsplash api and post.
 @bot.command(name='newferret15')
 async def new_ferret_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=ferret&client_id=' + UNSPLASHKEY)
-    ferret_data = api_data.json()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(ferret_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + ferret_data['urls']['raw'] + "\n Photographer: " + ferret_data['user']['name'] + " " + "<" + ferret_data['user']['links']['html'] + ">")
+    searchTerm = "ferret"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['ferret'][0] == {} or newdogjson['ferret'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['ferret'][0] = api_data.json()
+        newdogjson['ferret'][1] = 0
+
+    # store the image link
+    data = newdogjson['ferret'][0]['items'][(newdogjson['ferret'][1])]['link']
+    
+    # increment the index
+    newdogjson['ferret'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
 
 # On command '/newleon15', fetch lizard image from unsplash api and post.
 @bot.command(name='newleon15')
 async def new_leon_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=leon&client_id=' + UNSPLASHKEY)
-    leon_data = api_data.json()
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(leon_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + leon_data['urls']['raw'] + "\n Photographer: " + leon_data['user']['name'] + " " + "<" + leon_data['user']['links']['html'] + ">")
+    searchTerm = "leon+kennedy"
 
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['leon'][0] == {} or newdogjson['leon'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['leon'][0] = api_data.json()
+        newdogjson['leon'][1] = 0
+
+    # store the image link
+    data = newdogjson['leon'][0]['items'][(newdogjson['leon'][1])]['link']
+    
+    # increment the index
+    newdogjson['leon'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+    
 # On command '/newguy15', fetch lizard image from unsplash api and post.
 @bot.command(name='newguy15')
 async def new_guy_15(ctx):
-    api_data = requests.get('https://api.unsplash.com/photos/random?query=guy&client_id=' + UNSPLASHKEY)
-    guy_data = api_data.json()
+    
+    searchTerm = "guy"
 
-    async with aiohttp.ClientSession() as session:
-        async with session.get(guy_data['urls']['raw']) as resp:
-            if resp.status != 200:
-                return await ctx.send('Hmm, it looks like something went wrong :(( Sorry!! I\'ll get @CakeTEC on it! Its possible you submitted too many requests.')
-            data = io.BytesIO(await resp.read())
-            await ctx.send("Powered by Unsplash. \n Link: " + guy_data['urls']['raw'] + "\n Photographer: " + guy_data['user']['name'] + " " + "<" + guy_data['user']['links']['html'] + ">")
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['guy'][0] == {} or newdogjson['guy'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['guy'][0] = api_data.json()
+        newdogjson['guy'][1] = 0
+
+    # store the image link
+    data = newdogjson['guy'][0]['items'][(newdogjson['guy'][1])]['link']
+    
+    # increment the index
+    newdogjson['guy'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newanimegirl15')
+async def new_anime_girl_15(ctx):
+
+    searchTerm = "anime+girl"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['animegirl'][0] == {} or newdogjson['animegirl'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['animegirl'][0] = api_data.json()
+        newdogjson['animegirl'][1] = 0
+
+    # store the image link
+    data = newdogjson['animegirl'][0]['items'][(newdogjson['animegirl'][1])]['link']
+
+    # increment the index
+    newdogjson['animegirl'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newbird15')
+async def new_anime_girl_15(ctx):
+
+    searchTerm = "bird"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['bird'][0] == {} or newdogjson['bird'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['bird'][0] = api_data.json()
+        newdogjson['bird'][1] = 0
+
+    # store the image link
+    data = newdogjson['bird'][0]['items'][(newdogjson['bird'][1])]['link']
+
+    # increment the index
+    newdogjson['bird'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
 # Start the loop to check if it is DAY 15
 check_to15.start()
