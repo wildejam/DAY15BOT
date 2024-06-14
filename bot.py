@@ -16,6 +16,7 @@ from discord.ext import commands, tasks
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 UNSPLASHKEY = os.getenv('UNSPLASH_TOKEN')
+GOOGLEKEY = os.getenv('GOOGLE_KEY')
 
 # Determines the command prefix that users will use to use the bot
 bot = commands.Bot(command_prefix='/')
@@ -282,7 +283,7 @@ async def new_cat_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['cat'][0] == {} or newdogjson['cat'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['cat'][0] = api_data.json()
         newdogjson['cat'][1] = 0
 
@@ -302,7 +303,7 @@ async def new_lizard_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['lizard'][0] == {} or newdogjson['lizard'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['lizard'][0] = api_data.json()
         newdogjson['lizard'][1] = 0
 
@@ -322,7 +323,7 @@ async def new_rock_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['rock'][0] == {} or newdogjson['rock'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['rock'][0] = api_data.json()
         newdogjson['rock'][1] = 0
 
@@ -342,7 +343,7 @@ async def new_ferret_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['ferret'][0] == {} or newdogjson['ferret'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['ferret'][0] = api_data.json()
         newdogjson['ferret'][1] = 0
 
@@ -362,7 +363,7 @@ async def new_leon_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['leon'][0] == {} or newdogjson['leon'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['leon'][0] = api_data.json()
         newdogjson['leon'][1] = 0
 
@@ -382,7 +383,7 @@ async def new_guy_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['guy'][0] == {} or newdogjson['guy'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['guy'][0] = api_data.json()
         newdogjson['guy'][1] = 0
 
@@ -401,7 +402,7 @@ async def new_anime_girl_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['animegirl'][0] == {} or newdogjson['animegirl'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['animegirl'][0] = api_data.json()
         newdogjson['animegirl'][1] = 0
 
@@ -420,7 +421,7 @@ async def new_anime_girl_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['bird'][0] == {} or newdogjson['bird'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['bird'][0] = api_data.json()
         newdogjson['bird'][1] = 0
 
@@ -439,7 +440,7 @@ async def new_hgtv_dream_home_sweepstakes_15(ctx):
 
     # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
     if (newdogjson['hgtv'][0] == {} or newdogjson['hgtv'][1] >= 10):
-        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyCc0NXm9ox98Oaro0f2D_k7j8rCeX_B-HE&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
         newdogjson['hgtv'][0] = api_data.json()
         newdogjson['hgtv'][1] = 0
 
