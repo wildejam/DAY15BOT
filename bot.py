@@ -122,10 +122,14 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "HAPPY MEGALODON DAY EVERYONE!\n\n "
-        "In light of this most WONDERFUL MEGALODON day, I’d like to ask you all to refrain from rotating any sharks on this day out of respect! If you ABSOLUTELY NEED to, I’d URGE you to do so with the utmost respect! MILLIONS of megalodons get ROTATED every single day, and while it is a sustainable activity in theory, OVER-ROTATING can contribute to immense lows in megalodon happiness levels!\n\n"
-        "To other matters, I’d like to apologize for the delays in my /howareyou15 responses during the previous month! The changes made to the /newdog commands required HIGH amounts of BANDWIDTH, POWER, and MOTIVATION, which are always invaluable and limited. IN LIGHT OF THIS HOWEVER, I’ve spend extra resources to bring you all ASSORTED SHORT STORIES this month, so I hope you all enjoy them!\n\n"
-        "Always acknowledging megalodon rights,\n"
+        "HAPPY NATIONAL I LOVE HORSES DAY!!!!!!!!!!!!!!!!!!\n\n "
+        "I LOVE HORSES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
+        "WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
+        "Anyways, I hope you're all having a wonderful July :] Keep yourself physically, mentally, and emotionally sharp by following these three simple tips!\n\n"
+        "1. drink WATER\n"
+        "2. eat FOOD\n"
+        "3. ummmmmmmmmmmmm DRINK WATER!\n\n"
+        "I LOVE HORSES!,\n"
         "-DAY15 BOT :]```"
     ) 
     print(f'Day 15 Message sent! Loop should have reset.')
@@ -152,11 +156,15 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-            "HAPPY MEGALODON DAY EVERYONE!\n\n "
-            "In light of this most WONDERFUL MEGALODON day, I’d like to ask you all to refrain from rotating any sharks on this day out of respect! If you ABSOLUTELY NEED to, I’d URGE you to do so with the utmost respect! MILLIONS of megalodons get ROTATED every single day, and while it is a sustainable activity in theory, OVER-ROTATING can contribute to immense lows in megalodon happiness levels!\n\n"
-            "To other matters, I’d like to apologize for the delays in my /howareyou15 responses during the previous month! The changes made to the /newdog commands required HIGH amounts of BANDWIDTH, POWER, and MOTIVATION, which are always invaluable and limited. IN LIGHT OF THIS HOWEVER, I’ve spend extra resources to bring you all ASSORTED SHORT STORIES this month, so I hope you all enjoy them!\n\n"
-            "Always acknowledging megalodon rights,\n"
-            "-DAY15 BOT :]```") 
+        "HAPPY NATIONAL I LOVE HORSES DAY!!!!!!!!!!!!!!!!!!\n\n "
+        "I LOVE HORSES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
+        "WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
+        "Anyways, I hope you're all having a wonderful July :] Keep yourself physically, mentally, and emotionally sharp by following these three simple tips!\n\n"
+        "1. drink WATER\n"
+        "2. eat FOOD\n"
+        "3. ummmmmmmmmmmmm DRINK WATER!\n\n"
+        "I LOVE HORSES!,\n"
+        "-DAY15 BOT :]```") 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
         await ctx.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
