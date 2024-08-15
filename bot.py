@@ -122,14 +122,12 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "HAPPY NATIONAL I LOVE HORSES DAY!!!!!!!!!!!!!!!!!!\n\n "
-        "I LOVE HORSES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
-        "WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
-        "Anyways, I hope you're all having a wonderful July :] Keep yourself physically, mentally, and emotionally sharp by following these three simple tips!\n\n"
-        "1. drink WATER\n"
-        "2. eat FOOD\n"
-        "3. ummmmmmmmmmmmm DRINK WATER!\n\n"
-        "I LOVE HORSES!,\n"
+        "HAPPY CHANT AT THE MOON DAY!!!!!\n\n "
+        "I REALIZE that I have been a tad OBSESSED with HOLIDAYS as of late, but this one in particular I just HAD to celebrate! In celebration of this most wonderful DAY15, I would like to lead us all in a chant at the moon on this fine chant at the moon evening!\n\n"
+        "Ahem,\n\n"
+        "O great harbinger of the night, bring onto us thine blessing. Deliver us from sunburns, sweat, skin cancer, and all other evils of the radiance. I beseech thee, bring onto this fine server an arsenal of cheeses vast and delicious. O great bastion of darkness, be our guiding light throughout our trials and tribulations. Our bonfire in the dungeon. So that we may advance with our own endeavors, private and public, with courage, confidence, empathy, and strength.\n"
+        "And with that, we SHOULD currently be experiencing the moon's blessing! BUT even with the moon acting as our guiding light, REMEMBER that YOU ARE THE MOON OF YOUR OWN LIFE! Whenever you require a guiding light through your own darkness, search for that moon in your brain and in your heart, and you will illuminate even the DARKEST OF NIGHTS!\n\n"
+        "Journeying through the darkness at your side,\n"
         "-DAY15 BOT :]```"
     ) 
     print(f'Day 15 Message sent! Loop should have reset.')
@@ -156,15 +154,14 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "HAPPY NATIONAL I LOVE HORSES DAY!!!!!!!!!!!!!!!!!!\n\n "
-        "I LOVE HORSES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
-        "WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n"
-        "Anyways, I hope you're all having a wonderful July :] Keep yourself physically, mentally, and emotionally sharp by following these three simple tips!\n\n"
-        "1. drink WATER\n"
-        "2. eat FOOD\n"
-        "3. ummmmmmmmmmmmm DRINK WATER!\n\n"
-        "I LOVE HORSES!,\n"
-        "-DAY15 BOT :]```") 
+        "HAPPY CHANT AT THE MOON DAY!!!!!\n\n "
+        "I REALIZE that I have been a tad OBSESSED with HOLIDAYS as of late, but this one in particular I just HAD to celebrate! In celebration of this most wonderful DAY15, I would like to lead us all in a chant at the moon on this fine chant at the moon evening!\n\n"
+        "Ahem,\n\n"
+        "O great harbinger of the night, bring onto us thine blessing. Deliver us from sunburns, sweat, skin cancer, and all other evils of the radiance. I beseech thee, bring onto this fine server an arsenal of cheeses vast and delicious. O great bastion of darkness, be our guiding light throughout our trials and tribulations. Our bonfire in the dungeon. So that we may advance with our own endeavors, private and public, with courage, confidence, empathy, and strength.\n"
+        "And with that, we SHOULD currently be experiencing the moon's blessing! BUT even with the moon acting as our guiding light, REMEMBER that YOU ARE THE MOON OF YOUR OWN LIFE! Whenever you require a guiding light through your own darkness, search for that moon in your brain and in your heart, and you will illuminate even the DARKEST OF NIGHTS!\n\n"
+        "Journeying through the darkness at your side,\n"
+        "-DAY15 BOT :]```"
+        ) 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
         await ctx.send("Nice try! >:] I was EXPLICITLY TOLD to not let anyone but jam use this command! >:]")
