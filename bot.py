@@ -154,12 +154,12 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "HAPPY CHANT AT THE MOON DAY!!!!!\n\n "
-        "I REALIZE that I have been a tad OBSESSED with HOLIDAYS as of late, but this one in particular I just HAD to celebrate! In celebration of this most wonderful DAY15, I would like to lead us all in a chant at the moon on this fine chant at the moon evening!\n\n"
-        "Ahem,\n\n"
-        "O great harbinger of the night, bring onto us thine blessing. Deliver us from sunburns, sweat, skin cancer, and all other evils of the radiance. I beseech thee, bring onto this fine server an arsenal of cheeses vast and delicious. O great bastion of darkness, be our guiding light throughout our trials and tribulations. Our bonfire in the dungeon. So that we may advance with our own endeavors, private and public, with courage, confidence, empathy, and strength.\n"
-        "And with that, we SHOULD currently be experiencing the moon's blessing! BUT even with the moon acting as our guiding light, REMEMBER that YOU ARE THE MOON OF YOUR OWN LIFE! Whenever you require a guiding light through your own darkness, search for that moon in your brain and in your heart, and you will illuminate even the DARKEST OF NIGHTS!\n\n"
-        "Journeying through the darkness at your side,\n"
+        "AND ALSO. GIVE IT UP FOR NATIONAL **DOUBLE** CHEESEBURGER DAY!\n\n "
+        "With the advent of this most WONDERFUL holiday I would like to remind you all that INVESTING IN YOURSELF is SUPER IMPORTANT and that there's NO SHAME in thoughtfully spending MORE for your own enjoyment!"
+        "Sometimes you work REALLY REALLY hard and accomplish MANY things that nobody gets to see, and in these situations it is PERFECTLY VALID to reward yourself with that **SECOND** cheeseburger patty! Just like that ***SECOND*** CUP OF CHEESE!\n\n"
+        "Obviously splurging is something that should be done in moderation, and this balance requires looking at yourself HONESTLY! OVER-REWARDING yourself is another trap that many fall into, but I believe you all have the capability to look at yourselves truthfully and come to this conclusion with confidence! "
+        "In a few days it will be NATIONAL CHEESEBURGER DAY (i think you can get super cheap burgers at various restaurants on this day) but that will be the day for NORMAL spending. On THIS DAY, ON MY BEHALF, SPLURGE ON YOURSELF A LITTLE! GET YOURSELF A DOUBLE CHEESEBURGER INSTEAD!\n\n"
+        "Burger!\n"
         "-DAY15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
