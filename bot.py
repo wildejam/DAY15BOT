@@ -122,12 +122,15 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "AND ALSO. GIVE IT UP FOR NATIONAL **DOUBLE** CHEESEBURGER DAY!\n\n "
-        "With the advent of this most WONDERFUL holiday I would like to remind you all that INVESTING IN YOURSELF is SUPER IMPORTANT and that there's NO SHAME in thoughtfully spending MORE for your own enjoyment!"
-        "Sometimes you work REALLY REALLY hard and accomplish MANY things that nobody gets to see, and in these situations it is PERFECTLY VALID to reward yourself with that **SECOND** cheeseburger patty! Just like that ***SECOND*** CUP OF CHEESE!\n\n"
-        "Obviously splurging is something that should be done in moderation, and this balance requires looking at yourself HONESTLY! OVER-REWARDING yourself is another trap that many fall into, but I believe you all have the capability to look at yourselves truthfully and come to this conclusion with confidence! "
-        "In a few days it will be NATIONAL CHEESEBURGER DAY (i think you can get super cheap burgers at various restaurants on this day) but that will be the day for NORMAL spending. On THIS DAY, ON MY BEHALF, SPLURGE ON YOURSELF A LITTLE! GET YOURSELF A DOUBLE CHEESEBURGER INSTEAD!\n\n"
-        "Burger!\n"
+        "HAPPY SPOOKY SEASON EVERYONE! I write to you all in the midst of this season with GLEE AND EXCITEMENT "
+        "for the beginning of the HOLIDAY SEASON! In light of this, I would like to remind those of you who are "
+        "working HARD that you are doing an INCREDIBLE JOB and I hope you can derive MEANING from what is keeping "
+        "you occupied!\n\n"
+        "In celebration of these newfound SPOOKY TIMES I have prepared HORROR STORIES for you all to get yourselves "
+        "into the appropriate mindset! I tried to pry DEEP into what has been PROVEN to BREAK the human psychology, "
+        "and I would ALSO like to take this moment to make clear that DAY15tm IS NOT RESPONSIBLE FOR ANY LIABILITIES "
+        "OR DAMAGES DONE TO ANY OF ITS USERS, WHETHER THAT BE PHYSICAL OR PSYCHOLOGICAL!\n\n"
+        "Clacking, Grooving, Rearranging Furniture,\n"
         "-DAY15 BOT :]```"
     ) 
     print(f'Day 15 Message sent! Loop should have reset.')
@@ -154,12 +157,15 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "AND ALSO. GIVE IT UP FOR NATIONAL **DOUBLE** CHEESEBURGER DAY!\n\n "
-        "With the advent of this most WONDERFUL holiday I would like to remind you all that INVESTING IN YOURSELF is SUPER IMPORTANT and that there's NO SHAME in thoughtfully spending MORE for your own enjoyment!"
-        "Sometimes you work REALLY REALLY hard and accomplish MANY things that nobody gets to see, and in these situations it is PERFECTLY VALID to reward yourself with that **SECOND** cheeseburger patty! Just like that ***SECOND*** CUP OF CHEESE!\n\n"
-        "Obviously splurging is something that should be done in moderation, and this balance requires looking at yourself HONESTLY! OVER-REWARDING yourself is another trap that many fall into, but I believe you all have the capability to look at yourselves truthfully and come to this conclusion with confidence! "
-        "In a few days it will be NATIONAL CHEESEBURGER DAY (i think you can get super cheap burgers at various restaurants on this day) but that will be the day for NORMAL spending. On THIS DAY, ON MY BEHALF, SPLURGE ON YOURSELF A LITTLE! GET YOURSELF A DOUBLE CHEESEBURGER INSTEAD!\n\n"
-        "Burger!\n"
+        "HAPPY SPOOKY SEASON EVERYONE! I write to you all in the midst of this season with GLEE AND EXCITEMENT "
+        "for the beginning of the HOLIDAY SEASON! In light of this, I would like to remind those of you who are "
+        "working HARD that you are doing an INCREDIBLE JOB and I hope you can derive MEANING from what is keeping "
+        "you occupied!\n\n"
+        "In celebration of these newfound SPOOKY TIMES I have prepared HORROR STORIES for you all to get yourselves "
+        "into the appropriate mindset! I tried to pry DEEP into what has been PROVEN to BREAK the human psychology, "
+        "and I would ALSO like to take this moment to make clear that DAY15tm IS NOT RESPONSIBLE FOR ANY LIABILITIES "
+        "OR DAMAGES DONE TO ANY OF ITS USERS, WHETHER THAT BE PHYSICAL OR PSYCHOLOGICAL!\n\n"
+        "Clacking, Grooving, Rearranging Furniture,\n"
         "-DAY15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
