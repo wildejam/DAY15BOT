@@ -78,9 +78,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    # mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mdt_zone)
+    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mst_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -94,7 +94,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
