@@ -122,16 +122,17 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "HAPPY SPOOKY SEASON EVERYONE! I write to you all in the midst of this season with GLEE AND EXCITEMENT "
-        "for the beginning of the HOLIDAY SEASON! In light of this, I would like to remind those of you who are "
-        "working HARD that you are doing an INCREDIBLE JOB and I hope you can derive MEANING from what is keeping "
-        "you occupied!\n\n"
-        "In celebration of these newfound SPOOKY TIMES I have prepared HORROR STORIES for you all to get yourselves "
-        "into the appropriate mindset! I tried to pry DEEP into what has been PROVEN to BREAK the human psychology, "
-        "and I would ALSO like to take this moment to make clear that DAY15tm IS NOT RESPONSIBLE FOR ANY LIABILITIES "
-        "OR DAMAGES DONE TO ANY OF ITS USERS, WHETHER THAT BE PHYSICAL OR PSYCHOLOGICAL!\n\n"
-        "Clacking, Grooving, Rearranging Furniture,\n"
+        "COMBAT TEAMS ALPHA THROUGH NOVEMBER: PULL OUT TO NEAREST EVAC STATION <-- I searched NOVEMBER on the internet and could only find this quote--REGARDLESS "
+        "WELCOME TO NOVEMBER EVERYONE! I hope Halloween was a great introduction to this year's HOLIDAY SEASON, because we are NOW ENTERING THE TIME TO BE THANKFUL "
+        "FOR EVERYTHING AROUND US! There is always little doubt that much of the world around us is not as it should be. Sailing through the seas of greed, hate, and evil for long enough is bound "
+        "to inspire great despair in anyone; what is the point in putting effort into anything, only for the SEA to swallow it up whole? The answer lies on the very SHIP under your feet! What a "
+        "DELIGHTFUL ship you've built for yourself, in fact! And what an EARNEST, KIND, and TENACIOUS crew you've assembled throughout your long journey on the seas! TAKE NOT "
+        "FOR GRANTED THE FRUITS OF YOUR LABOR THAT YOU'VE MANIFESTED THUS FAR! And when you can truly understand the wonders you've surrounded yourself with, you'll be able "
+        "to weather ANY storm! And there just might be a beautiful new world awaiting you on the other side of the sea...\n\n"
+        "Forever your loyal shipmate,\n"
         "-DAY15 BOT :]```"
+
+        
     ) 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -157,15 +158,14 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "HAPPY SPOOKY SEASON EVERYONE! I write to you all in the midst of this season with GLEE AND EXCITEMENT "
-        "for the beginning of the HOLIDAY SEASON! In light of this, I would like to remind those of you who are "
-        "working HARD that you are doing an INCREDIBLE JOB and I hope you can derive MEANING from what is keeping "
-        "you occupied!\n\n"
-        "In celebration of these newfound SPOOKY TIMES I have prepared HORROR STORIES for you all to get yourselves "
-        "into the appropriate mindset! I tried to pry DEEP into what has been PROVEN to BREAK the human psychology, "
-        "and I would ALSO like to take this moment to make clear that DAY15tm IS NOT RESPONSIBLE FOR ANY LIABILITIES "
-        "OR DAMAGES DONE TO ANY OF ITS USERS, WHETHER THAT BE PHYSICAL OR PSYCHOLOGICAL!\n\n"
-        "Clacking, Grooving, Rearranging Furniture,\n"
+        "COMBAT TEAMS ALPHA THROUGH NOVEMBER: PULL OUT TO NEAREST EVAC STATION <-- I searched NOVEMBER on the internet and could only find this quote--REGARDLESS "
+        "WELCOME TO NOVEMBER EVERYONE! I hope Halloween was a great introduction to this year's HOLIDAY SEASON, because we are NOW ENTERING THE TIME TO BE THANKFUL "
+        "FOR EVERYTHING AROUND US! There is always little doubt that much of the world around us is not as it should be. Sailing through the seas of greed, hate, and evil for long enough is bound "
+        "to inspire great despair in anyone; what is the point in putting effort into anything, only for the SEA to swallow it up whole? The answer lies on the very SHIP under your feet! What a "
+        "DELIGHTFUL ship you've built for yourself, in fact! And what an EARNEST, KIND, and TENACIOUS crew you've assembled throughout your long journey on the seas! TAKE NOT "
+        "FOR GRANTED THE FRUITS OF YOUR LABOR THAT YOU'VE MANIFESTED THUS FAR! And when you can truly understand the wonders you've surrounded yourself with, you'll be able "
+        "to weather ANY storm! And there just might be a beautiful new world awaiting you on the other side of the sea...\n\n"
+        "Forever your loyal shipmate,\n"
         "-DAY15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
