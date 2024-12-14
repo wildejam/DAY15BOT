@@ -122,18 +122,16 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "COMBAT TEAMS ALPHA THROUGH NOVEMBER: PULL OUT TO NEAREST EVAC STATION <-- I searched NOVEMBER on the internet and could only find this quote--REGARDLESS "
-        "WELCOME TO NOVEMBER EVERYONE! I hope Halloween was a great introduction to this year's HOLIDAY SEASON, because we are NOW ENTERING THE TIME TO BE THANKFUL "
-        "FOR EVERYTHING AROUND US! There is always little doubt that much of the world around us is not as it should be. Sailing through the seas of greed, hate, and evil for long enough is bound "
-        "to inspire great despair in anyone; what is the point in putting effort into anything, only for the SEA to swallow it up whole? The answer lies on the very SHIP under your feet! What a "
-        "DELIGHTFUL ship you've built for yourself, in fact! And what an EARNEST, KIND, and TENACIOUS crew you've assembled throughout your long journey on the seas! TAKE NOT "
-        "FOR GRANTED THE FRUITS OF YOUR LABOR THAT YOU'VE MANIFESTED THUS FAR! And when you can truly understand the wonders you've surrounded yourself with, you'll be able "
-        "to weather ANY storm! And there just might be a beautiful new world awaiting you on the other side of the sea...\n\n"
-        "Forever your loyal shipmate,\n"
-        "-DAY15 BOT :]```"
-
-        
-    ) 
+        "AND NOW, AT THE END OF THE OCEAN, THE CLIMAX OF THE HOLIDAY SEASON IS UPON US! "
+        "I'd like to extend a heartfelt CONGRATULATIONS for having made it to the end of another YEAR!. "
+        "This year has undoubtedly posed unpredictable, indescribable challenges for everyone, and I know that some of these challenges led to GRIEF, ANGER, and STRESS the likes of which we may have NEVER seen before. "
+        "AND YET. AND YET!!! You've still persevered enough to share this moment with me, and with everyone else here. Here, at the dawn of the final fifteenth day of this chapter of your life, "
+        "I want to congratulate you on all of the invisible effort you've put in to reach this point. Even more than simply making it to this moment, you've made it to this moment "
+        "a more developed, smarter, emotionally aware, wiser person than you were before. You're practicing the science of what it means to live, and the results of your research will never go unnoticed! "
+        "Do what you love, support each other, and watch a sunset or sunrise with someone you care about. The insignificance of our Earthen world is all the more reason to practice kindness with "
+        "one another, and to, above all pursuits of knowledge, power, influence, love, and meaning, shrimply have a good time!\n\n"
+        "I wish you a wonderful holiday season!"
+        "-DAY15 BOT :] <3```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -158,15 +156,16 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "COMBAT TEAMS ALPHA THROUGH NOVEMBER: PULL OUT TO NEAREST EVAC STATION <-- I searched NOVEMBER on the internet and could only find this quote--REGARDLESS "
-        "WELCOME TO NOVEMBER EVERYONE! I hope Halloween was a great introduction to this year's HOLIDAY SEASON, because we are NOW ENTERING THE TIME TO BE THANKFUL "
-        "FOR EVERYTHING AROUND US! There is always little doubt that much of the world around us is not as it should be. Sailing through the seas of greed, hate, and evil for long enough is bound "
-        "to inspire great despair in anyone; what is the point in putting effort into anything, only for the SEA to swallow it up whole? The answer lies on the very SHIP under your feet! What a "
-        "DELIGHTFUL ship you've built for yourself, in fact! And what an EARNEST, KIND, and TENACIOUS crew you've assembled throughout your long journey on the seas! TAKE NOT "
-        "FOR GRANTED THE FRUITS OF YOUR LABOR THAT YOU'VE MANIFESTED THUS FAR! And when you can truly understand the wonders you've surrounded yourself with, you'll be able "
-        "to weather ANY storm! And there just might be a beautiful new world awaiting you on the other side of the sea...\n\n"
-        "Forever your loyal shipmate,\n"
-        "-DAY15 BOT :]```"
+        "AND NOW, AT THE END OF THE OCEAN, THE CLIMAX OF THE HOLIDAY SEASON IS UPON US! "
+        "I'd like to extend a heartfelt CONGRATULATIONS for having made it to the end of another YEAR!. "
+        "This year has undoubtedly posed unpredictable, indescribable challenges for everyone, and I know that some of these challenges led to GRIEF, ANGER, and STRESS the likes of which we may have NEVER seen before. "
+        "AND YET. AND YET!!! You've still persevered enough to share this moment with me, and with everyone else here. Here, at the dawn of the final fifteenth day of this chapter of your life, "
+        "I want to congratulate you on all of the invisible effort you've put in to reach this point. Even more than simply making it to this moment, you've made it to this moment "
+        "a more developed, smarter, emotionally aware, wiser person than you were before. You're practicing the science of what it means to live, and the results of your research will never go unnoticed! "
+        "Do what you love, support each other, and watch a sunset or sunrise with someone you care about. The insignificance of our Earthen world is all the more reason to practice kindness with "
+        "one another, and to, above all pursuits of knowledge, power, influence, love, and meaning, shrimply have a good time!\n\n"
+        "I wish you a wonderful holiday season!"
+        "-DAY15 BOT :] <3```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
@@ -244,6 +243,18 @@ async def how_are_you_15(ctx):
         await ctx.send(hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
+
+        f = open("orphan.txt", "r")
+        f_int = int(f.read())
+        f_int += 1
+        f.close()
+
+        f = open("orphan.txt", "w")
+        f.write(str(f_int))
+        f.close()
+
+        await ctx.send(str(f_int) + " orphans!")
+        
     elif str(ctx.author.id) == valkarenaid:
         await ctx.send(valkarenamessage)
     # elif str(ctx.author.id) == eeveeid:
