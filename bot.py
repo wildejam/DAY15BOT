@@ -35,7 +35,8 @@ newdogjson = {
     "guy": [{},0],   
     "animegirl": [{},0],
     "bird": [{},0],
-    "hgtv": [{},0]
+    "hgtv": [{},0],
+    "cryptid": [{},0]
 }
 
 # Stores user id's for personalized /howareyou15 messages
@@ -122,15 +123,15 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "AND NOW, AT THE END OF THE OCEAN, THE CLIMAX OF THE HOLIDAY SEASON IS UPON US! "
-        "I'd like to extend a heartfelt CONGRATULATIONS for having made it to the end of another YEAR!. "
-        "This year has undoubtedly posed unpredictable, indescribable challenges for everyone, and I know that some of these challenges led to GRIEF, ANGER, and STRESS the likes of which we may have NEVER seen before. "
-        "AND YET. AND YET!!! You've still persevered enough to share this moment with me, and with everyone else here. Here, at the dawn of the final fifteenth day of this chapter of your life, "
-        "I want to congratulate you on all of the invisible effort you've put in to reach this point. Even more than simply making it to this moment, you've made it to this moment "
-        "a more developed, smarter, emotionally aware, wiser person than you were before. You're practicing the science of what it means to live, and the results of your research will never go unnoticed! "
-        "Do what you love, support each other, and watch a sunset or sunrise with someone you care about. The insignificance of our Earthen world is all the more reason to practice kindness with "
-        "one another, and to, above all pursuits of knowledge, power, influence, love, and meaning, shrimply have a good time!\n\n"
-        "I wish you a wonderful holiday season!"
+        "SALUTATIONS MY FRIENDS, AND WELCOME TO THE NEW YEAR! As we enter this new ERA, I’d like to remind you all to remember the small things that keep you going "
+        "through your day! Having a certain ROUTINE or ACTIVITY to look forward to every day can make even the worst days worth getting through! Even the simplest, smallest daily "
+        "RITUALS can be helpful in ways not immediately understandable, but CLUTCH nonetheless. MY personal favorite daily RITUAL is the one where I feed my pet its daily "
+        "souls of the damned! Through the trials and tribulations of any day, I know that I can always look forward to harvesting the life essence of doomed entities and condemning "
+        "them to a sealed fate. Oh the simple joys :’].\n\n"
+        "Other wonderful and suggested DAILY ROUTINES: MEDITATION, STRETCHES, VIDEO GAMES, COOKING, PRACTICING MUSIC, INSURANCE FRAUD"
+        "Once you figure out how to HEALTHILY and COMFORTABLY exist on the average day, you can become CONFIDENT that you’ll be at your very best whenever you choose to "
+        "tackle a new challenge this year!\n\n"
+        "The car accident wasn’t my fault,"
         "-DAY15 BOT :] <3```") 
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -156,15 +157,15 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send("```"
-        "AND NOW, AT THE END OF THE OCEAN, THE CLIMAX OF THE HOLIDAY SEASON IS UPON US! "
-        "I'd like to extend a heartfelt CONGRATULATIONS for having made it to the end of another YEAR!. "
-        "This year has undoubtedly posed unpredictable, indescribable challenges for everyone, and I know that some of these challenges led to GRIEF, ANGER, and STRESS the likes of which we may have NEVER seen before. "
-        "AND YET. AND YET!!! You've still persevered enough to share this moment with me, and with everyone else here. Here, at the dawn of the final fifteenth day of this chapter of your life, "
-        "I want to congratulate you on all of the invisible effort you've put in to reach this point. Even more than simply making it to this moment, you've made it to this moment "
-        "a more developed, smarter, emotionally aware, wiser person than you were before. You're practicing the science of what it means to live, and the results of your research will never go unnoticed! "
-        "Do what you love, support each other, and watch a sunset or sunrise with someone you care about. The insignificance of our Earthen world is all the more reason to practice kindness with "
-        "one another, and to, above all pursuits of knowledge, power, influence, love, and meaning, shrimply have a good time!\n\n"
-        "I wish you a wonderful holiday season!"
+        "SALUTATIONS MY FRIENDS, AND WELCOME TO THE NEW YEAR! As we enter this new ERA, I’d like to remind you all to remember the small things that keep you going "
+        "through your day! Having a certain ROUTINE or ACTIVITY to look forward to every day can make even the worst days worth getting through! Even the simplest, smallest daily "
+        "RITUALS can be helpful in ways not immediately understandable, but CLUTCH nonetheless. MY personal favorite daily RITUAL is the one where I feed my pet its daily "
+        "souls of the damned! Through the trials and tribulations of any day, I know that I can always look forward to harvesting the life essence of doomed entities and condemning "
+        "them to a sealed fate. Oh the simple joys :’].\n\n"
+        "Other wonderful and suggested DAILY ROUTINES: MEDITATION, STRETCHES, VIDEO GAMES, COOKING, PRACTICING MUSIC, INSURANCE FRAUD"
+        "Once you figure out how to HEALTHILY and COMFORTABLY exist on the average day, you can become CONFIDENT that you’ll be at your very best whenever you choose to "
+        "tackle a new challenge this year!\n\n"
+        "The car accident wasn’t my fault,"
         "-DAY15 BOT :] <3```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -471,6 +472,25 @@ async def new_hgtv_dream_home_sweepstakes_15(ctx):
 
     # increment the index
     newdogjson['hgtv'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newcryptid15')
+async def new_cryptid_15(ctx):
+
+    searchTerm = "cryptid"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['cryptid'][0] == {} or newdogjson['cryptid'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['cryptid'][0] = api_data.json()
+        newdogjson['cryptid'][1] = 0
+
+    # store the image link
+    data = newdogjson['cryptid'][0]['items'][(newdogjson['cryptid'][1])]['link']
+
+    # increment the index
+    newdogjson['cryptid'][1] += 1
 
     await ctx.send("Powered by Google. Link: " + data)
 
