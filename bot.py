@@ -123,16 +123,20 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-        "SALUTATIONS MY FRIENDS, AND WELCOME TO THE NEW YEAR! As we enter this new ERA, I’d like to remind you all to remember the small things that keep you going "
-        "through your day! Having a certain ROUTINE or ACTIVITY to look forward to every day can make even the worst days worth getting through! Even the simplest, smallest daily "
-        "RITUALS can be helpful in ways not immediately understandable, but CLUTCH nonetheless. MY personal favorite daily RITUAL is the one where I feed my pet its daily "
-        "souls of the damned! Through the trials and tribulations of any day, I know that I can always look forward to harvesting the life essence of doomed entities and condemning "
-        "them to a sealed fate. Oh the simple joys :’].\n\n"
-        "Other wonderful and suggested DAILY ROUTINES: MEDITATION, STRETCHES, VIDEO GAMES, COOKING, PRACTICING MUSIC, INSURANCE FRAUD"
-        "Once you figure out how to HEALTHILY and COMFORTABLY exist on the average day, you can become CONFIDENT that you’ll be at your very best whenever you choose to "
-        "tackle a new challenge this year!\n\n"
-        "The car accident wasn’t my fault,"
-        "-DAY15 BOT :] <3```") 
+           "|-----------------------| \n"
+           "|   _______  _______    | \n"
+           "|  |       \/       |   | \n"
+           "|  |                |   | \n"
+           "|  | Learn and Grow |   |\n"
+           "|  |Be in the moment|   | \n"
+           "|  | You are based. |   | \n"
+           "|   \              /    | \n"
+           "|    \     :]     /     | \n"
+           "|     \          /      | \n"
+           "|      \________/       | \n"
+           "|-----------------------| \n\n"
+           "Forever YOUR Valentine,\n"
+           "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -156,17 +160,22 @@ async def adminoverride15(ctx):
         # print(f'Retrieved Channel {message_channel}')
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-        await ctx.send("```"
-        "SALUTATIONS MY FRIENDS, AND WELCOME TO THE NEW YEAR! As we enter this new ERA, I’d like to remind you all to remember the small things that keep you going "
-        "through your day! Having a certain ROUTINE or ACTIVITY to look forward to every day can make even the worst days worth getting through! Even the simplest, smallest daily "
-        "RITUALS can be helpful in ways not immediately understandable, but CLUTCH nonetheless. MY personal favorite daily RITUAL is the one where I feed my pet its daily "
-        "souls of the damned! Through the trials and tribulations of any day, I know that I can always look forward to harvesting the life essence of doomed entities and condemning "
-        "them to a sealed fate. Oh the simple joys :’].\n\n"
-        "Other wonderful and suggested DAILY ROUTINES: MEDITATION, STRETCHES, VIDEO GAMES, COOKING, PRACTICING MUSIC, INSURANCE FRAUD"
-        "Once you figure out how to HEALTHILY and COMFORTABLY exist on the average day, you can become CONFIDENT that you’ll be at your very best whenever you choose to "
-        "tackle a new challenge this year!\n\n"
-        "The car accident wasn’t my fault,"
-        "-DAY15 BOT :] <3```"
+        await ctx.send(
+        "```"
+           "|-----------------------| \n"
+           "|   _______  _______    | \n"
+           "|  |       \/       |   | \n"
+           "|  |                |   | \n"
+           "|  | Learn and Grow |   |\n"
+           "|  |Be in the moment|   | \n"
+           "|  | You are based. |   | \n"
+           "|   \              /    | \n"
+           "|    \     :]     /     | \n"
+           "|     \          /      | \n"
+           "|      \________/       | \n"
+           "|-----------------------| \n\n"
+           "Forever YOUR Valentine,\n"
+           "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
