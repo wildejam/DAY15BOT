@@ -36,7 +36,9 @@ newdogjson = {
     "animegirl": [{},0],
     "bird": [{},0],
     "hgtv": [{},0],
-    "cryptid": [{},0]
+    "cryptid": [{},0],
+    "rat": [{},0],
+    "otter": [{},0],
 }
 
 # Stores user id's for personalized /howareyou15 messages
@@ -79,9 +81,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mst_zone)
+    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    # mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mdt_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -95,7 +97,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -123,19 +125,14 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "|-----------------------| \n"
-           "|   _______  _______    | \n"
-           "|  |       \/       |   | \n"
-           "|  |                |   | \n"
-           "|  | Learn and Grow |   |\n"
-           "|  |Be in the moment|   | \n"
-           "|  | You are based. |   | \n"
-           "|   \              /    | \n"
-           "|    \     :]     /     | \n"
-           "|     \          /      | \n"
-           "|      \________/       | \n"
-           "|-----------------------| \n\n"
-           "Forever YOUR Valentine,\n"
+           "GREETINGS EVERYONE AND HAPPY MARCH FIFTEENTH, THE DAY OF THAT GUY, TWO-THOUSAND AND TWENTY FIVE!"
+           "It is my understanding that a number of you are in the MIDST OF AN ACADEMIC HELLSCAPE, WHICH I OFFER MY SINCEREST CONDOLENCES FOR."
+           "Academic hellscape or not however, I'd like to remind everyone of a perhaps generic, but nonetheless incredibly important motto:\n\n TAKE YOUR TIME.\n\n"
+           "Throughout my years in this server with you all, I've learned that the SMALL, INSIGNIFICANT moments that we spend together are oftentimes the most memorable. "
+           "These are the moments that live in our hearts, just as much as any major event! The importance of our bonds comes out in the mundanities we share more "
+           "than anywhere else. And so, savor these moments just as you would savor a more formal event! Growth and memories happen slowly over time anyways, so never "
+           "fret about the rate of your progress. You'll feel the pressure to rush with every project, every commitment, every deadline, but NEVER let this stop you from enjoying the PROCESS! Make your memories on your way to your goals--not after you reach them!\n\n"
+           "PEEERRRRSOONAAAAAAAA!!,\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -161,20 +158,15 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
-        "```"
-           "|-----------------------| \n"
-           "|   _______  _______    | \n"
-           "|  |       \/       |   | \n"
-           "|  |                |   | \n"
-           "|  | Learn and Grow |   |\n"
-           "|  |Be in the moment|   | \n"
-           "|  | You are based. |   | \n"
-           "|   \              /    | \n"
-           "|    \     :]     /     | \n"
-           "|     \          /      | \n"
-           "|      \________/       | \n"
-           "|-----------------------| \n\n"
-           "Forever YOUR Valentine,\n"
+           "```"
+           "GREETINGS EVERYONE AND HAPPY MARCH FIFTEENTH, THE DAY OF THAT GUY, TWO-THOUSAND AND TWENTY FIVE!"
+           "It is my understanding that a number of you are in the MIDST OF AN ACADEMIC HELLSCAPE, WHICH I OFFER MY SINCEREST CONDOLENCES FOR."
+           "Academic hellscape or not however, I'd like to remind everyone of a perhaps generic, but nonetheless incredibly important motto:\n\n TAKE YOUR TIME.\n\n"
+           "Throughout my years in this server with you all, I've learned that the SMALL, INSIGNIFICANT moments that we spend together are oftentimes the most memorable. "
+           "These are the moments that live in our hearts, just as much as any major event! The importance of our bonds comes out in the mundanities we share more "
+           "than anywhere else. And so, savor these moments just as you would savor a more formal event! Growth and memories happen slowly over time anyways, so never "
+           "fret about the rate of your progress. You'll feel the pressure to rush with every project, every commitment, every deadline, but NEVER let this stop you from enjoying the PROCESS! Make your memories on your way to your goals--not after you reach them!\n\n"
+           "PEEERRRRSOONAAAAAAAA!!,\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -500,6 +492,46 @@ async def new_cryptid_15(ctx):
 
     # increment the index
     newdogjson['cryptid'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+# ----------------------added 3/15/2025------------------------------------
+
+@bot.command(name='newrat15')
+async def new_rat_15(ctx):
+
+    searchTerm = "rat"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['rat'][0] == {} or newdogjson['rat'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['rat'][0] = api_data.json()
+        newdogjson['rat'][1] = 0
+
+    # store the image link
+    data = newdogjson['rat'][0]['items'][(newdogjson['rat'][1])]['link']
+
+    # increment the index
+    newdogjson['rat'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newjam15')
+async def new_jam_15(ctx):
+
+    searchTerm = "otter"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['otter'][0] == {} or newdogjson['otter'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['otter'][0] = api_data.json()
+        newdogjson['otter'][1] = 0
+
+    # store the image link
+    data = newdogjson['otter'][0]['items'][(newdogjson['otter'][1])]['link']
+
+    # increment the index
+    newdogjson['otter'][1] += 1
 
     await ctx.send("Powered by Google. Link: " + data)
 
