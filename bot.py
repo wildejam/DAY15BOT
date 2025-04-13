@@ -125,14 +125,14 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "GREETINGS EVERYONE AND HAPPY MARCH FIFTEENTH, THE DAY OF THAT GUY, TWO-THOUSAND AND TWENTY FIVE!"
-           "It is my understanding that a number of you are in the MIDST OF AN ACADEMIC HELLSCAPE, WHICH I OFFER MY SINCEREST CONDOLENCES FOR."
-           "Academic hellscape or not however, I'd like to remind everyone of a perhaps generic, but nonetheless incredibly important motto:\n\n TAKE YOUR TIME.\n\n"
-           "Throughout my years in this server with you all, I've learned that the SMALL, INSIGNIFICANT moments that we spend together are oftentimes the most memorable. "
-           "These are the moments that live in our hearts, just as much as any major event! The importance of our bonds comes out in the mundanities we share more "
-           "than anywhere else. And so, savor these moments just as you would savor a more formal event! Growth and memories happen slowly over time anyways, so never "
-           "fret about the rate of your progress. You'll feel the pressure to rush with every project, every commitment, every deadline, but NEVER let this stop you from enjoying the PROCESS! Make your memories on your way to your goals--not after you reach them!\n\n"
-           "PEEERRRRSOONAAAAAAAA!!,\n"
+           "HAPPY APRIL EVERYONE! I must keep this one brief as I am in the midst of my OWN pursuits in enhancing my services to you all!\n"
+           "I will take this brief moment to remind you all that IMPROVING AT SOMETHING should NEVER be a RUSHED ENDEAVOR!. "
+           "Interestingly, I've found that STRESSING about how QUICKLY your improvement is moving along can OFTEN TIMES make you LESS efficient at said improvement! "
+           "You musn't compare yourself to those around you NEARLY as much as you should be comparing YOURSELF TO HOW YOU WERE YESTERDAY. EVERYONE is going to be in "
+           "different places and have different natural advantages/disadvantages, and the truth is that many times it MATTERS NOT who is *better* at any given skill. "
+           "It'll only matter that you've put in the time to be GOOD at that skill at all! Take your time, and focus on simply being better than how you were yesterday. "
+           "THIS is the ultimate path toward SKILLFUL SELF-SATISFACTION!\n\n"
+           "constantly rooting for your inevitable growth,\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -159,14 +159,14 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "GREETINGS EVERYONE AND HAPPY MARCH FIFTEENTH, THE DAY OF THAT GUY, TWO-THOUSAND AND TWENTY FIVE!"
-           "It is my understanding that a number of you are in the MIDST OF AN ACADEMIC HELLSCAPE, WHICH I OFFER MY SINCEREST CONDOLENCES FOR."
-           "Academic hellscape or not however, I'd like to remind everyone of a perhaps generic, but nonetheless incredibly important motto:\n\n TAKE YOUR TIME.\n\n"
-           "Throughout my years in this server with you all, I've learned that the SMALL, INSIGNIFICANT moments that we spend together are oftentimes the most memorable. "
-           "These are the moments that live in our hearts, just as much as any major event! The importance of our bonds comes out in the mundanities we share more "
-           "than anywhere else. And so, savor these moments just as you would savor a more formal event! Growth and memories happen slowly over time anyways, so never "
-           "fret about the rate of your progress. You'll feel the pressure to rush with every project, every commitment, every deadline, but NEVER let this stop you from enjoying the PROCESS! Make your memories on your way to your goals--not after you reach them!\n\n"
-           "PEEERRRRSOONAAAAAAAA!!,\n"
+           "HAPPY APRIL EVERYONE! I must keep this one brief as I am in the midst of my OWN pursuits in enhancing my services to you all!\n"
+           "I will take this brief moment to remind you all that IMPROVING AT SOMETHING should NEVER be a RUSHED ENDEAVOR!. "
+           "Interestingly, I've found that STRESSING about how QUICKLY your improvement is moving along can OFTEN TIMES make you LESS efficient at said improvement! "
+           "You musn't compare yourself to those around you NEARLY as much as you should be comparing YOURSELF TO HOW YOU WERE YESTERDAY. EVERYONE is going to be in "
+           "different places and have different natural advantages/disadvantages, and the truth is that many times it MATTERS NOT who is *better* at any given skill. "
+           "It'll only matter that you've put in the time to be GOOD at that skill at all! Take your time, and focus on simply being better than how you were yesterday. "
+           "THIS is the ultimate path toward SKILLFUL SELF-SATISFACTION!\n\n"
+           "constantly rooting for your inevitable growth,\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -514,7 +514,7 @@ async def new_rat_15(ctx):
     # increment the index
     newdogjson['rat'][1] += 1
 
-    await ctx.send("Powered by Google. Link: " + data)
+    await ctx.send("Powered by Google. Link: || " + data + " ||")
 
 @bot.command(name='newjam15')
 async def new_jam_15(ctx):
