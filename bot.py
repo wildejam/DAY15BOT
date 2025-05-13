@@ -57,6 +57,7 @@ tjid = os.getenv('tjid')
 shoopid = os.getenv('shoopid')
 bonesid = os.getenv('bonesid')
 nuiid = os.getenv('nuiid')
+bingleid = os.getenv('bingleid')
 
 caketecmessage = os.getenv('caketecmessage')
 ddragonmessage = os.getenv('ddragonmessage')
@@ -73,6 +74,7 @@ tjmessage = os.getenv('tjmessage')
 shoopmessage = os.getenv('shoopmessage')
 bonesmessage = os.getenv('bonesmessage')
 nuimessage = os.getenv('nuimessage')
+binglemessage = os.getenv('binglemessage')
 
 
 # -----------------------------------------------HELPER FUNCTIONS-------------------------------------------------------
@@ -125,14 +127,14 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "HAPPY APRIL EVERYONE! I must keep this one brief as I am in the midst of my OWN pursuits in enhancing my services to you all!\n"
-           "I will take this brief moment to remind you all that IMPROVING AT SOMETHING should NEVER be a RUSHED ENDEAVOR!. "
-           "Interestingly, I've found that STRESSING about how QUICKLY your improvement is moving along can OFTEN TIMES make you LESS efficient at said improvement! "
-           "You musn't compare yourself to those around you NEARLY as much as you should be comparing YOURSELF TO HOW YOU WERE YESTERDAY. EVERYONE is going to be in "
-           "different places and have different natural advantages/disadvantages, and the truth is that many times it MATTERS NOT who is *better* at any given skill. "
-           "It'll only matter that you've put in the time to be GOOD at that skill at all! Take your time, and focus on simply being better than how you were yesterday. "
-           "THIS is the ultimate path toward SKILLFUL SELF-SATISFACTION!\n\n"
-           "constantly rooting for your inevitable growth,\n"
+           "ON THIS HISTORICAL DAY15, I WOULD LIKE TO DEDICATE THE DAY TO THE COLLEGE GRADUATES WHO BATTLED THROUGH THE TRENCHES OF ACADEMIC WARFARE, AND CAME OUT "
+           "THE OTHER SIDE NOT ONLY ALIVE, BUT STRONGER THAN WHEN THEY ENTERED! As you look back on this chapter of your life (which you should!), "
+           "I want you to cherish all of the experiences you had. Good AND Bad! Take those memories with you for the rest of eternity, because those are times that "
+           "you'll never be able to get back.\n\n"
+           "BUT! even though those experiences will never be able to be re-lived, they have still made their mark. And that mark will be forever everlasting "
+           "That mark makes itself known through your actions, your words, and your values. Your very being is further engraved into the fabric of the universe via those "
+           "experiences. So don't feel so down about it! The best part? THERE'S STILL SO MUCH MORE LIFE TO LIVE!\n\n "
+           "Slow down, have a look around, and make sure you take it all in. It'll be with you forever, but it'll never be now.\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -159,14 +161,14 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "HAPPY APRIL EVERYONE! I must keep this one brief as I am in the midst of my OWN pursuits in enhancing my services to you all!\n"
-           "I will take this brief moment to remind you all that IMPROVING AT SOMETHING should NEVER be a RUSHED ENDEAVOR!. "
-           "Interestingly, I've found that STRESSING about how QUICKLY your improvement is moving along can OFTEN TIMES make you LESS efficient at said improvement! "
-           "You musn't compare yourself to those around you NEARLY as much as you should be comparing YOURSELF TO HOW YOU WERE YESTERDAY. EVERYONE is going to be in "
-           "different places and have different natural advantages/disadvantages, and the truth is that many times it MATTERS NOT who is *better* at any given skill. "
-           "It'll only matter that you've put in the time to be GOOD at that skill at all! Take your time, and focus on simply being better than how you were yesterday. "
-           "THIS is the ultimate path toward SKILLFUL SELF-SATISFACTION!\n\n"
-           "constantly rooting for your inevitable growth,\n"
+           "ON THIS HISTORICAL DAY15, I WOULD LIKE TO DEDICATE THE DAY TO THE COLLEGE GRADUATES WHO BATTLED THROUGH THE TRENCHES OF ACADEMIC WARFARE, AND CAME OUT "
+           "THE OTHER SIDE NOT ONLY ALIVE, BUT STRONGER THAN WHEN THEY ENTERED! As you look back on this chapter of your life (which you should!), "
+           "I want you to cherish all of the experiences you had. Good AND Bad! Take those memories with you for the rest of eternity, because those are times that "
+           "you'll never be able to get back.\n\n"
+           "BUT! even though those experiences will never be able to be re-lived, they have still made their mark. And that mark will be forever everlasting "
+           "That mark makes itself known through your actions, your words, and your values. Your very being is further engraved into the fabric of the universe via those "
+           "experiences. So don't feel so down about it! The best part? THERE'S STILL SO MUCH MORE LIFE TO LIVE!\n\n "
+           "Slow down, have a look around, and make sure you take it all in. It'll be with you forever, but it'll never be now.\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -271,6 +273,8 @@ async def how_are_you_15(ctx):
         await ctx.send(tjmessage)
     elif str(ctx.author.id) == nuiid:
         await ctx.send(nuimessage)
+    elif str(ctx.author.id) == bingleid:
+        await ctx.send(binglemessage)
 
     else:
         await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
