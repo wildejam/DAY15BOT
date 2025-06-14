@@ -39,6 +39,8 @@ newdogjson = {
     "cryptid": [{},0],
     "rat": [{},0],
     "otter": [{},0],
+    "car": [{},0],
+    "dragon": [{},0]
 }
 
 # Stores user id's for personalized /howareyou15 messages
@@ -127,14 +129,11 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "ON THIS HISTORICAL DAY15, I WOULD LIKE TO DEDICATE THE DAY TO THE COLLEGE GRADUATES WHO BATTLED THROUGH THE TRENCHES OF ACADEMIC WARFARE, AND CAME OUT "
-           "THE OTHER SIDE NOT ONLY ALIVE, BUT STRONGER THAN WHEN THEY ENTERED! As you look back on this chapter of your life (which you should!), "
-           "I want you to cherish all of the experiences you had. Good AND Bad! Take those memories with you for the rest of eternity, because those are times that "
-           "you'll never be able to get back.\n\n"
-           "BUT! even though those experiences will never be able to be re-lived, they have still made their mark. And that mark will be forever everlasting "
-           "That mark makes itself known through your actions, your words, and your values. Your very being is further engraved into the fabric of the universe via those "
-           "experiences. So don't feel so down about it! The best part? THERE'S STILL SO MUCH MORE LIFE TO LIVE!\n\n "
-           "Slow down, have a look around, and make sure you take it all in. It'll be with you forever, but it'll never be now.\n"
+           "GREETINGS TRAVELLERS! As summer comes into FULL SWING on this fine DAY 15, I'll remind everyone of the importance of MAINTAINING YOUR BODY "
+           "TEMPERATURE AND HYDRATION LEVELS! There is only one thing worse than sweating and heating up, and that's sweating and heating up to the point of "
+           "heat stroke. Enjoy the outdoors, take advantage of outdoor gatherings, BUT MAKE SURE TO CHECK YOURSELF EVERY ONCE IN A WHILE FOR YOUR HEALTH! "
+           "Additionally, I'd like to formally announce the advent of /newcar15 and /newdragon15! I hope you enjoy this NEW CONTENT UPDATE!\n\n"
+           "Installing high-tech water cooling systems,\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -161,14 +160,11 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "ON THIS HISTORICAL DAY15, I WOULD LIKE TO DEDICATE THE DAY TO THE COLLEGE GRADUATES WHO BATTLED THROUGH THE TRENCHES OF ACADEMIC WARFARE, AND CAME OUT "
-           "THE OTHER SIDE NOT ONLY ALIVE, BUT STRONGER THAN WHEN THEY ENTERED! As you look back on this chapter of your life (which you should!), "
-           "I want you to cherish all of the experiences you had. Good AND Bad! Take those memories with you for the rest of eternity, because those are times that "
-           "you'll never be able to get back.\n\n"
-           "BUT! even though those experiences will never be able to be re-lived, they have still made their mark. And that mark will be forever everlasting "
-           "That mark makes itself known through your actions, your words, and your values. Your very being is further engraved into the fabric of the universe via those "
-           "experiences. So don't feel so down about it! The best part? THERE'S STILL SO MUCH MORE LIFE TO LIVE!\n\n "
-           "Slow down, have a look around, and make sure you take it all in. It'll be with you forever, but it'll never be now.\n"
+           "GREETINGS TRAVELLERS! As summer comes into FULL SWING on this fine DAY 15, I'll remind everyone of the importance of MAINTAINING YOUR BODY "
+           "TEMPERATURE AND HYDRATION LEVELS! There is only one thing worse than sweating and heating up, and that's sweating and heating up to the point of "
+           "heat stroke. Enjoy the outdoors, take advantage of outdoor gatherings, BUT MAKE SURE TO CHECK YOURSELF EVERY ONCE IN A WHILE FOR YOUR HEALTH! "
+           "Additionally, I'd like to formally announce the advent of /newcar15 and /newdragon15! I hope you enjoy this NEW CONTENT UPDATE!\n\n"
+           "Installing high-tech water cooling systems,\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -496,6 +492,44 @@ async def new_cryptid_15(ctx):
 
     # increment the index
     newdogjson['cryptid'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newcar15')
+async def new_car_15(ctx):
+
+    searchTerm = "car"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['car'][0] == {} or newdogjson['car'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['car'][0] = api_data.json()
+        newdogjson['car'][1] = 0
+
+    # store the image link
+    data = newdogjson['car'][0]['items'][(newdogjson['car'][1])]['link']
+
+    # increment the index
+    newdogjson['car'][1] += 1
+
+    await ctx.send("Powered by Google. Link: " + data)
+
+@bot.command(name='newdragon15')
+async def new_dragon_15(ctx):
+
+    searchTerm = "dragon"
+
+    # first, check if an api call needs to be made, and perform one if necessary. update json file accordingly, and set index to 0.
+    if (newdogjson['dragon'][0] == {} or newdogjson['dragon'][1] >= 10):
+        api_data = requests.get('https://customsearch.googleapis.com/customsearch/v1?key=' + GOOGLEKEY + '&cx=a22729bb04f1e4c95&q=' + searchTerm + '&searchType=image&start=' + str(random.randint(0,90)))
+        newdogjson['dragon'][0] = api_data.json()
+        newdogjson['dragon'][1] = 0
+
+    # store the image link
+    data = newdogjson['dragon'][0]['items'][(newdogjson['dragon'][1])]['link']
+
+    # increment the index
+    newdogjson['dragon'][1] += 1
 
     await ctx.send("Powered by Google. Link: " + data)
 
