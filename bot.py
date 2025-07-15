@@ -129,11 +129,9 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "GREETINGS TRAVELLERS! As summer comes into FULL SWING on this fine DAY 15, I'll remind everyone of the importance of MAINTAINING YOUR BODY "
-           "TEMPERATURE AND HYDRATION LEVELS! There is only one thing worse than sweating and heating up, and that's sweating and heating up to the point of "
-           "heat stroke. Enjoy the outdoors, take advantage of outdoor gatherings, BUT MAKE SURE TO CHECK YOURSELF EVERY ONCE IN A WHILE FOR YOUR HEALTH! "
-           "Additionally, I'd like to formally announce the advent of /newcar15 and /newdragon15! I hope you enjoy this NEW CONTENT UPDATE!\n\n"
-           "Installing high-tech water cooling systems,\n"
+           "And as we claw our way through the desert with the spiteful heat attempting to waver our resolve, we push through! Moments before even our "
+           "resolve falters under the sun, an oasis! We have made it! All of our efforts have not been in vain, and we break bread under the shade of a palm tree. "
+           "I brought individual food items for each of you! Rest up. The journey will continue, and we'll need all of our strength to make it past! "
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -160,11 +158,9 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "GREETINGS TRAVELLERS! As summer comes into FULL SWING on this fine DAY 15, I'll remind everyone of the importance of MAINTAINING YOUR BODY "
-           "TEMPERATURE AND HYDRATION LEVELS! There is only one thing worse than sweating and heating up, and that's sweating and heating up to the point of "
-           "heat stroke. Enjoy the outdoors, take advantage of outdoor gatherings, BUT MAKE SURE TO CHECK YOURSELF EVERY ONCE IN A WHILE FOR YOUR HEALTH! "
-           "Additionally, I'd like to formally announce the advent of /newcar15 and /newdragon15! I hope you enjoy this NEW CONTENT UPDATE!\n\n"
-           "Installing high-tech water cooling systems,\n"
+           "And as we claw our way through the desert with the spiteful heat attempting to waver our resolve, we push through! Moments before even our "
+           "resolve falters under the sun, an oasis! We have made it! All of our efforts have not been in vain, and we break bread under the shade of a palm tree. "
+           "I brought individual food items for each of you! Rest up. The journey will continue, and we'll need all of our strength to make it past! "
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
