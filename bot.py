@@ -129,9 +129,11 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "And as we claw our way through the desert with the spiteful heat attempting to waver our resolve, we push through! Moments before even our "
-           "resolve falters under the sun, an oasis! We have made it! All of our efforts have not been in vain, and we break bread under the shade of a palm tree. "
-           "I brought individual food items for each of you! Rest up. The journey will continue, and we'll need all of our strength to make it past! "
+           "Refreshed from the oasis, our adventure continues, and the desert is finally behind us! "
+           "And now, the forest. Ironically, we've gone from no water to an over-abundance. The humidity is, uncomfortable. Yet seeing "
+           "each other push forward keeps us inspired to press onward. Finally, a clearing. A beautiful rushing waterfall with aquatic life" \
+           "bolstering our resolve. Comfortable resting spots under the shade of the tree-line. We've reached our next pit stop!" \
+           "Why not set aside a moment to take it all in, maybe even spend the night!"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -158,9 +160,11 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "And as we claw our way through the desert with the spiteful heat attempting to waver our resolve, we push through! Moments before even our "
-           "resolve falters under the sun, an oasis! We have made it! All of our efforts have not been in vain, and we break bread under the shade of a palm tree. "
-           "I brought individual food items for each of you! Rest up. The journey will continue, and we'll need all of our strength to make it past! "
+           "Refreshed from the oasis, our adventure continues, and the desert is finally behind us! "
+           "And now, the forest. Ironically, we've gone from no water to an over-abundance. The humidity is, uncomfortable. Yet seeing "
+           "each other push forward keeps us inspired to press onward. Finally, a clearing. A beautiful rushing waterfall with aquatic life" \
+           "bolstering our resolve. Comfortable resting spots under the shade of the tree-line. We've reached our next pit stop!" \
+           "Why not set aside a moment to take it all in, maybe even spend the night!"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
