@@ -129,11 +129,11 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "Refreshed from the oasis, our adventure continues, and the desert is finally behind us! "
-           "And now, the forest. Ironically, we've gone from no water to an over-abundance. The humidity is, uncomfortable. Yet seeing "
-           "each other push forward keeps us inspired to press onward. Finally, a clearing. A beautiful rushing waterfall with aquatic life" \
-           "bolstering our resolve. Comfortable resting spots under the shade of the tree-line. We've reached our next pit stop!" \
-           "Why not set aside a moment to take it all in, maybe even spend the night!"
+           "At last, the blazing heat transitions into a temperate delight!"
+           "Just as the abundant forest began to feel gluttonous, perhaps even suffocating, our surroundings become just "
+           "that bit dryer. Cooler! The breeze flows through our party, providing solace from the humid heat of the " \
+           "rainforest. The grass is still green, and the lands are still lush however. That spot under the tree looks quite comfy! " \
+           "We brought that oversized picnic blanked for a reason!"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -160,11 +160,11 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "Refreshed from the oasis, our adventure continues, and the desert is finally behind us! "
-           "And now, the forest. Ironically, we've gone from no water to an over-abundance. The humidity is, uncomfortable. Yet seeing "
-           "each other push forward keeps us inspired to press onward. Finally, a clearing. A beautiful rushing waterfall with aquatic life" \
-           "bolstering our resolve. Comfortable resting spots under the shade of the tree-line. We've reached our next pit stop!" \
-           "Why not set aside a moment to take it all in, maybe even spend the night!"
+           "At last, the blazing heat transitions into a temperate delight!"
+           "Just as the abundant forest began to feel gluttonous, perhaps even suffocating, our surroundings become just "
+           "that bit dryer. Cooler! The breeze flows through our party, providing solace from the humid heat of the " \
+           "rainforest. The grass is still green, and the lands are still lush however. That spot under the tree looks quite comfy! " \
+           "We brought that oversized picnic blanked for a reason!"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -243,18 +243,6 @@ async def how_are_you_15(ctx):
         await ctx.send(hannahtlmessage)
     elif str(ctx.author.id) == spicychrisid:
         await ctx.send(spicychrismessage)
-
-        f = open("orphan.txt", "r")
-        f_int = int(f.read())
-        f_int += 1
-        f.close()
-
-        f = open("orphan.txt", "w")
-        f.write(str(f_int))
-        f.close()
-
-        await ctx.send(str(f_int) + " orphans!")
-        
     elif str(ctx.author.id) == valkarenaid:
         await ctx.send(valkarenamessage)
     # elif str(ctx.author.id) == eeveeid:
