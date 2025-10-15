@@ -129,11 +129,12 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "At last, the blazing heat transitions into a temperate delight!"
-           "Just as the abundant forest began to feel gluttonous, perhaps even suffocating, our surroundings become just "
-           "that bit dryer. Cooler! The breeze flows through our party, providing solace from the humid heat of the " \
-           "rainforest. The grass is still green, and the lands are still lush however. That spot under the tree looks quite comfy! " \
-           "We brought that oversized picnic blanked for a reason!"
+           "Colder and colder, we all see the leaves start to grow more colorful, and our layers of warmth grow ever larger. " \
+           "The scenery is splendid! Leaves crunch beneath our stomping feet, paws, and other miscellaneous appendages. " \
+           "The leaves actually grow immensely thick--they're starting to pile up to our waists. " \
+           "In no time at all, we have found ourselves in an echoing, leafy cavern! A fortress of leaf. " \
+           "This seems like a cozy abode! I'd be wary of starting any fires though...\n\n" \
+           "Burrowing under the seas of red and green for a nap,\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -160,11 +161,12 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "At last, the blazing heat transitions into a temperate delight!"
-           "Just as the abundant forest began to feel gluttonous, perhaps even suffocating, our surroundings become just "
-           "that bit dryer. Cooler! The breeze flows through our party, providing solace from the humid heat of the " \
-           "rainforest. The grass is still green, and the lands are still lush however. That spot under the tree looks quite comfy! " \
-           "We brought that oversized picnic blanked for a reason!"
+           "Colder and colder, we all see the leaves start to grow more colorful, and our layers of warmth grow ever larger. " \
+           "The scenery is splendid! Leaves crunch beneath our stomping feet, paws, and other miscellaneous appendages. " \
+           "The leaves actually grow immensely thick--they're starting to pile up to our waists. " \
+           "In no time at all, we have found ourselves in an echoing, leafy cavern! A fortress of leaf. " \
+           "This seems like a cozy abode! I'd be wary of starting any fires though...\n\n" \
+           "Burrowing under the seas of red and green for a nap,\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
