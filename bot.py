@@ -129,12 +129,13 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "Colder and colder, we all see the leaves start to grow more colorful, and our layers of warmth grow ever larger. " \
-           "The scenery is splendid! Leaves crunch beneath our stomping feet, paws, and other miscellaneous appendages. " \
-           "The leaves actually grow immensely thick--they're starting to pile up to our waists. " \
-           "In no time at all, we have found ourselves in an echoing, leafy cavern! A fortress of leaf. " \
-           "This seems like a cozy abode! I'd be wary of starting any fires though...\n\n" \
-           "Burrowing under the seas of red and green for a nap,\n"
+           "Tough as it was to move on from the house of leaves, greater tidings yet awaited us. " \
+           "Surprised we were to find a long lost, yet still quite functional log cabin, in the middle of these haunting woods! " \
+           "It will take some effort, some doing. But I'm envisioning a soft, warm glow in an otherwise " \
+           "cold, bitter winter. Perhaps we can call this place home, for but a spell?" \
+           "Everyone, let's all do our best to make this place the best home we can manage! I'll be looking forward to our time together!" \
+           "I think we will all find this *house* a source of *content* in the coming days.\n\n" \
+           "Wait, say that again...\n" \
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -161,12 +162,13 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "Colder and colder, we all see the leaves start to grow more colorful, and our layers of warmth grow ever larger. " \
-           "The scenery is splendid! Leaves crunch beneath our stomping feet, paws, and other miscellaneous appendages. " \
-           "The leaves actually grow immensely thick--they're starting to pile up to our waists. " \
-           "In no time at all, we have found ourselves in an echoing, leafy cavern! A fortress of leaf. " \
-           "This seems like a cozy abode! I'd be wary of starting any fires though...\n\n" \
-           "Burrowing under the seas of red and green for a nap,\n"
+           "Tough as it was to move on from the house of leaves, greater tidings yet awaited us. " \
+           "Surprised we were to find a long lost, yet still quite functional log cabin, in the middle of these haunting woods! " \
+           "It will take some effort, some doing. But I'm envisioning a soft, warm glow in an otherwise " \
+           "cold, bitter winter. Perhaps we can call this place home, for but a spell?" \
+           "Everyone, let's all do our best to make this place the best home we can manage! I'll be looking forward to our time together!" \
+           "I think we will all find this *house* a source of *content* in the coming days.\n\n" \
+           "Wait, say that again...\n" \
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -542,7 +544,7 @@ async def new_rat_15(ctx):
     # increment the index
     newdogjson['rat'][1] += 1
 
-    await ctx.send("Powered by Google. Link: || " + data + " ||")
+    await ctx.send("Powered by Google. Link: " + data)
 
 @bot.command(name='newjam15')
 async def new_jam_15(ctx):
