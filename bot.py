@@ -129,13 +129,20 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "Tough as it was to move on from the house of leaves, greater tidings yet awaited us. " \
-           "Surprised we were to find a long lost, yet still quite functional log cabin, in the middle of these haunting woods! " \
-           "It will take some effort, some doing. But I'm envisioning a soft, warm glow in an otherwise " \
-           "cold, bitter winter. Perhaps we can call this place home, for but a spell?" \
-           "Everyone, let's all do our best to make this place the best home we can manage! I'll be looking forward to our time together!" \
-           "I think we will all find this *house* a source of *content* in the coming days.\n\n" \
-           "Wait, say that again...\n" \
+           "And now, we rest!\n" \
+           "Sitting around the cozy fire,\n " \
+           "A warm tune from our rosy lyre.\n" \
+           "A space for each, a space for all,\n" \
+           "Long having waved goodbye to fall.\n\n" \
+           "But a new adventure awaits our group,\n"\
+           "...that is, right after a hearty soup!\n"\
+           "Take this precious time to think,\n"\
+           "Everyone, I toast thee a drink!\n\n"\
+           "To all of our collective Determination, and undying internal fire. The drive to keep going is strong, whether out of nature or out of spite.\n" \
+           "To all of our collective Love, and ability to calmly set aside our ire. For a life without love is a life steeped in death.\n"\
+           "To all of our collective Joy, and happiness amidst challenges most dire. Finding respite in the small things, when some weeks never let you catch breath.\n"\
+           "To all of our collective Wisdom, and knowledge growing ever higher. For knowledge is power, and power is might.\n\n"\
+           "Happy Holidays Everyone!\n" \
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -162,13 +169,20 @@ async def adminoverride15(ctx):
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
            "```"
-           "Tough as it was to move on from the house of leaves, greater tidings yet awaited us. " \
-           "Surprised we were to find a long lost, yet still quite functional log cabin, in the middle of these haunting woods! " \
-           "It will take some effort, some doing. But I'm envisioning a soft, warm glow in an otherwise " \
-           "cold, bitter winter. Perhaps we can call this place home, for but a spell?" \
-           "Everyone, let's all do our best to make this place the best home we can manage! I'll be looking forward to our time together!" \
-           "I think we will all find this *house* a source of *content* in the coming days.\n\n" \
-           "Wait, say that again...\n" \
+           "And now, we rest!\n" \
+           "Sitting around the cozy fire,\n " \
+           "A warm tune from our rosy lyre.\n" \
+           "A space for each, a space for all,\n" \
+           "Long having waved goodbye to fall.\n\n" \
+           "But a new adventure awaits our group,\n"\
+           "...that is, right after a hearty soup!\n"\
+           "Take this precious time to think,\n"\
+           "Everyone, I toast thee a drink!\n\n"\
+           "To all of our collective Determination, and undying internal fire. The drive to keep going is strong, whether out of nature or out of spite.\n" \
+           "To all of our collective Love, and ability to calmly set aside our ire. For a life without love is a life steeped in death.\n"\
+           "To all of our collective Joy, and happiness amidst challenges most dire. Finding respite in the small things, when some weeks never let you catch breath.\n"\
+           "To all of our collective Wisdom, and knowledge growing ever higher. For knowledge is power, and power is might.\n\n"\
+           "Happy Holidays Everyone!\n" \
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
