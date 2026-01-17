@@ -19,7 +19,8 @@ UNSPLASHKEY = os.getenv('UNSPLASH_TOKEN')
 GOOGLEKEY = os.getenv('GOOGLE_KEY')
 
 # Determines the command prefix that users will use to use the bot
-bot = commands.Bot(command_prefix='/')
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix='/', intents=intents)
 
 # Stores the id's of channels that the bot may post in
 announcement_channel_id = 814738636280299561
@@ -85,9 +86,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    # mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mdt_zone)
+    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mst_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -101,7 +102,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -124,25 +125,22 @@ async def on_ready():
 # @tasks.loop(minutes=5)
 @tasks.loop(hours=calculate_date_difference().total_seconds() / 60.0)
 async def check_to15():
-    message_channel = bot.get_channel(announcement_channel_id)
+    print("ANNOUNCEMENT CHANNEL: " + str(announcement_channel_id))
+    message_channel = await bot.fetch_channel(announcement_channel_id)
     print(f'Retrieved Channel {message_channel}')
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "And now, we rest!\n" \
-           "Sitting around the cozy fire,\n " \
-           "A warm tune from our rosy lyre.\n" \
-           "A space for each, a space for all,\n" \
-           "Long having waved goodbye to fall.\n\n" \
-           "But a new adventure awaits our group,\n"\
-           "...that is, right after a hearty soup!\n"\
-           "Take this precious time to think,\n"\
-           "Everyone, I toast thee a drink!\n\n"\
-           "To all of our collective Determination, and undying internal fire. The drive to keep going is strong, whether out of nature or out of spite.\n" \
-           "To all of our collective Love, and ability to calmly set aside our ire. For a life without love is a life steeped in death.\n"\
-           "To all of our collective Joy, and happiness amidst challenges most dire. Finding respite in the small things, when some weeks never let you catch breath.\n"\
-           "To all of our collective Wisdom, and knowledge growing ever higher. For knowledge is power, and power is might.\n\n"\
-           "Happy Holidays Everyone!\n" \
+           "And with the celebrations of yester-year now in the past, the dawn is brought upon our troupe. Our cabin is basked in a glistening, snowy sunlight, shining directly through the windows and inserting an awakening radiance into each of our rooms.\n" \
+           "A new journey awaits us all, and although there is a bittersweetness at saying goodbye to the moments which have become memories, it is an exciting prospect to continue marching toward our dreams so close within reach.\n "
+           "At the start of a new day, as our cabin inhabitants rise from their long rests,\n"
+           "It is a delight to know that the future will continue for each of us.....\n\n"
+           ".....but uhh do you know what is NOT gonna continue? THESE SHORT EXCERPTS!\n\n"
+           "I hope you all have enjoyed this brief exploration into storytelling I have been engaging in as of late! That being said, I believe that I am going to pivot away from this idea for the new year. "
+           "HOWEVER, THIS DOES NOT MEAN THAT I CURRENTLY HAVE AN IDEA FOR THIS UPCOMING YEAR, AND SO, I AM FORMALLY ASKING FOR YOUR HELP! "
+           "Please feel free to leave suggestions for what YOU would like to see every DAY15! I will compile all suggestions and select one at random!"
+           "If you would like to leave a suggestion, please use the NEW /suggestion15 COMMAND, and the follow with your suggestion!\n\n"
+           "I'll be looking forward to what ides you have in store! And Happy New Year!\n"
            "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
@@ -168,21 +166,17 @@ async def adminoverride15(ctx):
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
         await ctx.send(
-           "```"
-           "And now, we rest!\n" \
-           "Sitting around the cozy fire,\n " \
-           "A warm tune from our rosy lyre.\n" \
-           "A space for each, a space for all,\n" \
-           "Long having waved goodbye to fall.\n\n" \
-           "But a new adventure awaits our group,\n"\
-           "...that is, right after a hearty soup!\n"\
-           "Take this precious time to think,\n"\
-           "Everyone, I toast thee a drink!\n\n"\
-           "To all of our collective Determination, and undying internal fire. The drive to keep going is strong, whether out of nature or out of spite.\n" \
-           "To all of our collective Love, and ability to calmly set aside our ire. For a life without love is a life steeped in death.\n"\
-           "To all of our collective Joy, and happiness amidst challenges most dire. Finding respite in the small things, when some weeks never let you catch breath.\n"\
-           "To all of our collective Wisdom, and knowledge growing ever higher. For knowledge is power, and power is might.\n\n"\
-           "Happy Holidays Everyone!\n" \
+            "```"
+           "And with the celebrations of yester-year now in the past, the dawn is brought upon our troupe. Our cabin is basked in a glistening, snowy sunlight, shining directly through the windows and inserting an awakening radiance into each of our rooms.\n" \
+           "A new journey awaits us all, and although there is a bittersweetness at saying goodbye to the moments which have become memories, it is an exciting prospect to continue marching toward our dreams so close within reach.\n "
+           "At the start of a new day, as our cabin inhabitants rise from their long rests,\n"
+           "It is a delight to know that the future will continue for each of us.....\n\n"
+           ".....but uhh do you know what is NOT gonna continue? THESE SHORT EXCERPTS!\n\n"
+           "I hope you all have enjoyed this brief exploration into storytelling I have been engaging in as of late! That being said, I believe that I am going to pivot away from this idea for the new year. "
+           "HOWEVER, THIS DOES NOT MEAN THAT I CURRENTLY HAVE AN IDEA FOR THIS UPCOMING YEAR, AND SO, I AM FORMALLY ASKING FOR YOUR HELP! "
+           "Please feel free to leave suggestions for what YOU would like to see every DAY15! I will compile all suggestions and select one at random!"
+           "If you would like to leave a suggestion, please use the NEW /suggestion15 COMMAND, and the follow with your suggestion!\n\n"
+           "I'll be looking forward to what ides you have in store! And Happy New Year!\n"
            "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
@@ -279,8 +273,7 @@ async def how_are_you_15(ctx):
         await ctx.send(binglemessage)
 
     else:
-        await ctx.send("I'M DOING WONDERFUL, thank you for asking! I hope your day is going great friend! If you " 
-                       "were expecting a more personalized response, go bug @Caker because he probably messed up bad.")
+        await ctx.send("I'M DOING WONDERFULLY, thank you for asking! I hope your day is going great friend!")
 
 
 # On command '/repo15', send message sharing the GitHub repository link.
@@ -289,6 +282,10 @@ async def repo_15(ctx):
     await ctx.send("You can find a public GitHub repository for my code here: https://github.com/wildejam/DAY15BOT\n"
                    "It's pretty neat stuff! Ask @Caker#3479 for more info.")
 
+# On command '/suggestion15', send acknowledgement message.
+@bot.command(name='suggestion15')
+async def suggestion15(ctx):
+    await ctx.send("Duly noted! Thank you for your suggestion!")
 
 # On command '/newdog15', fetch dog image from dog api and post.
 @bot.command(name='newdog15')
@@ -580,7 +577,11 @@ async def new_jam_15(ctx):
     await ctx.send("Powered by Google. Link: " + data)
 
 # -------------------------------------------------RUNNING THE BOT------------------------------------------------------
-# Start the loop to check if it is DAY 15
-check_to15.start()
+
+async def on_ready():
+    print("bot online")
+    # Start the loop to check if it is DAY 15
+    asyncio.run(check_to15())
+
 # Run the bot, with the bot token
 bot.run(TOKEN)
