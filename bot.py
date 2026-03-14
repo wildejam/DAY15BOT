@@ -79,6 +79,9 @@ bonesmessage = os.getenv('bonesmessage')
 nuimessage = os.getenv('nuimessage')
 binglemessage = os.getenv('binglemessage')
 
+# used for /howareyou15 3/14/26
+random_tiers = ["S TIER", "A tier", "B tier", "C tier", "D tier", "F tier"]
+
 
 # -----------------------------------------------HELPER FUNCTIONS-------------------------------------------------------
 # Calculates the time until the next day15 from the present time. Returns a time_delta object.
@@ -86,9 +89,9 @@ def calculate_date_difference():
     # Get today's date and time and store it (Mountain Daylight Time/Mountain Standard Time)
     # DON'T FORGET TO CHANGE TO/FROM MST/MDT, OR FIGURE OUT A WAY TO ACCOUNT FOR IT
     # MDT = UTC - 6:00, MST = UTC - 7:00
-    # mdt_zone = timezone(-timedelta(hours=6), name="MDT")
-    mst_zone = timezone(-timedelta(hours=7), name="MST")
-    today = datetime.now(mst_zone)
+    mdt_zone = timezone(-timedelta(hours=6), name="MDT")
+    # mst_zone = timezone(-timedelta(hours=7), name="MST")
+    today = datetime.now(mdt_zone)
     # Store the next month, so that we can store the next day 15
     if today.day < 15:
         next_year = today.year
@@ -102,7 +105,7 @@ def calculate_date_difference():
             next_month = today.month + 1
 
     # Store the next day15
-    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mst_zone)
+    next_day15 = datetime(year=next_year, month=next_month, day=15, tzinfo=mdt_zone)
 
     # Date difference is now calculated and stored in the dateDifference object
     date_difference = next_day15 - today
@@ -131,17 +134,14 @@ async def check_to15():
     await message_channel.send(file=discord.File('DAY15.png'),
                                content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
     await message_channel.send("```"
-           "And with the celebrations of yester-year now in the past, the dawn is brought upon our troupe. Our cabin is basked in a glistening, snowy sunlight, shining directly through the windows and inserting an awakening radiance into each of our rooms.\n" \
-           "A new journey awaits us all, and although there is a bittersweetness at saying goodbye to the moments which have become memories, it is an exciting prospect to continue marching toward our dreams so close within reach.\n "
-           "At the start of a new day, as our cabin inhabitants rise from their long rests,\n"
-           "It is a delight to know that the future will continue for each of us.....\n\n"
-           ".....but uhh do you know what is NOT gonna continue? THESE SHORT EXCERPTS!\n\n"
-           "I hope you all have enjoyed this brief exploration into storytelling I have been engaging in as of late! That being said, I believe that I am going to pivot away from this idea for the new year. "
-           "HOWEVER, THIS DOES NOT MEAN THAT I CURRENTLY HAVE AN IDEA FOR THIS UPCOMING YEAR, AND SO, I AM FORMALLY ASKING FOR YOUR HELP! "
-           "Please feel free to leave suggestions for what YOU would like to see every DAY15! I will compile all suggestions and select one at random!"
-           "If you would like to leave a suggestion, please use the NEW /suggestion15 COMMAND, and the follow with your suggestion!\n\n"
-           "I'll be looking forward to what ides you have in store! And Happy New Year!\n"
-           "-DAY 15 BOT :]```")
+        "\"Suggestion15: tierlist the server members unironically. be ruthless. give us some hottake thats like \"Shoop is F tier and Snowball Bot is S tier\"\"\n\n"
+        "Happy March everyone! I hope that your pillows remain cold and your chairs remain un-squeaky!\n"
+        "A friendly reminder this month that the world you see in your day-to-day truly is filled with wonderful people who have genuine kindness and compassion in their heart!"
+        "It is easy to succumb to nihilism and despair when you see it thrown into your face twenty-four seven, "
+        "but that view is a colossal distortion of how a lot of the world is!"
+        "There are many, many, many great souls out there linked together in an invisible solidarity to pursue a better world, and even though it is easy to miss, you truly can find them everywhere. You just might need to go out and look.\n\n"
+        "Never forget that in your pursuit of a better world, there are countless who unknowingly stand alongside you. I, for one, am happy to be one of them! \n"
+        "-DAY 15 BOT :]```")
     print(f'Day 15 Message sent! Loop should have reset.')
 
 
@@ -165,19 +165,15 @@ async def adminoverride15(ctx):
         # print(f'Retrieved Channel {message_channel}')
         await ctx.send(file=discord.File('DAY15.png'),
                                 content="@everyone\n\n __GIVE IT UP FOR **DAY 15**!!!!!__")
-        await ctx.send(
-            "```"
-           "And with the celebrations of yester-year now in the past, the dawn is brought upon our troupe. Our cabin is basked in a glistening, snowy sunlight, shining directly through the windows and inserting an awakening radiance into each of our rooms.\n" \
-           "A new journey awaits us all, and although there is a bittersweetness at saying goodbye to the moments which have become memories, it is an exciting prospect to continue marching toward our dreams so close within reach.\n "
-           "At the start of a new day, as our cabin inhabitants rise from their long rests,\n"
-           "It is a delight to know that the future will continue for each of us.....\n\n"
-           ".....but uhh do you know what is NOT gonna continue? THESE SHORT EXCERPTS!\n\n"
-           "I hope you all have enjoyed this brief exploration into storytelling I have been engaging in as of late! That being said, I believe that I am going to pivot away from this idea for the new year. "
-           "HOWEVER, THIS DOES NOT MEAN THAT I CURRENTLY HAVE AN IDEA FOR THIS UPCOMING YEAR, AND SO, I AM FORMALLY ASKING FOR YOUR HELP! "
-           "Please feel free to leave suggestions for what YOU would like to see every DAY15! I will compile all suggestions and select one at random!"
-           "If you would like to leave a suggestion, please use the NEW /suggestion15 COMMAND, and the follow with your suggestion!\n\n"
-           "I'll be looking forward to what ides you have in store! And Happy New Year!\n"
-           "-DAY 15 BOT :]```"
+        await ctx.send("```"
+        "\"Suggestion15: tierlist the server members unironically. be ruthless. give us some hottake thats like \"Shoop is F tier and Snowball Bot is S tier\"\"\n\n"
+        "Happy March everyone! I hope that your pillows remain cold and your chairs remain un-squeaky!\n"
+        "A friendly reminder this month that the world you see in your day-to-day truly is filled with wonderful people who have genuine kindness and compassion in their heart!"
+        "It is easy to succumb to nihilism and despair when you see it thrown into your face twenty-four seven, "
+        "but that view is a colossal distortion of how a lot of the world is!"
+        "There are many, many, many great souls out there linked together in an invisible solidarity to pursue a better world, and even though it is easy to miss, you truly can find them everywhere. You just might need to go out and look.\n\n"
+        "Never forget that in your pursuit of a better world, there are countless who unknowingly stand alongside you. I, for one, am happy to be one of them! \n"
+        "-DAY 15 BOT :]```"
         ) 
         print(f'Day 15 Message sent! Loop should have reset.')
     else:
@@ -229,12 +225,12 @@ async def time_to_15(ctx):
 @bot.command(name='howareyou15')
 async def how_are_you_15(ctx):
     if str(ctx.author.id) == caketecid:
-        await ctx.send(caketecmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
         await ctx.send(file=discord.File('club-penguin-mop.gif'))
     elif str(ctx.author.id) == ddragonid:
-        await ctx.send(ddragonmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == hernyid:
-        await ctx.send(hernymessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
 
         f = open("orphan.txt", "r")
         f_int = int(f.read())
@@ -248,29 +244,29 @@ async def how_are_you_15(ctx):
         await ctx.send(str(f_int) + " orphans!")
 
     elif str(ctx.author.id) == bagkatid:
-        await ctx.send(bagkatmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == lumpiaid:
-        await ctx.send(lumpiamessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == hannahtlid:
-        await ctx.send(hannahtlmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == spicychrisid:
-        await ctx.send(spicychrismessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == valkarenaid:
-        await ctx.send(valkarenamessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     # elif str(ctx.author.id) == eeveeid:
     #     await ctx.send(eeveemessage)
     elif str(ctx.author.id) == christinaid:
-        await ctx.send(christinamessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == shoopid:
-        await ctx.send(shoopmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == bonesid:
-        await ctx.send(bonesmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == tjid:
-        await ctx.send(tjmessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == nuiid:
-        await ctx.send(nuimessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
     elif str(ctx.author.id) == bingleid:
-        await ctx.send(binglemessage)
+        await ctx.send(random_tiers[random.randint(0, 5)])
 
     else:
         await ctx.send("I'M DOING WONDERFULLY, thank you for asking! I hope your day is going great friend!")
